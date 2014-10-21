@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <include
+        android:id="@+id/include_studiostar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ImageView
+        android:id="@+id/star_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_studiostar"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/star_iv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_iv"
+        android:layout_marginLeft="30dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/star2" />
+
+    <TextView
+        android:id="@+id/star_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/star_iv2"
+        android:layout_below="@+id/star_iv"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/star_iv2"
+        android:text="@string/star_title"
+        android:textSize="@dimen/information_textsize" />
+
+    <ImageView
+        android:id="@+id/star_iv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_iv2"
+        android:layout_marginLeft="30dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sup1" />
+
+    <TextView
+        android:id="@+id/star_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/star_iv3"
+        android:layout_below="@+id/star_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/star_iv3"
+        android:text="@string/star_content"
+        android:textSize="@dimen/information_contentsize" />
+
+    <ImageView
+        android:id="@+id/star_iv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_iv3"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sup2" />
+
+    <TextView
+        android:id="@+id/star_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/star_iv4"
+        android:layout_below="@+id/star_tv2"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/star_iv4"
+        android:text="@string/star_content2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <ImageView
+        android:id="@+id/star_iv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_iv4"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/sup3" />
+
+    <TextView
+        android:id="@+id/star_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/star_iv5"
+        android:layout_below="@+id/star_tv3"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/star_iv5"
+        android:text="@string/star_content3"
+        android:textSize="@dimen/information_contentsize" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopsActivity" >
+
+    <include
+        android:id="@+id/include_shops"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ImageView
+        android:id="@+id/shop_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_shops"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/shop" />
+
+    <ImageView
+        android:id="@+id/shop_iv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_iv"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/shop2" />
+
+    <TextView
+        android:id="@+id/shop_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shop_iv2"
+        android:layout_below="@+id/shop_iv"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/shop_iv2"
+        android:text="@string/shops_title"
+        android:textSize="@dimen/information_textsize" />
+
+    <ImageView
+        android:id="@+id/shop_iv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_iv2"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sup1" />
+
+    <TextView
+        android:id="@+id/shop_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shop_iv3"
+        android:layout_below="@+id/shop_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/shop_iv3"
+        android:text="@string/shops_content"
+        android:textSize="@dimen/information_contentsize" />
+
+    <ImageView
+        android:id="@+id/shop_iv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_iv3"
+        android:layout_marginLeft="30dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sup2" />
+
+    <TextView
+        android:id="@+id/shop_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shop_iv4"
+        android:layout_below="@+id/shop_tv2"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/shop_iv4"
+        android:text="@string/shops_content2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <ImageView
+        android:id="@+id/shop_iv5"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_iv4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/sup3" />
+
+    <TextView
+        android:id="@+id/shop_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shop_iv5"
+        android:layout_below="@+id/shop_tv3"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/shop_iv5"
+        android:text="@string/shops_content3"
+        android:textSize="@dimen/information_contentsize" />
+
+</RelativeLayout>

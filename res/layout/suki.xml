@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SukiActivity" >
+
+    <include
+        android:id="@+id/include_suki"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_suki"
+        android:layout_alignParentLeft="true" >
+    </ListView>
+
+</RelativeLayout>

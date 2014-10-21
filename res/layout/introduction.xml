@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/include_introduction"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ImageView
+        android:id="@+id/introduction_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_introduction"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/introduction" />
+    <TextView 
+        android:id="@+id/introduction_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introduction_iv"
+        android:textSize="@dimen/information_textsize"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/introduction_title"/>
+    <TextView 
+        android:id="@+id/introduction_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introduction_tv1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/introduction_content"
+        android:textSize="@dimen/information_contentsize"
+        />
+</RelativeLayout>

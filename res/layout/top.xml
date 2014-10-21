@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/include1"
+    android:background="@drawable/header" >
+
+    <ImageView
+        android:id="@+id/ivReturn"
+        android:layout_width="@dimen/top_bmsize"
+        android:layout_height="@dimen/top_bmsize"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btnreturn" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FFFFFF"
+        android:text="博物馆在线"
+        android:textSize="@dimen/top_size" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="@dimen/top_bmsize"
+        android:layout_height="@dimen/top_bmsize"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="22dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/tv_title"
+        android:src="@drawable/btnmenu" />
+
+</RelativeLayout>

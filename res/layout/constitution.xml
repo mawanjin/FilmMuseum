@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/include_constitution"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <TextView
+        android:id="@+id/constitution_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_constitution"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_title"
+        android:textSize="@dimen/information_textsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content2_title"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content2_2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_title"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv5"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv7"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_3"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv8"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_4"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv9"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_5"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_6"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv11"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_7"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv12"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_8"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv13"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_9_title"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/constitution_tv15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constitution_tv14"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/constitution_content3_9"
+        android:textSize="@dimen/information_contentsize" />
+
+</RelativeLayout>

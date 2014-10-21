@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/header" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header" >
+
+        <include
+            android:id="@+id/include_heaven"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/include1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            layout="@layout/top" />
+
+        <ImageView
+            android:id="@+id/iv1_heaven"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/iv_heaven"
+            android:contentDescription="@string/image_contentDescription"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/iv2_heaven"
+            android:src="@drawable/suki" />
+
+        <ImageView
+            android:id="@+id/iv2_heaven"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@+id/iv_heaven"
+            android:contentDescription="@string/image_contentDescription"
+            android:layout_alignTop="@+id/iv1_heaven"
+            android:src="@drawable/down" />
+
+        <TextView
+            android:id="@+id/tv_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv2_heaven"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/title_name"
+            android:textColor="#f5f5f5"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/tv2_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_heaven"
+            android:layout_below="@+id/tv_heaven"
+            android:layout_marginTop="8dp"
+            android:text="@string/title"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:id="@+id/tv3_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv2_heaven"
+            android:layout_below="@+id/tv2_heaven"
+            android:layout_marginTop="8dp"
+            android:text="@string/time"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"
+              />
+
+        <TextView
+            android:id="@+id/tv4_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv3_heaven"
+            android:layout_below="@+id/tv3_heaven"
+            android:layout_marginTop="8dp"
+            android:text="@string/address"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"
+              />
+
+        <TextView
+            android:id="@+id/tv5_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv4_heaven"
+            android:layout_below="@+id/tv4_heaven"
+            android:layout_marginTop="8dp"
+            android:text="@string/piece"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"
+              />
+
+        <TextView
+            android:id="@+id/tv6_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv5_heaven"
+            android:layout_below="@+id/tv5_heaven"
+            android:layout_marginTop="8dp"
+            android:text="@string/price"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"
+              />
+
+        <TextView
+            android:id="@+id/tv7_heaven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv6_heaven"
+            android:layout_below="@+id/tv6_heaven"
+            android:layout_marginTop="20dp"
+            android:text="@string/message"
+            android:textColor="#f5f5f5"
+            android:textSize="26sp"
+              />
+
+        <ImageView
+            android:id="@+id/iv_heaven"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/image_contentDescription"
+            android:layout_below="@+id/include_heaven"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#00000000"
+            android:src="@drawable/heavens" />
+    </RelativeLayout>
+
+</ScrollView>

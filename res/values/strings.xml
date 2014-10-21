@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="image_contentDescription">图片</string>
+    <string name="main_button1">智能导览模式</string>
+    <string name="main_button2">博物馆在线</string>
+    <string name="beacon_tv">欢迎使用智能模式</string>
+    <string name="setBehindOffset">1000</string>
+    <string name="app_name">上海电影博物馆</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_name">4D影片《大闹天宫》</string>
+    <string name="title">片名：大闹天宫</string>
+    <string name="time">片长：20分钟</string>
+    <string name="address">影院：上海电影博物馆4D影厅(上海市漕溪北路595号)</string>
+    <string name="piece">排片：09:50、10:30、11:10、13:30、14:14、15:00、15:45</string>
+    <string name="price">票价:30元</string>
+    <string name="message">购票请至上海电影博物馆现场购买</string>
+    <string name="dragon">4D影片《鱼龙勇士》</string>
+    <string name="content">一亿五千万年前的侏罗纪时期，地球被大片海洋覆盖，各类史前生物生活在这片广袤的海洋里。达克龙为了给儿子达达炼制补脑鱼油誓言要抓住小鱼龙宝儿，宝儿在一场混战中与妈妈失散，为了找到鱼龙群，他踏上了历险的征途。一路上危机重重，最终，爱的力量战胜了个人恩怨，宝儿和强哥帮助达达救起了危在旦夕的达克龙。宝儿终于到达深海，和妈妈团聚。</string>
+    <string name="dragon_name">片名：鱼龙勇士</string>
+    <string name="dragon_time">片长：17分钟</string>
+    <string name="dragon_address">影院：上海电影博物馆4D影厅（上海市漕溪北路595号）</string>
+    <string name="dragon_piece">排片：10:30、11:30、14:15、15:45</string>
+    <string name="dragon_price">票价：30元</string>
+    <string name="dragon_message">购票请至上海电影博物馆现场购买。</string>
+    <string name="title_activity_beacon">BeaconActivity</string>
+    <string name="title_activity_glance">GlanceActivity</string>
+    <string name="title_activity_route">RouteActivity</string>
+    <string name="title_activity_recommend">RecommendActivity</string>
+    <string name="title_activity_optional">OptionalActivity</string>
+    <string name="title_activity_movie">MovieActivity</string>
+    <string name="introduction">上海电影博物馆位于徐汇区漕溪北路595号上海电影集团大楼1至4楼，总体面积达1.5万平方米，是一座融展示与活动、参观与体验
+	    为一体，涵盖文物收藏、学术研究、社会教育、陈列展示等功能的行业博物馆。博物馆分为四大主题展区，五号摄影棚及一座艺术影厅。上海电影博物馆呈现了百年上海电影的魅力，
+	    生动演绎了电影人、电影事和电影背后的故事，是满足大众电影文化需求的艺术圣殿，也是上海乃至中国电影最为重要的展示窗口之一，更将成为上海城市威化的新地标。</string>
+    <string name="title_activity_intelligence">IntelligenceActivity</string>
+    <string name="title_activity_pre_web">PreWebActivity</string>
+    <string name="title_activity_suki">SukiActivity</string>
+
+    <!-- 百年辉煌 -->
+    <string name="brilliant_title">百年辉煌</string>
+    <string name="brilliant_content">百年上海电影，在不同历史时期，涌现出了众多经典影片。本展区以图文形式展示了其中30部最具
+        开创性的经典名作。</string>
+
+    <!-- 影史第一 -->
+    <string name="first_title">影史第一</string>
+    <string name="first_content">中国电影诞生以来，上海影人以敢为天下先的开拓精神，凭借聪明才智和辛勤努力，为中国电影创造了众多
+        “第一”。这里仅仅只列举其中的30项，从一个侧面折射出
+	    上海作为中国电影发祥地的历史地位和突出贡献。</string>
+
+    <!-- 乌鸦与麻雀 -->
+    <string name="crow_title">《乌鸦与麻雀》场景</string>
+    <string name="crow_content">《乌鸦与麻雀》是昆仑影业公司1949年出品的一步讽刺喜剧。影片以上海一幢石库门民居里四家人的邻里关系，
+	     折射出“乱世之末”的市井生相，是40年代中国现实主义电影的标志性作品之一。本展区用情景再现的手法，为参观者呈现出郑君里、吴茵、上官云珠、李天济、
+	     黄宗英等电影工作者在片场进行拍摄的场景。</string>
+
+    <!-- 艺术影厅 -->
+    <string name="artclass_title">艺术影厅</string>
+    <string name="artclass_content">艺术影厅充分展现了当今世界最先进的电影放映科技，包括美国科视数字系统公司 提供的最新数字放映设备，
+	    以及安恒利（国际）有限公司 赞助的“全景声”影院多声道立体声设备。这些先进的放映技术与特有的动感特效装置相配合，能为观影者带来超凡的视听效果和无与
+	    伦比的动感体验。</string>
+
+    <!-- 一号摄影棚 -->
+    <string name="studio_title">一号摄影棚</string>
+    <string name="studio_content">1号摄影棚是上海东方电影频道全媒体高清演播厅。现代化的影视拍摄装备，诠释着全媒体时代电影电视制作的发
+	    展趋势。在这里，参观者可以更直观地体验现代化影视制作流程及功能强大的媒体环境。</string>
+
+    <!-- 一号录音棚 -->
+    <string name="recoding_title">一号录音棚</string>
+    <string name="recoding_content">1号录音棚是上海电影译制厂所属的一座现代化、数字化多媒体录音棚，电影艺术技术专家将在这里进行外国
+        影片的译制创作。</string>
+
+    <!-- 动画电影工作室 -->
+    <string name="animation_title">动画电影工作室</string>
+    <string name="animation_content">动画电影工作室配置了传统动画电影摄影台和数字动画装备。上海美术电影制片厂的动画艺术家将在这里进
+        行动画影片的现场创作演示，参观者可以在观摩中详细了解木偶、剪纸、手绘动画的制作工艺流程。</string>
+
+    <!-- 后期工作室 -->
+    <string name="later_title">后期工作室</string>
+    <string name="later_content">电影后期制作可使用拟音和音效设计互动装置，为影片创造奇妙的声音效果，也可运用视频剪辑工具创造电影蒙太奇
+        的视觉效果。参观者可以在观摩中学习、了解电影后期生产、加工的一般技术环节。</string>
+
+    <!-- 化妆服装工作室 -->
+    <string name="clothing_title">化妆服装工作室</string>
+    <string name="clothing_content">电影化妆脱胎于舞台戏剧化妆艺术，但它比舞台化妆更趋向生活的真实和细节的逼真，具有毫发毕现的写实主义
+        风格。用手中的化妆工具和特殊化学材料，将影片中的角色塑造得真实可信、栩栩如生，是每一位电影化妆师的神圣职责。随着电影工业逐渐发展成熟，专业服装设计师应
+        运而生,为影片主题、样式、风格及人物性格塑造提供了新的创作手段。半个多世纪以来，上影积累了数以千计，并留有珍贵历史印记的服装、服饰。这里陈列的只是其中
+        有代表性的一小部分。</string>
+
+    <!-- 电影百科 -->
+    <string name="encyclopedia_title">电影百科</string>
+    <string name="encyclopedia_content">电影是一种19世纪人类科学技术发明的产物，它根据人类眼睛的视觉特性和成像原理，结合物理、光学、
+	    化学、机械、自动化、新材料等科学技术成果发明研制而成。本展区着重介绍电影成像原理的基础知识，让参观者在与视觉成像装置的互动与操作中，了解电影艺术、
+	    技术的基本规律。</string>
+    <!-- 影海溯源 -->
+    <string name="shadow_title">影海溯源</string>
+    <string name="shadow_content">19世纪末，美、法、西班牙等国的冒险家，不畏路途遥远，携带刚刚问世的电影放映机和胶片，搭乘海船登陆上海。
+	    他们怀着对财富和成功的梦想，把电影的种子撒播到脚下这片新鲜而又神秘的土地。参观者可通过本展区的环形银幕，感受西方冒险家眼中的上海之旅。同时，展柜中
+	    陈列的28本40年代的电影剧本，也为参观者了解电影的成长发展提供了原始佐证。</string>
+
+    <!-- 光影长河 -->
+    <string name="river_title">光影长河</string>
+    <string name="river_content">1949年后，在接收原官办电影机构和与民营电影机构公私合营基础上，组建了国营上海电影制片厂。从1950年至
+        1966年，上海共出品各类故事影片300余部，形成了上海电影史上的第三次高潮。改革开放后，上海电影克服了“文革”造成的损失，开启了历史上第四个繁荣
+        时期。新世纪以来，上海影人在全国率先完成了转企改制，将传统的电影制片厂转变为现代化的电影集团，续写了百年上海电影的光荣与梦想。</string>
+
+    <!-- 恋爱与义务 -->
+    <string name="love_title">《恋爱与义务》难得一遇的首映体验</string>
+    <string name="love_content1">内容简介：\n本片由大导演卜万苍执导， 大编剧朱石麟谱稿， 改编自波兰女作家华罗琛同名小说， 阮玲玉、 金焰、 陈燕燕等大明星担纲主演。\n本片是阮玲玉的经典之作， 她在影片中分饰两角， 其中更是身穿水手校服， 展现少有的青春动感模样。  </string>
+    <string name="love_content2">故事梗概：\n本片讲述的是封建家庭小姐杨乃凡， 和大学生李祖义相爱， 但在封建礼教的压力之下， 她屈服了。 奉父母之命她嫁给
+        	了“世家子弟”黄大任， 并有了一对儿女。 后来， 杨乃凡偶与李祖义相遇， 两人仍没忘旧情， 一起私奔了。 过了一段幸福的乡间生活后， 两人为生活所困只得又回到
+        	城里谋生。 但社会已不接纳这两个人， 李祖义找不到工作， 在沉重的生活压力之下潦倒而死。 从此， 杨乃凡与女儿平儿过着艰苦的生活。 十五年后， 平儿长大了， 她
+        	与一富家子弟之间产生了爱情， 并得知母亲杨乃凡的身世。 杨乃凡为了女儿一生的幸福， 将平儿托给黄大任， 自己投河自尽。 </string>
+    <string name="love_content3">难得一遇的首映体验\n《恋爱与义务》 是一部被认为遗失已久的经典之作， 在千里之外的拉丁美洲被重新发现。 经由台北电影资料馆和意大利
+        L’immagineRitrovata修复实验室共同修复， 这次是本片修复版全球首轮放映， 并作为上海国际电影节经典修复单元的开幕影片。 其中这场放映特别选在了，拍摄这部电影的
+        联华电影制片厂原址——上海电影博物馆放映。更为难能可贵的是，本次放映特别设置了“辩士”现场表演。“辩士”是东亚地区默片时代独特的表演形式，由一位“辩士”配合影像向观众“实况解说”
+        影片。当年，出名的辩士往往比影片本身更为吸引观众，像日本大导演黑泽明的哥哥正是一位著名的辩士。本次担纲“辩士”的是台湾著名的作家、主持人、编辑、教授马国光先生。</string>
+
+    <!-- 神女 -->
+    <string name="goddess_title">修复版《神女》现场交响乐配乐</string>
+    <string name="goddess_content">2014年6月3日， 由拿督黄纪达基金会和中国电影资料馆联合推出的中国经典默片《神女》 数字修复版将重现上海滩， 于6
+        	月15日作为上海国际电影节的正式展映环节放映。 《神女》 将在上海电影博物馆重现， 现场将由交响乐团演奏为本片重新创作的电影配乐。 《神女》 的放映标志着这
+        	部老电影历经沧桑80年后历史性回归其原拍摄地——联华影业公司， 即现在的上海电影博物馆所在地。 </string>
+    <!-- 博物馆简介 -->
+    <string name="introduction_title">博物馆简介</string>
+    <string name="introduction_content">上海电影博物馆位于徐汇区漕溪路595号上海电影集团大楼1至4楼， 总体面积达1.5W平方米， 是一座融展示与活
+	    动、 参观与体验为一体， 涵盖文物收藏、 学术研究、 社会教育、 陈列展示等功能的行业博物馆。 博物馆分为四大主题展区， 五号摄影棚及一座艺术影厅。 上海电影博物馆呈现了百
+	    上海电影的魅力， 生动演绎了电影人、 电影事和电影背后的故事， 是满足大众电影文化需求的艺术圣殿， 也是上海电影乃至中国电影最为重要的展示窗口之一， 更将成为上海城市
+	    威化的新地标。 </string>
+    <!-- 开放时间 -->
+    <string name="business_title">开放时间</string>
+    <string name="business_content">周二至周日：9：00——17：00（16：30停止售票， 周一闭馆）</string>
+    <string name="business_content2">周一闭馆节假日除外</string>
+    <!-- 购票指南 -->
+    <string name="ticket_title">购票须知</string>
+    <string name="ticket_content">1、  购票前， 请仔细阅读上海电影博物馆门票价格一览表、 艺术影厅当日排片表。 电影开场钱半小时内恕不退票。 艺术影厅位
+	    于展区内， 需凭门票购买上述影院电影票。 </string>
+    <string name="ticket_content2">2、   艺术影厅儿童全票， 婴幼儿谢绝观看。 </string>
+    <string name="ticket_content3">3、   票、 款请当面点清。 </string>
+    <string name="ticket_content4">4、   售票处受理现金、 信用卡购票， 支票购票须三个工作日后取票。 </string>
+    <string name="ticket_content5">5、   购买优惠票， 须出示相关证件， 一票一证。 </string>
+    <string name="ticket_content6">6、  请观众遵守秩序， 文明购票。 </string>
+    <string name="ticket_content7">7、  请仔细阅读所购票面记载的相关事项， 并在有效期（场次）内使用。 </string>
+    <!-- 服务中心 -->
+    <string name="service_centre_title">服务中心</string>
+    <string name="service_centre_content">1楼大厅左侧</string>
+    <string name="service_centre_content2">周二至周日：9：00——17：00（16：30停止售票， 周一闭馆）</string>
+    <string name="service_centre_content3">开馆时间内为您提供一下服务：</string>
+    <string name="service_centre_content4">提供资讯服务。 </string>
+    <string name="service_centre_content5">提供票务、 艺术影厅排片、 入馆须知、 展映活动等信息。 </string>
+    <string name="service_centre_content6">提供预约讲解服务。 </string>
+    <string name="service_centre_content7">提供物品租借服务。 </string>
+    <string name="service_centre_content8">提供失物招领登记服务。 </string>
+    <string name="service_centre_content9">免费提供轮椅、 婴儿车及医药箱等便民服务。 </string>
+    <string name="service_centre_content10">免费提供导览图、 活动介绍等相关信息资料服务。 </string>
+    <string name="service_centre_content11">免费提供手机充电服务。 </string>
+    <!-- 博物馆商店 -->
+    <string name="shops_title">博物馆商店</string>
+    <string name="shops_content">1楼展区</string>
+    <string name="shops_content2">周二至周日：9：00——17：00</string>
+    <string name="shops_content3">专营电影衍生产品、 商务文具、 生活用品、 服饰配饰、 家居装饰等纪念产品。 </string>
+    <!-- 片场星吧 -->
+    <string name="star_title">片场星吧</string>
+    <string name="star_content">1楼大厅右侧</string>
+    <string name="star_content2">周二至周日：9：00——17：00（16：30停止售票， 周一闭馆）</string>
+    <string name="star_content3">“片场星吧”是一处多功能体验休闲区。 展项内容包括：明星墙、 笑脸墙、 影人签名钢琴、 获奥斯卡技术奖的闪电照明灯等。 参观
+	    者即可在此品尝咖啡、 稍事休息， 又可欣赏一侧墙面上昔日影星的风采， 感受电影拍摄现场紧张忙碌的工作气氛。 </string>
+    <!-- 联系方式 -->
+    <string name="contact_title">联系方式</string>
+    <string name="contact_content">参观资讯热线：021-64268666</string>
+    <string name="contact_content2">团队票务热线：021-54892625*8819</string>
+    <string name="contact_content3">志愿者招募热线：021-64878765</string>
+    <!-- 会员章程 -->
+    <string name="constitution_title">会员章程</string>
+    <string name="constitution_content">上海电影博物馆限量版艺术会员卡使用细则</string>
+    <string name="constitution_content2_title">1。 会员费用</string>
+    <string name="constitution_content2">艺术会员办理费用为500元， 有效期自办理起2年</string>
+    <string name="constitution_content2_2">（含20元工本费及480元储值金额）</string>
+    <string name="constitution_content3_title">2.会员礼遇</string>
+    <string name="constitution_content3">2.1首次办理艺术会员即可获得博物馆参观兑换卷2张;</string>
+    <string name="constitution_content3_2">2.2凭艺术会员卡参观博物馆可免费获得租借语音导览设备一次/套;(押金需自理)</string>
+    <string name="constitution_content3_3">2.3艺术会员购买博物馆门票， 出示会员卡可享受额外9折优惠;</string>
+    <string name="constitution_content3_4">2.4参加博物馆艺术影院举办的各类影展活动， 享受票价8折优惠;</string>
+    <string name="constitution_content3_5">2.5艺术会员在博物馆商店和咖啡去消费时， 凭会员卡可享受9折优惠;</string>
+    <string name="constitution_content3_6">2.6以信息与邮件形式优先获得博物馆近期活动讯息;</string>
+    <string name="constitution_content3_7">2.7艺术会员生日当日来馆， 凭有效证件可免费领取2张参观票;</string>
+    <string name="constitution_content3_8">2.8艺术会员可优先预约博物馆举办的各类展映活动、 教育活动</string>
+    <string name="constitution_content3_9_title">特别注意</string>
+    <string name="constitution_content3_9">2.9艺术会员有效期为自购卡日起2年。 逾期可付费延期， 没半年需缴纳手续费20元;</string>
+    <!-- 参观须知 -->
+    <string name="visit_title">参观须知</string>
+    <string name="visit_content">1、  严禁携带尖锐、 易燃易爆等危险品入馆。 </string>
+    <string name="visit_content2">2、  携带宠物者谢绝入馆。 </string>
+    <string name="visit_content3">3、  馆内严禁吸烟或饮食。 </string>
+    <string name="visit_content4">4、  参观时请勿触摸艺术品。 </string>
+    <string name="visit_content5">5、  请勿拍照。 若特别展览会允许拍照， 请勿使用闪光灯。 </string>
+    <string name="visit_content6">6、  请勿在展馆内喧哗， 影响他人参观。 </string>
+    <string name="visit_content7">7、  请保持展馆内清洁。 </string>
+    <string name="visit_content8">8、   请保管好您随身携带的物品。 </string>
+    <string name="visit_content9">9、   若为学校团体， 请教师务必全程带领参观， 维持学生的安全和秩序。 </string>
+    <string name="visit_content10">10、  本馆遇有重大活动或重要设备设施维修保养时， 可根据需要临时闭馆， 届时将预先告示公众。 </string>
+    <string name="title_activity_wxentry">WXEntryActivity</string>
+    <string name="title_activity_lovely">LovelyActivity</string>
+    <string name="title_activity_goddess">GoddessActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_audio">AudioActivity</string>
+    <string name="title_activity_login">上海电影博物馆</string>
+    <string name="title_activity_dimensional">DimensionalActivity</string>
+    <string name="title_activity_menu_interface">MenuInterfaceActivity</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_art_highlights">ArtHighlightsActivity</string>
+    <string name="title_activity_eagerness">EagernessActivity</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_screening">ScreeningActivity</string>
+    <string name="title_activity_information">InformationActivity</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="title_activity_brilliant">BrilliantActivity</string>
+    <string name="title_activity_high_floor">HighFloorActivity</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_crow">CrowActivity</string>
+    <string name="title_activity_art_class">ArtClassActivity</string>
+    <string name="title_activity_studio">StudioActivity</string>
+    <string name="title_activity_recoding">RecodingActivity</string>
+    <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_later_studio">LaterStudioActivity</string>
+    <string name="title_activity_clothing">ClothingActivity</string>
+    <string name="title_activity_encyclopedia">EncyclopediaActivity</string>
+    <string name="title_activity_shadow">ShadowActivity</string>
+    <string name="title_activity_river">RiverActivity</string>
+    <string name="title_activity_introduction">IntroductionActivity</string>
+    <string name="title_activity_business">BusinessActivity</string>
+    <string name="title_activity_ticket">TicketActivity</string>
+    <string name="title_activity_sup_services">SupServicesActivity</string>
+    <string name="title_activity_visit">VisitActivity</string>
+    <string name="title_activity_join">JoinActivity</string>
+    <string name="title_activity_contact">ContactActivity</string>
+    <string name="title_activity_service_centre">Service_centreActivity</string>
+    <string name="title_activity_studio_star">StudioStarActivity</string>
+    <string name="title_activity_shops">ShopsActivity</string>
+    <string name="title_activity_constitution">ConstitutionActivity</string>
+    <string name="title_activity_volunteer">VolunteerActivity</string>
+    <string name="title_activity_now_screening">NowScreeningActivity</string>
+    <string name="title_activity_future_screening">FutureScreeningActivity</string>
+    <string name="title_activity_review_screening">ReviewScreeningActivity</string>
+    <string name="title_activity_heaven">HeavenActivity</string>
+    <string name="title_activity_dragon">DragonActivity</string>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="top_bmsize">40dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">5dp</dimen>
+    <!-- 主界面 -->
+    <dimen name="menuInter_list_height">450dp</dimen>
+    <dimen name="menu_textsize">32sp</dimen>
+    <!-- 首页 -->
+    <dimen name="main_imageView3_margintop">250dp</dimen>
+    <!-- 艺术亮点 -->
+    <dimen name="highlights_gride_height">400dp</dimen>
+    <dimen name="high_title">25dp</dimen>
+    <dimen name="high_content">14dp</dimen>
+    <dimen name="high_image">280dp</dimen>
+    <!-- 艺术亮点内容 -->
+    <dimen name="textsize1">30sp</dimen>
+    <dimen name="textsize2">25sp</dimen>
+    <!-- 先睹为快 -->
+    <dimen name="iv_eagerness">300dp</dimen>
+    <dimen name="relative_margintop">60dp</dimen>
+    <!-- 参观资讯 -->
+    <dimen name="information_textsize">32dp</dimen>
+    <dimen name="information_contentsize">27dp</dimen>
+    <dimen name="constitution_size">28sp</dimen>
+    <dimen name="business_width">15dp</dimen>
+    <dimen name="iv1_introduction">350dp</dimen>
+    <dimen name="top_size">32sp</dimen>
+    <dimen name="main_btnsize">28dp</dimen>
+    <dimen name="include1">60dp</dimen>
+    <dimen name="beacon_size">30sp</dimen>
+    <!-- 右滑菜单 -->
+    <dimen name="setBehindOffsetRes">450dp</dimen>
+    <!-- 展映活动 -->
+    <dimen name="Screen_textsize1">30sp</dimen>
+    <dimen name="Screen_textsize2">26sp</dimen>
+    <!-- 菜单 -->
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="horizontal_margin">10dp</dimen>
+    <!-- 恋爱与义务 -->
+    <dimen name="lovely_textsize">30dp</dimen>
+    <dimen name="lovely_margintop">15dp</dimen>
+    <!-- 神女 -->
+    <dimen name="goddess_textsize">30dp</dimen>
+    <dimen name="goddess_margintop">15dp</dimen>
+    <dimen name="iv_screening_width">300dp</dimen>
+    <dimen name="iv_screening_height">400dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

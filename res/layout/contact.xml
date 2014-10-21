@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity" >
+
+    <include
+        android:id="@+id/include_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ImageView
+        android:id="@+id/contact_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_contact"
+         android:contentDescription="@string/image_contentDescription"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/contact" />
+
+    <TextView
+        android:id="@+id/contact_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_iv"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/contact_title"
+        android:textSize="@dimen/information_textsize" />
+
+    <TextView
+        android:id="@+id/contact_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_tv1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/contact_content"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/contact_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_tv2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/contact_content2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/contact_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_tv3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/contact_content3"
+        android:textSize="@dimen/information_contentsize" />
+
+</RelativeLayout>

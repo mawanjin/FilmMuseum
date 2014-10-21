@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header"
+    tools:context=".MovieActivity" >
+
+    <include
+        android:id="@+id/include_movie"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+	<include 
+	    android:id="@+id/include2_movie"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/include_movie"
+	    layout="@layout/player"/>
+    <!-- 播放按钮 -->
+
+    <ImageView
+        android:id="@+id/movie_player"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_height="wrap_content" />
+    <!-- 进度条 -->
+
+    <SeekBar
+        android:id="@+id/movie_seekbar"
+        android:layout_width="720dp"
+        android:layout_height="wrap_content"
+        
+        android:progressDrawable="@drawable/player_setting_bright_progressbar"
+        android:thumb="@drawable/player_settings_bright_thumb" />
+
+    <ImageView
+        android:id="@+id/movie_suki"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/movie_down"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

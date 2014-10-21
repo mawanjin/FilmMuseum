@@ -1,0 +1,4 @@
+<resources>
+		 <!-- 首页 -->
+	<dimen name="main_imageView3_margintop">50dp</dimen>
+</resources>

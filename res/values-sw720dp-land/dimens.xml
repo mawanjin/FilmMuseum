@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主界面 -->
+    <dimen name="menuInter_list_height">500dp</dimen>
+    <!-- 首页 -->
+    <dimen name="main_imageView3_margintop">250dp</dimen>
+    <!-- 艺术亮点 -->
+    <dimen name="highlights_gride_height">450dp</dimen>
+    <dimen name="high_title">25dp</dimen>
+    <dimen name="high_content">14dp</dimen>
+    <dimen name="high_image">330dp</dimen>
+    <!-- 艺术亮点内容 -->
+    <dimen name="textsize1">45sp</dimen>
+    <dimen name="textsize2">35sp</dimen>
+    <!-- 先睹为快 -->
+    <dimen name="iv_eagerness">300dp</dimen>
+    <dimen name="relative_margintop">60dp</dimen>
+    <!-- 参观资讯 -->
+    <dimen name="business_width">15dp</dimen>
+    <dimen name="iv1_introduction">350dp</dimen>
+    <dimen name="top_size">30sp</dimen>
+    <dimen name="include1">50dp</dimen>
+    <dimen name="beacon_size">30sp</dimen>
+    <dimen name="setBehindOffsetRes">450dp</dimen>
+    <!-- 展映活动 -->
+    <dimen name="Screen_textsize1">32sp</dimen>
+    <dimen name="Screen_textsize2">26sp</dimen>
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioActivity.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoActivity.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/com/example/eagerness/EagernessActivity.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/com/example/eagerness/MovieActivity.java" charset="GB2312" />
+    <file url="PROJECT" charset="GB2312" />
+  </component>
+</project>
+

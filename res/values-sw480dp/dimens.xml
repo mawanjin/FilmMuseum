@@ -1,0 +1,21 @@
+<resources>
+	 <!-- 首页 -->
+	<dimen name="main_imageView3_margintop">50dp</dimen>
+	<!-- 主界面 -->
+    <dimen name="menuInter_list_height">350dp</dimen>
+    <!-- 艺术亮点 -->
+	<dimen name="highlights_gride_height">250dp</dimen>
+	<dimen name="high_title">20dp</dimen>
+	<dimen name="high_content">10dp</dimen>
+	<dimen name="high_image">160dp</dimen>
+	
+	<dimen name="top_size">25sp</dimen>
+	<!-- 右滑菜单 -->
+	<dimen name="setBehindOffsetRes">70dp</dimen>
+	<!-- 展映活动 -->
+	<dimen name="textsize1">20sp</dimen>
+	<dimen name="textsize2">18sp</dimen>
+	
+	<dimen name="iv_screening_width">250dp</dimen>
+	<dimen name="iv_screening_height">350dp</dimen>
+</resources>

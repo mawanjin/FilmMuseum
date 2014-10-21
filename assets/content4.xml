@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <layer>
+        <type>image</type>
+
+        <src>glan.png</src>
+
+        <width>1480</width>
+
+        <height>700</height>
+
+        <x>0</x>
+
+        <y>0</y>
+
+        <text></text>
+
+        <textsize>0</textsize>
+    </layer>
+    <layer>
+        <type>text</type>
+
+        <src></src>
+
+        <width>0</width>
+
+        <height>0</height>
+
+        <x>0</x>
+
+        <y>0</y>
+
+        <text>电影观有哪些经典馆藏？</text>
+
+        <textsize>32</textsize>
+    </layer>
+    <layer>
+        <type>text</type>
+
+        <src></src>
+
+        <width>0</width>
+
+        <height>0</height>
+
+        <x>0</x>
+
+        <y>0</y>
+
+        <text>江泽民为上影集团60周年为家暴致上影集团\n老艺术《大闹天宫》分镜头画面张光宇\n的《大闹天宫》人《孔夫子》剧照影集《再\n会吧
+	    上海》剧照底陈毅送给《南征北战》主联华摄影机。</text>
+
+        <textsize>27</textsize>
+    </layer>
+    <layer>
+        <type>text</type>
+
+        <src></src>
+
+        <width>0</width>
+
+        <height>0</height>
+
+        <x>0</x>
+
+        <y>0</y>
+
+        <text>馆藏有哪些大师手记？</text>
+
+        <textsize>32</textsize>
+    </layer>
+    <layer>
+        <type>text</type>
+
+        <src></src>
+
+        <width>0</width>
+
+        <height>0</height>
+
+        <x>0</x>
+
+        <y>0</y>
+
+        <text>夏衍批阅艾明之剧本手稿\n张瑞芳的日记本\n夏衍写给张石川的信\n吕其明的《红旗颂》曲谱</text>
+
+        <textsize>27</textsize>
+    </layer>
+
+</resources>

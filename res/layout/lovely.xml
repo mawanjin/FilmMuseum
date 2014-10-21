@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LovelyActivity" >
+
+        <include
+            android:id="@+id/include_lovely"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/include1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            layout="@layout/top" />
+
+        <ImageView
+            android:id="@+id/lovely_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include_lovely"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:id="@+id/lovely_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lovely_iv"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/lovely_margintop"
+            android:text="@string/love_title"
+            android:textSize="@dimen/lovely_textsize" />
+
+        <TextView
+            android:id="@+id/lovely_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/lovely_tv3"
+            android:layout_below="@+id/lovely_tv3"
+            android:layout_marginTop="@dimen/lovely_margintop"
+            android:text="@string/love_content1"
+            android:textSize="@dimen/lovely_textsize" />
+
+        <TextView
+            android:id="@+id/lovely_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/lovely_tv1"
+            android:layout_below="@+id/lovely_tv1"
+            android:layout_marginTop="@dimen/lovely_margintop"
+            android:text="@string/love_content2"
+            android:textSize="@dimen/lovely_textsize" />
+
+        <TextView
+            android:id="@+id/lovely_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/lovely_tv2"
+            android:layout_below="@+id/lovely_tv2"
+            android:layout_marginTop="@dimen/lovely_margintop"
+            android:text="@string/love_content3"
+            android:textSize="@dimen/lovely_textsize" />
+    </RelativeLayout>
+
+</ScrollView>

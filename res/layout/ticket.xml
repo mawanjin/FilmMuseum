@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketActivity" >
+
+    <include
+        android:id="@+id/include_ticket"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
+
+    <ImageView
+        android:id="@+id/ticket_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_ticket"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ticket" />
+
+    <TextView
+        android:id="@+id/ticket_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_iv"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/ticket_title"
+        android:textSize="@dimen/information_textsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content2"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content3"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content4"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv5"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content5"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content6"
+        android:textSize="@dimen/information_contentsize" />
+
+    <TextView
+        android:id="@+id/ticket_tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket_tv7"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ticket_content7"
+        android:textSize="@dimen/information_contentsize" />
+
+</RelativeLayout>
