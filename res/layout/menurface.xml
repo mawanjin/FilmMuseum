@@ -1,28 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
 
-     <include
-         android:id="@+id/include_menurface"
-         android:layout_width="fill_parent"
-         android:layout_height="@dimen/include1"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentRight="true"
-         layout="@layout/top" />
+    <include
+        android:id="@+id/include_menurface"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/include1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/top" />
 
     <ListView
         android:id="@+id/lv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignLeft="@+id/include_menurface"
-        android:scrollbars="none"
-        android:divider="@drawable/line3"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/include_menurface"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/include_menurface" >
+        android:layout_marginTop="20dp"
+        android:divider="@drawable/line3"
+        android:scrollbars="none" >
     </ListView>
+
 </RelativeLayout>
