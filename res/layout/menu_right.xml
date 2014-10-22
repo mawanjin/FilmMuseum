@@ -19,38 +19,15 @@
             android:textColor="#222626"
             android:textSize="32sp"
             android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btn_right"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:src="@drawable/button3" />
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_right"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_alignRight="@+id/textView1"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line1" />
         <!-- 艺术亮点 -->
 
         <Button
             android:id="@+id/btn_art"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_right"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
             android:background="#00000000"
             android:gravity="left|center_vertical"

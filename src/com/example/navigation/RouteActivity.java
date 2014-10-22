@@ -11,18 +11,14 @@ import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
 import com.example.information.BusinessActivity;
 import com.example.information.ConstitutionActivity;
 import com.example.information.ContactActivity;
 import com.example.information.InformationActivity;
 import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
 import com.example.information.SupServicesActivity;
 import com.example.information.TicketActivity;
 import com.example.information.VisitActivity;
-import com.example.information.VolunteerActivity;
 import com.example.screening.FutureScreeningActivity;
 import com.example.screening.NowScreeningActivity;
 import com.example.screening.ReviewScreeningActivity;
@@ -34,10 +30,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -82,17 +76,10 @@ public class RouteActivity extends Activity implements View.OnClickListener {
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
 				Intent intent = new Intent();
-				if (position == 0) {
-					intent.setClass(getApplicationContext(),
-							RecommendActivity.class);
-					startActivity(intent);
-					overridePendingTransition(R.anim.a2, R.anim.a1);
-				} else {
-					intent.setClass(getApplicationContext(),
-							OptionalActivity.class);
-					startActivity(intent);
-					overridePendingTransition(R.anim.a2, R.anim.a1);
-				}
+				intent.setClass(getApplicationContext(),
+						RecommendActivity.class);
+				startActivity(intent);
+				overridePendingTransition(R.anim.a2, R.anim.a1);
 
 			}
 		});
@@ -256,7 +243,7 @@ public class RouteActivity extends Activity implements View.OnClickListener {
 			break;
 		// 加入我们
 		case R.id.btn_join:
-			intent.setClass(getApplicationContext(), JoinActivity.class);
+			intent.setClass(getApplicationContext(), ConstitutionActivity.class);
 			startActivity(intent);
 			finish();
 			break;

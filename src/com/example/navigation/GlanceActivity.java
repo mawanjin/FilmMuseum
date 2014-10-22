@@ -7,13 +7,11 @@ import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
 import com.example.information.BusinessActivity;
+import com.example.information.ConstitutionActivity;
 import com.example.information.ContactActivity;
 import com.example.information.InformationActivity;
 import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
 import com.example.information.SupServicesActivity;
 import com.example.information.TicketActivity;
 import com.example.information.VisitActivity;
@@ -25,17 +23,14 @@ import com.slidingmenu.lib.SlidingMenu;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -229,7 +224,7 @@ public class GlanceActivity extends Activity implements View.OnClickListener {
 			break;
 		// 加入我们
 		case R.id.btn_join:
-			intent.setClass(getApplicationContext(), JoinActivity.class);
+			intent.setClass(getApplicationContext(), ConstitutionActivity.class);
 			startActivity(intent);
 			finish();
 			break;

@@ -8,7 +8,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -30,13 +29,12 @@ import android.widget.Toast;
 
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
-import com.example.filmmuseum.SukiActivity;
 import com.example.filmmuseum.SysApplication;
 import com.example.information.BusinessActivity;
+import com.example.information.ConstitutionActivity;
 import com.example.information.ContactActivity;
 import com.example.information.InformationActivity;
 import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
 import com.example.information.SupServicesActivity;
 import com.example.information.TicketActivity;
 import com.example.information.VisitActivity;
@@ -141,8 +139,6 @@ public class ArtHighlightsActivity extends Activity implements
 			}
 		});
 
-		// 获取菜单控件的ID
-		view.findViewById(R.id.btn_right).setOnClickListener(this);
 		// 艺术亮点
 		view.findViewById(R.id.btn_art).setOnClickListener(this);
 		// 先睹为快
@@ -186,13 +182,6 @@ public class ArtHighlightsActivity extends Activity implements
 	public void onClick(View view) {
 		Intent intent = new Intent();
 		switch (view.getId()) {
-		// 我的收藏
-		case R.id.btn_right:
-			intent.setClass(getApplicationContext(), SukiActivity.class);
-			startActivity(intent);
-			finish();
-			overridePendingTransition(R.anim.a2, R.anim.a1);
-			break;
 		// 艺术亮点
 		case R.id.btn_art:
 			intent.setClass(getApplicationContext(),
@@ -310,7 +299,7 @@ public class ArtHighlightsActivity extends Activity implements
 			break;
 		// 加入我们
 		case R.id.btn_join:
-			intent.setClass(getApplicationContext(), JoinActivity.class);
+			intent.setClass(getApplicationContext(), ConstitutionActivity.class);
 			startActivity(intent);
 			finish();
 			overridePendingTransition(R.anim.a2, R.anim.a1);

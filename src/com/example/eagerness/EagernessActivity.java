@@ -254,7 +254,7 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 			break;
 		// 加入我们
 		case R.id.btn_join:
-			intent.setClass(getApplicationContext(), JoinActivity.class);
+			intent.setClass(getApplicationContext(), ConstitutionActivity.class);
 			startActivity(intent);
 			finish();
 			break;

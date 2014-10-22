@@ -11,9 +11,6 @@ import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.id;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
 import com.example.navigation.GlanceActivity;
 import com.example.navigation.HighFloorActivity;
 import com.example.navigation.NavigationActivity;
@@ -26,16 +23,13 @@ import com.slidingmenu.lib.SlidingMenu;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
@@ -257,7 +251,7 @@ public class SupServicesActivity extends Activity implements OnClickListener {
 			break;
 		// 加入我们
 		case R.id.btn_join:
-			intent.setClass(getApplicationContext(), JoinActivity.class);
+			intent.setClass(getApplicationContext(), ConstitutionActivity.class);
 			startActivity(intent);
 			finish();
 			break;

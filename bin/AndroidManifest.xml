@@ -46,20 +46,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.intelligent.DimensionalActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-        </activity>
-        <activity
             android:name="com.example.filmmuseum.MenuInterfaceActivity"
             android:label="@string/title_activity_menu_interface"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.intelligent.WebActivity"
-            android:label="@string/title_activity_web"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -88,68 +76,8 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.arthighlights.BrilliantActivity"
-            android:label="@string/title_activity_brilliant"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="com.example.navigation.HighFloorActivity"
             android:label="@string/title_activity_high_floor"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.FirstActivity"
-            android:label="@string/title_activity_first"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.CrowActivity"
-            android:label="@string/title_activity_crow"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.ArtClassActivity"
-            android:label="@string/title_activity_art_class"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.StudioActivity"
-            android:label="@string/title_activity_studio"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.RecodingActivity"
-            android:label="@string/title_activity_recoding"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.AnimationActivity"
-            android:label="@string/title_activity_animation"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.LaterStudioActivity"
-            android:label="@string/title_activity_later_studio"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.ClothingActivity"
-            android:label="@string/title_activity_clothing"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.EncyclopediaActivity"
-            android:label="@string/title_activity_encyclopedia"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.ShadowActivity"
-            android:label="@string/title_activity_shadow"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.arthighlights.RiverActivity"
-            android:label="@string/title_activity_river"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -178,11 +106,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.information.JoinActivity"
-            android:label="@string/title_activity_join"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="com.example.information.ContactActivity"
             android:label="@string/title_activity_contact"
             android:screenOrientation="portrait" >
@@ -205,11 +128,6 @@
         <activity
             android:name="com.example.information.ConstitutionActivity"
             android:label="@string/title_activity_constitution"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.information.VolunteerActivity"
-            android:label="@string/title_activity_volunteer"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -258,27 +176,9 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.navigation.OptionalActivity"
-            android:label="@string/title_activity_optional"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="com.example.eagerness.MovieActivity"
             android:label="@string/title_activity_movie"
             android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.intelligent.IntelligenceActivity"
-            android:label="@string/title_activity_intelligence"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.intelligent.PreWebActivity"
-            android:label="@string/title_activity_pre_web" >
-        </activity>
-        <activity
-            android:name="com.example.filmmuseum.SukiActivity"
-            android:label="@string/title_activity_suki" >
         </activity>
         <activity
             android:name="com.example.screening.LovelyActivity"
@@ -292,28 +192,11 @@
             android:name="com.example.arthighlights.VideoActivity"
             android:label="@string/title_activity_video"
             android:screenOrientation="portrait" >
-             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:scheme="sdksample" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.arthighlights.AudioActivity"
             android:label="@string/title_activity_audio"
             android:screenOrientation="portrait" >
-             <intent-filter>
-                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.filmmuseum.wxapi.WXEntryActivity"
-            android:label="@string/title_activity_wxentry" >
         </activity>
     </application>
 
