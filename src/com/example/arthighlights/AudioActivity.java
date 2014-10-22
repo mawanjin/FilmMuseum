@@ -36,30 +36,19 @@ import java.util.TimerTask;
 public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 	private TextView tv, tv2, tv3;
 	@SuppressWarnings("unused")
-	private ImageView ivReturn, ivMenu, iv, iv2, iv3, iv4, iv5;
-	private PopupWindow pop;
+	private ImageView ivReturn, ivMenu, iv, iv2,iv3;
 	private MediaPlayer player = null;
 	private SeekBar seekbar;
-	private int x, y;
 	private boolean flag = true;
 	private upDateSeekBar update; // 更新进度条用
 	private String path = null;
 	private Bitmap bm;
-	// 申请的微信 appid
-	private static final String APP_ID = "wx6462caed59df1b17";
-	// IWXAPI是第三方app和微信通信的openaip接口
-	private IWXAPI api;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// 隐藏标题栏
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.audio);
-		regToWx();
-		WindowManager wm = (WindowManager) this
-				.getSystemService(Context.WINDOW_SERVICE);
-		x = wm.getDefaultDisplay().getWidth();
-		y = wm.getDefaultDisplay().getHeight();
 		SysApplication.getInstance().addActivity(this);
 		tv = (TextView) findViewById(R.id.tv_title);
 
@@ -69,8 +58,6 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 		iv = (ImageView) findViewById(R.id.audio_iv);
 		iv2 = (ImageView) findViewById(R.id.audio_iv2);
 		iv3 = (ImageView) findViewById(R.id.audio_iv3);
-		iv4 = (ImageView) findViewById(R.id.audio_iv4);
-		iv5 = (ImageView) findViewById(R.id.audio_iv5);
 
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
@@ -111,26 +98,12 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 						iv2.setY(arts.getY());
 						iv2.setLayoutParams(params);
 					}
-//					if (arts.getId() == 4) {
-//						bm = BitmapFactory.decodeFile(getExternalStoragePath()
-//								+ "/FilmMuseum/system/image/" + arts.getSrc());
-//						iv3.setImageBitmap(bm);
-//						iv3.setX(arts.getX());
-//						iv3.setY(arts.getY());
-//					}
-//					if (arts.getId() == 5) {
-//						bm = BitmapFactory.decodeFile(getExternalStoragePath()
-//								+ "/FilmMuseum/system/image/" + arts.getSrc());
-//						iv4.setImageBitmap(bm);
-//						iv4.setX(arts.getX());
-//						iv4.setY(arts.getY());
-//					}
 					if (arts.getId() == 6) {
 						bm = BitmapFactory.decodeFile(getExternalStoragePath()
 								+ "/FilmMuseum/system/image/" + arts.getSrc());
-						iv5.setImageBitmap(bm);
-						iv5.setX(arts.getX());
-						iv5.setY(arts.getY());
+						iv3.setImageBitmap(bm);
+						iv3.setX(arts.getX());
+						iv3.setY(arts.getY());
 					}
 				} else if (arts.getType().equals("text")) {
 					if (arts.getId() == 7) {
@@ -149,13 +122,7 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 				}
 			}
 		}
-
-		iv4.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				showPopUp(v);
-			}
-		});
-
+		
 		List<ArtContent> con = dow.readConXml(getExternalStoragePath()
 				+ "/FilmMuseum/system/content.xml");
 		Bundle bundle = getIntent().getExtras();
@@ -287,70 +254,6 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 		finish();
 		super.onStop();
 	}
-
-	private void showPopUp(View v) {
-		View view = LayoutInflater.from(getApplicationContext()).inflate(
-				R.layout.share, null);
-		Button btn = (Button) view.findViewById(R.id.share_btn);
-		btn.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				if (pop != null && pop.isShowing() == true) {
-					pop.dismiss();
-				}
-			}
-		});
-		ImageView iv1 = (ImageView) view.findViewById(R.id.share_iv);
-		iv1.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				Log.v("HTTWs", "000");
-				String text = "微信分享";
-				WXTextObject textObj = new WXTextObject();
-				textObj.text = text;
-				WXMediaMessage msg = new WXMediaMessage();
-				msg.mediaObject = textObj;
-				msg.description = text;
-				SendMessageToWX.Req req = new SendMessageToWX.Req();
-				
-				req.transaction = buildTransaction("text");
-				req.message = msg;
-				
-				api.sendReq(req);
-				
-				SysApplication.getInstance().exit();
-			}
-		});
-		ImageView iv2=(ImageView) view.findViewById(R.id.share_iv2);
-		iv2.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				WXWebpageObject webpage = new WXWebpageObject();
-				webpage.webpageUrl="http://www.baidu.com";
-				WXMediaMessage msg = new WXMediaMessage(webpage);
-				msg.title ="测试";
-				msg.description ="made in HTTWs";
-				SendMessageToWX.Req req=new SendMessageToWX.Req();
-				req.transaction = String.valueOf(System.currentTimeMillis());
-				req.message = msg;
-				req.scene = SendMessageToWX.Req.WXSceneTimeline;
-				api.sendReq(req);
-			}
-		});
-		pop = new PopupWindow(view, LayoutParams.FILL_PARENT, 600);
-		pop.setFocusable(true);
-		pop.setOutsideTouchable(true);
-		pop.setBackgroundDrawable(new BitmapDrawable());
-		pop.showAtLocation(v, Gravity.NO_GRAVITY, 0, (int) y);
-	}
-	private String buildTransaction(final String type) {
-		return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
-	}
-
-	private void regToWx() {
-		// 创建WXAPIFactory工厂，获取IWXAPI的实例
-		api = WXAPIFactory.createWXAPI(this, APP_ID, true);
-		boolean bl=api.registerApp(APP_ID);
-		Log.v("HTTWs", "bl "+bl);
-	}
-
 	public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
 		Log.v("HTTWs", "----------> " + progress);
 	}
