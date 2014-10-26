@@ -1,55 +1,49 @@
 package com.example.navigation;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.ActionBar.LayoutParams;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.widget.*;
 import com.example.arthighlights.AudioActivity;
+import com.example.data.FloorLegendFactory;
+import com.example.data.MarkerPointer;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.regional.PhotoViewAttacher;
 import com.example.regional.PhotoViewAttacher.OnMatrixChangedListener;
-import com.example.regional.PhotoViewAttacher.OnPhotoTapListener;
+import org.melonframwork.android.Pointer;
+import org.melonframwork.android.TouchImageView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * 楼层图主页
+ */
 public class HighFloorActivity extends Activity implements View.OnClickListener {
+    private String TAG = HighFloorActivity.class.getName();
 
 	private TextView tv;
 
 	private ImageView iv1, iv2, iv3, iv4;
-	private ImageView zom;
 	private ImageView ivMenu;
 	private ImageView ivReturn;
-	private int cnt = 1;
-	private PhotoViewAttacher attacher;
 	private PopupWindow pop;
-	private int popX;
-	private int popY;
 	private Bitmap bm;
 	private LinearLayout layout;
+    private FrameLayout container;
+    private TouchImageView touchImageView;
+
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,15 +51,13 @@ public class HighFloorActivity extends Activity implements View.OnClickListener 
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.high_floor);
 		SysApplication.getInstance().addActivity(this);
+
+        container = (FrameLayout) findViewById(R.id.container);
+        switchFloor(1);
 		tv = (TextView) findViewById(R.id.tv_title);
 		tv.setText("博物馆楼层图");
-		zom = (ImageView) findViewById(R.id.iv_highfloor);
-		bm = BitmapFactory.decodeResource(getResources(), R.drawable.f1);
-		zom.setImageBitmap(bm);
-		attacher = new PhotoViewAttacher(zom);
-		Log.v("HTTWs", "---->1");
-		attacher.setOnMatrixChangeListener(new MatrixChangeListener());
-		attacher.setOnPhotoTapListener(new PhotoTapListener());
+
+
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -91,47 +83,76 @@ public class HighFloorActivity extends Activity implements View.OnClickListener 
 		ivMenu.setVisibility(View.GONE);
 	}
 
+    private void switchFloor(int index){
+        container.removeAllViews();
+
+        switch (index){
+            case 1:
+                touchImageView = new TouchImageView(this,R.drawable.f1, FloorLegendFactory.getInstance(this).getViewItems());
+                break;
+            case 2:
+                touchImageView = new TouchImageView(this,R.drawable.f2, FloorLegendFactory.getInstance(this).getF2Items());
+                break;
+            case 3:
+                touchImageView = new TouchImageView(this,R.drawable.f3, FloorLegendFactory.getInstance(this).getF3Items());
+                break;
+            case 4:
+                touchImageView = new TouchImageView(this,R.drawable.f4, FloorLegendFactory.getInstance(this).getF4Items());
+                break;
+        }
+
+        touchImageView.setmActivity(this);
+        touchImageView.setEventDispatcher(new TouchImageView.EventDispatcher() {
+
+            public Pointer onClick(Pointer p) {
+                Log.d(TAG,"good");
+                //没有tip说明它本身是tip
+                if(p.tip!=null)return null;
+
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), AudioActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("id", ((MarkerPointer)p).getId());
+                intent.putExtras(bundle);
+                startActivity(intent);
+                return null;
+            }
+        });
+        container.addView(touchImageView);
+    }
+
 	public void onClick(View view) {
 		if (pop != null && pop.isShowing()) {
 			pop.dismiss();
 		}
 		switch (view.getId()) {
 		case R.id.highfloor_iv1:
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.f1);
-			zom.setImageBitmap(bm);
-			cnt = 1;
 			iv1.setImageResource(R.drawable.f1_2);
 			iv2.setImageResource(R.drawable.f2_1);
 			iv3.setImageResource(R.drawable.f3_1);
 			iv4.setImageResource(R.drawable.f4_1);
+            switchFloor(1);
 			break;
 		case R.id.highfloor_iv2:
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.f2);
-			zom.setImageBitmap(bm);
-			cnt = 2;
 			iv1.setImageResource(R.drawable.f1_1);
 			iv2.setImageResource(R.drawable.f2_2);
 			iv3.setImageResource(R.drawable.f3_1);
 			iv4.setImageResource(R.drawable.f4_1);
-
+            switchFloor(2);
 			break;
 		case R.id.highfloor_iv3:
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.f3);
-			zom.setImageBitmap(bm);
-			cnt = 3;
 			iv1.setImageResource(R.drawable.f1_1);
 			iv2.setImageResource(R.drawable.f2_1);
 			iv3.setImageResource(R.drawable.f3_2);
 			iv4.setImageResource(R.drawable.f4_1);
+            switchFloor(3);
 			break;
 		case R.id.highfloor_iv4:
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.f4);
-			zom.setImageBitmap(bm);
-			cnt = 4;
 			iv1.setImageResource(R.drawable.f1_1);
 			iv2.setImageResource(R.drawable.f2_1);
 			iv3.setImageResource(R.drawable.f3_1);
 			iv4.setImageResource(R.drawable.f4_2);
+            switchFloor(4);
 			break;
 		default:
 			break;
@@ -170,344 +191,22 @@ public class HighFloorActivity extends Activity implements View.OnClickListener 
 
 	protected void onDestroy() {
 		Log.v("HTTWs", "highfloorActivity进入ondestroy");
-		if (bm.isRecycled() == false) {
+		if (bm!=null&&bm.isRecycled() == false) {
 			bm.recycle();
 			bm = null;
 			System.gc();
 		}
-		zom = null;
 		System.gc();
 		super.onDestroy();
 	}
 
-	private class PhotoTapListener implements OnPhotoTapListener {
-
-		public void onPhotoTap(View view, float x, float y) {
-
-			float xPercentage = x * 100f;
-			float yPercentage = y * 100f;
-			float scale = attacher.getScale();
-			if (cnt == 1) {
-				if (xPercentage > 10 && xPercentage < 24 && yPercentage > 15
-						&& yPercentage < 25) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						Log.v("HTTWs", " __ 1");
-						popX = (int) (attacher.evX - 150+150*(1-scale));
-						popY = (int) (attacher.evY - 70+160*(1-scale));
-					}
-					showPopUp(view, 1, 1, scale);
-				}
-				if (xPercentage > 60 && xPercentage < 70 && yPercentage > 15
-						&& yPercentage < 25) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 1, scale);
-				}
-				if (xPercentage > 80 && xPercentage < 95 && yPercentage > 30
-						&& yPercentage < 40) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 1, scale);
-				}
-				if (xPercentage > 30 && xPercentage < 40 && yPercentage > 50
-						&& yPercentage < 60) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 1, scale);
-				}
-				if (xPercentage > 35 && xPercentage < 45 && yPercentage > 65
-						&& yPercentage < 75) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 1, scale);
-				}
-			}
-			if (cnt == 2) {
-				if (xPercentage > 15 && xPercentage < 26 && yPercentage > 17
-						&& yPercentage < 25) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 75 && xPercentage < 85 && yPercentage > 24
-						&& yPercentage < 32) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 8 && xPercentage < 18 && yPercentage > 50
-						&& yPercentage < 56) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 30 && xPercentage < 41 && yPercentage > 60
-						&& yPercentage < 70) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 58 && xPercentage < 67 && yPercentage > 55
-						&& yPercentage < 62) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 22 && xPercentage < 33 && yPercentage > 80
-						&& yPercentage < 88) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-				if (xPercentage > 62 && xPercentage < 72 && yPercentage > 80
-						&& yPercentage < 90) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 2, scale);
-				}
-			}
-			if (cnt == 3) {
-				if (xPercentage > 13 && xPercentage < 23 && yPercentage > 20
-						&& yPercentage < 30) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-				}
-				if (xPercentage > 40 && xPercentage < 50 && yPercentage > 22
-						&& yPercentage < 32) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-				}
-				if (xPercentage > 71 && xPercentage < 81 && yPercentage > 21
-						&& yPercentage < 31) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-				}
-				if (xPercentage > 22 && xPercentage < 32 && yPercentage > 47
-						&& yPercentage < 57) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-				}
-				if (xPercentage > 74 && xPercentage < 84 && yPercentage > 48
-						&& yPercentage < 58) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-					;
-				}
-				if (xPercentage > 38 && xPercentage < 48 && yPercentage > 76
-						&& yPercentage < 86) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 3, scale);
-				}
-			}
-			if (cnt == 4) {
-				if (xPercentage > 13 && xPercentage < 23 && yPercentage > 23
-						&& yPercentage < 33) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 4, scale);
-				}
-				if (xPercentage > 76 && xPercentage < 86 && yPercentage > 34
-						&& yPercentage < 44) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 4, scale);
-				}
-				if (xPercentage > 30 && xPercentage < 40 && yPercentage > 50
-						&& yPercentage < 60) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 4, scale);
-				}
-				if (xPercentage > 52 && xPercentage < 62 && yPercentage > 72
-						&& yPercentage < 82) {
-					if (attacher.getMaxScale() == (int) attacher.getScale()) {
-						popX = (int) (attacher.evX - 270);
-						popY = (int) (attacher.evY - 300);
-					} else if (attacher.getMinScale() == attacher.getScale()) {
-						popX = (int) (attacher.evX - 120);
-						popY = (int) (attacher.evY - 30);
-					} else {
-						popX = (int) (attacher.evX - 150);
-						popY = (int) (attacher.evY - 70);
-					}
-					showPopUp(view, 1, 4, scale);
-				}
-			}
-		}
-	}
-
+    /**
+     *
+     * @param v
+     * @param id
+     * @param i
+     * @param scale
+     */
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
 	private void showPopUp(View v, final int id, int i, float scale) {
@@ -550,7 +249,7 @@ public class HighFloorActivity extends Activity implements View.OnClickListener 
 		int[] location = new int[2];
 		v.getLocationOnScreen(location);
 
-		pop.showAtLocation(v, Gravity.NO_GRAVITY, popX, popY);
+//		pop.showAtLocation(v, Gravity.NO_GRAVITY, popX, popY);
 	}
 
 	private class MatrixChangeListener implements OnMatrixChangedListener {

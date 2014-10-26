@@ -1,32 +1,25 @@
 package com.example.filmmuseum;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.Window;
+import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.information.InformationActivity;
 import com.example.navigation.NavigationActivity;
 import com.example.screening.ScreeningActivity;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
+import java.util.*;
 
+/**
+ * 博物馆在线列表主页
+ */
 public class MenuInterfaceActivity extends Activity {
 
 	private ListView lv;

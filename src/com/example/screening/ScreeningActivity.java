@@ -1,52 +1,32 @@
 package com.example.screening;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
-import com.example.information.BusinessActivity;
-import com.example.information.ContactActivity;
-import com.example.information.InformationActivity;
-import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
-import com.example.information.SupServicesActivity;
-import com.example.information.TicketActivity;
-import com.example.information.VisitActivity;
+import com.example.information.*;
 import com.example.navigation.GlanceActivity;
 import com.example.navigation.HighFloorActivity;
 import com.example.navigation.NavigationActivity;
 import com.example.navigation.RouteActivity;
 import com.slidingmenu.lib.SlidingMenu;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Intent;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.*;
 
+/**
+ * 展影活动
+ */
 public class ScreeningActivity extends Activity implements OnClickListener {
 
 	private TextView tv;

@@ -32,6 +32,9 @@ import com.slidingmenu.lib.SlidingMenu;
 
 import java.util.*;
 
+/**
+ * ÏÈ¶ÃÎª¿ì
+ */
 public class EagernessActivity extends Activity implements View.OnClickListener {
 
 	private TextView tv;

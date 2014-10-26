@@ -1,18 +1,19 @@
 package com.example.information;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
 import com.example.navigation.GlanceActivity;
 import com.example.navigation.HighFloorActivity;
 import com.example.navigation.NavigationActivity;
@@ -23,26 +24,11 @@ import com.example.screening.ReviewScreeningActivity;
 import com.example.screening.ScreeningActivity;
 import com.slidingmenu.lib.SlidingMenu;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Intent;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.*;
 
+/**
+ * 参观资讯主页
+ */
 public class InformationActivity extends Activity implements OnClickListener {
 
 	private TextView tv;

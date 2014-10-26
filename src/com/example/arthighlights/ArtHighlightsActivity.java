@@ -1,45 +1,20 @@
 package com.example.arthighlights;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.AdapterView;
+import android.view.*;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SukiActivity;
 import com.example.filmmuseum.SysApplication;
-import com.example.information.BusinessActivity;
-import com.example.information.ContactActivity;
-import com.example.information.InformationActivity;
-import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
-import com.example.information.SupServicesActivity;
-import com.example.information.TicketActivity;
-import com.example.information.VisitActivity;
+import com.example.information.*;
 import com.example.navigation.GlanceActivity;
 import com.example.navigation.HighFloorActivity;
 import com.example.navigation.NavigationActivity;
@@ -52,6 +27,11 @@ import com.example.util.ArtMenu;
 import com.example.util.Download;
 import com.slidingmenu.lib.SlidingMenu;
 
+import java.util.*;
+
+/**
+ * “’ ı¡¡µ„
+ */
 public class ArtHighlightsActivity extends Activity implements
 		View.OnClickListener {
 

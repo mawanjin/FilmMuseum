@@ -1,48 +1,31 @@
 package com.example.navigation;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 import com.example.arthighlights.ArtHighlightsActivity;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
-import com.example.information.BusinessActivity;
-import com.example.information.ContactActivity;
-import com.example.information.InformationActivity;
-import com.example.information.IntroductionActivity;
-import com.example.information.JoinActivity;
-import com.example.information.SupServicesActivity;
-import com.example.information.TicketActivity;
-import com.example.information.VisitActivity;
+import com.example.information.*;
 import com.example.screening.FutureScreeningActivity;
 import com.example.screening.NowScreeningActivity;
 import com.example.screening.ReviewScreeningActivity;
 import com.example.screening.ScreeningActivity;
 import com.slidingmenu.lib.SlidingMenu;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+import java.util.*;
 
+/**
+ * Õ¹¹Ýµ¼º½Ö÷Ò³
+ */
 public class NavigationActivity extends Activity implements
 		View.OnClickListener {
 

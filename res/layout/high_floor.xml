@@ -1,75 +1,85 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HighFloorActivity" >
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".HighFloorActivity">
 
-    <include
-        android:id="@+id/include_highfloor"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/include1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        layout="@layout/top" />
+    <!--content-->
 
-    <ImageView
-        android:id="@+id/iv_highfloor"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/menu"
-        android:layout_below="@+id/include_highfloor" />
+    <FrameLayout
+            android:id="@+id/container"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            />
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_highfloor"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/menu"-->
+    <!--android:layout_below="@+id/include_highfloor"/>-->
 
+    <!--footer-->
     <LinearLayout
-        android:id="@+id/menu"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/header"
-        android:gravity="center_vertical|center_horizontal" >
-
-        <ImageView
-            android:id="@+id/highfloor_iv1"
+            android:id="@+id/menu"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/floor"
-            android:contentDescription="@string/image_contentDescription"
-            android:paddingBottom="18dp"
-            android:paddingTop="18dp" />
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/header"
+            android:gravity="center_vertical|center_horizontal">
 
         <ImageView
-            android:id="@+id/highfloor_iv2"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/floor"
-            android:contentDescription="@string/image_contentDescription"
-            android:paddingBottom="18dp"
-            android:paddingTop="18dp" />
+                android:id="@+id/highfloor_iv1"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/floor"
+                android:contentDescription="@string/image_contentDescription"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"/>
 
         <ImageView
-            android:id="@+id/highfloor_iv3"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/floor"
-            android:contentDescription="@string/image_contentDescription"
-            android:paddingBottom="18dp"
-            android:paddingTop="18dp" />
+                android:id="@+id/highfloor_iv2"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/floor"
+                android:contentDescription="@string/image_contentDescription"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"/>
 
         <ImageView
-            android:id="@+id/highfloor_iv4"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/floor"
-            android:contentDescription="@string/image_contentDescription"
-            android:paddingBottom="18dp"
-            android:paddingTop="18dp" />
+                android:id="@+id/highfloor_iv3"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/floor"
+                android:contentDescription="@string/image_contentDescription"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"/>
+
+        <ImageView
+                android:id="@+id/highfloor_iv4"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/floor"
+                android:contentDescription="@string/image_contentDescription"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"/>
     </LinearLayout>
 
+    <!--Header-->
+    <include
+            android:id="@+id/include_highfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/include1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            layout="@layout/top"/>
 </RelativeLayout>
