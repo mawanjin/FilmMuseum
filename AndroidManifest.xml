@@ -245,11 +245,12 @@
                 android:name="com.example.intelligent.BeaconActivity"
                 android:label="@string/title_activity_beacon"
                 android:screenOrientation="portrait">
+
         </activity>
         <activity
                 android:name="com.example.navigation.GlanceActivity"
-                android:label="@string/title_activity_glance"
                 android:screenOrientation="portrait">
+
         </activity>
         <activity
                 android:name="com.example.navigation.RouteActivity"
@@ -308,8 +309,15 @@
             </intent-filter>
         </activity>
         <activity
+                android:name="com.example.arthighlights.AudioFragmentActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </activity>
+
+        <activity
                 android:name="com.example.arthighlights.AudioActivity"
-                android:label="@string/title_activity_audio"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
@@ -319,6 +327,19 @@
                 android:name="com.example.filmmuseum.wxapi.WXEntryActivity"
                 android:label="@string/title_activity_wxentry">
         </activity>
+
+        <activity
+                android:name="com.example.arthighlights.ListMainActivity">
+
+        </activity>
+
+        <activity
+                android:name="com.example.arthighlights.VideoFragmentActivity">
+
+        </activity>
+
+
+
     </application>
 
 </manifest>

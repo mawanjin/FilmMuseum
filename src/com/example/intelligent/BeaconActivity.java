@@ -1,22 +1,10 @@
 package com.example.intelligent;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-import android.os.RemoteException;
+import android.os.*;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -24,17 +12,21 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.aprilbrother.aprilbrothersdk.Beacon;
 import com.aprilbrother.aprilbrothersdk.BeaconManager;
 import com.aprilbrother.aprilbrothersdk.BeaconManager.RangingListener;
 import com.aprilbrother.aprilbrothersdk.Region;
-import com.example.arthighlights.AudioActivity;
-import com.example.arthighlights.VideoActivity;
+import com.example.arthighlights.AudioFragmentActivity;
+import com.example.arthighlights.ListMainActivity;
+import com.example.arthighlights.VideoFragmentActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.example.util.ArtMenu;
 import com.example.util.Download;
+import com.example.util.ZipExtractorTask;
+
+import java.io.*;
+import java.util.*;
 
 /**
  * 搜索展示beacon列表
@@ -79,7 +71,37 @@ public class BeaconActivity extends Activity {
 		list = new ArrayList<Integer>();
 		mainlooper = this.getMainLooper();
 		handler = new Myhandler(mainlooper);
-		init();
+        init();
+        //test begin
+//        init();
+//        File destDir = new File(getExternalStoragePath()
+//                + "/FilmMuseum/download");
+//        if (!destDir.exists()) {
+//            destDir.mkdirs();
+//        }
+//        destDir = new File(getExternalStoragePath() + "/FilmMuseum/system");
+//        if (!destDir.exists()) {
+//            destDir.mkdirs();
+//        }
+//        destDir = new File(getExternalStoragePath() + "/FilmMuseum/collection");
+//        if (!destDir.exists()) {
+//            destDir.mkdirs();
+//        }
+//        String path = getExternalStoragePath()
+//                + "/FilmMuseum/download/FilmMuseum.zip";
+//        try {
+//            copyBigDataToSD(path);
+//            doZipExtractorWork();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
+//        Message msg = new Message();
+//        msg.obj = "2";
+//        handler.sendMessage(msg);
+        //test end
+
+
+
 	}
 
 	private void init() {
@@ -213,30 +235,41 @@ public class BeaconActivity extends Activity {
 				if (url == m.getId()) {
 					if (m.getType().equals("player")) {
 						Log.v("HTTWsa", "---->播放视频" + cnt);
-						Toast.makeText(getApplicationContext(), "播放的是视频" + cnt,
+						Toast.makeText(getBaseContext(), "播放的是视频" + cnt,
 								Toast.LENGTH_LONG).show();
-						intent.setClass(getApplicationContext(),
-								VideoActivity.class);
+						intent.setClass(getBaseContext(),
+                                VideoFragmentActivity.class);
 						Bundle bundle = new Bundle();
 						bundle.putInt("id", m.getId());
 						intent.putExtras(bundle);
 						startActivity(intent);
 						cnt = cnt + 1;
 						cntn = cntn + 1;
-					}
-					if (m.getType().equals("music")) {
+					}else if (m.getType().equals("music")) {
 						Log.v("HTTWsa", "---->播放音乐" + cnts);
 						Toast.makeText(getApplicationContext(),
 								"播放的是音乐" + cnts, Toast.LENGTH_LONG).show();
 						intent.setClass(getApplicationContext(),
-								AudioActivity.class);
+								AudioFragmentActivity.class);
 						Bundle bundle = new Bundle();
 						bundle.putInt("id", m.getId());
 						intent.putExtras(bundle);
 						startActivity(intent);
 						cnts = cnts + 1;
 						cntn = cntn + 1;
-					}
+					}else if(m.getType().equals("list")){
+                        Log.v("HTTWsa", "---->显示列表" + cnts);
+                        Toast.makeText(getApplicationContext(),
+                                "显示列表" , Toast.LENGTH_LONG).show();
+                        intent.setClass(getApplicationContext(),
+                                ListMainActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable(ListMainActivity.EXTRA_ITEMS,m);
+                        bundle.putInt("id", m.getId());
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    }
+
 				}
 			}
 		}
@@ -286,7 +319,7 @@ public class BeaconActivity extends Activity {
 
 	protected void onStart() {
 		super.onStart();
-
+        if(beaconManager==null)return;
 		if (!beaconManager.hasBluetooth()) {
 			Toast.makeText(this, "您的设备没有蓝牙或蓝牙版本太低，请确认后重试...", Toast.LENGTH_LONG)
 					.show();
@@ -328,5 +361,33 @@ public class BeaconActivity extends Activity {
 		}
 		super.onRestart();
 	}
+
+
+
+
+
+    // 拷贝文件到SD卡
+    private void copyBigDataToSD(String strOutFileName) throws IOException {
+        InputStream myInput;
+        OutputStream myOutputStream = new FileOutputStream(strOutFileName);
+        myInput = this.getAssets().open("FilmMuseum.zip");
+        byte[] buffer = new byte[1024];
+        int length = myInput.read(buffer);
+        while (length > 0) {
+            myOutputStream.write(buffer, 0, length);
+            length = myInput.read(buffer);
+        }
+        myOutputStream.flush();
+        myInput.close();
+        myOutputStream.close();
+    }
+
+    // 解压zip
+    public void doZipExtractorWork() {
+        ZipExtractorTask task = new ZipExtractorTask(getExternalStoragePath()
+                + "/FilmMuseum/download/FilmMuseum.zip",
+                getExternalStoragePath() + "/FilmMuseum/system/", this, true);
+        task.execute();
+    }
 
 }

@@ -1,26 +1,22 @@
 package com.example.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
+import android.sax.Element;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import android.sax.Element;
-import android.util.Log;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Download {
 
 	public List<ArtMenu> readMenuXml(String path)
 	{
 		List<ArtMenu> list = null;
+		List<ListItem> items = null;
 		ArtMenu menu = null;
+        ListItem item = null;
 		File xmlFile = new File(path);
 		Element xmlElement = null;
 		if(xmlFile.exists())
@@ -69,7 +65,39 @@ public class Download {
 							String text=xpp.nextText();
 							menu.setText(text);
 						}
-						
+
+                        if("items".equals(xpp.getName()))
+						{
+                            items = new ArrayList<ListItem>(0);
+                            menu.setItems(items);
+						}
+
+                        if("item".equals(xpp.getName()))
+						{
+                            item = new ListItem();
+                            items.add(item);
+						}
+
+                        if("isrc".equals(xpp.getName()))
+						{
+                            item.setSrc(xpp.nextText());
+						}
+
+                        if("ibig".equals(xpp.getName()))
+						{
+                            item.setBig(xpp.nextText());
+						}
+
+                        if("ititle".equals(xpp.getName()))
+						{
+                            item.setTitle(xpp.nextText());
+						}
+
+                        if("itxt".equals(xpp.getName()))
+						{
+                            item.setTxt(xpp.nextText());
+						}
+
 						break;
 					case XmlPullParser.END_TAG:
 						if("menu".equals(xpp.getName()))

@@ -1,4 +1,14 @@
 <resources>
 		 <!-- 首页 -->
 	<dimen name="main_imageView3_margintop">50dp</dimen>
+    <dimen name="list_padding_top">40dp</dimen>
+    <dimen name="list_padding_bottom">40dp</dimen>
+    <dimen name="list_padding_left">20dp</dimen>
+    <dimen name="list_padding_right">20dp</dimen>
+    <dimen name="list_title_fontsize">18sp</dimen>
+    <dimen name="list_txt_top">20dp</dimen>
+
+
+
+
 </resources>

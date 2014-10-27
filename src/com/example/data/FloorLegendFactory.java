@@ -162,5 +162,14 @@ public class FloorLegendFactory {
         return viewItems;
     }
 
+    public List<MarkerPointer> getViewItemsWithLocation() {
+
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.location_marker);
+        MarkerPointer location = new MarkerPointer(context, bitmap, 1136, 1800);
+
+        viewItems.add(location);
+        return viewItems;
+    }
+
 
 }

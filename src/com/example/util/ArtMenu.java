@@ -1,11 +1,17 @@
 package com.example.util;
 
-public class ArtMenu {
+import java.io.Serializable;
+import java.util.List;
+
+public class ArtMenu implements Serializable{
 	private int id;
 	private String type;
 	private String src;
 	private String title;
 	private String text;
+
+    private List<ListItem> items;
+
 	public ArtMenu(){}
 	public ArtMenu(int id, String type, String src, String title, String text) {
 		super();
@@ -45,5 +51,12 @@ public class ArtMenu {
 	public void setText(String text) {
 		this.text = text;
 	}
-	
+
+    public List<ListItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<ListItem> items) {
+        this.items = items;
+    }
 }

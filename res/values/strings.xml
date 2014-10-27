@@ -17,7 +17,8 @@
     <string name="price">票价:30元</string>
     <string name="message">购票请至上海电影博物馆现场购买</string>
     <string name="dragon">4D影片《鱼龙勇士》</string>
-    <string name="content">一亿五千万年前的侏罗纪时期，地球被大片海洋覆盖，各类史前生物生活在这片广袤的海洋里。达克龙为了给儿子达达炼制补脑鱼油誓言要抓住小鱼龙宝儿，宝儿在一场混战中与妈妈失散，为了找到鱼龙群，他踏上了历险的征途。一路上危机重重，最终，爱的力量战胜了个人恩怨，宝儿和强哥帮助达达救起了危在旦夕的达克龙。宝儿终于到达深海，和妈妈团聚。</string>
+    <string name="content">一亿五千万年前的侏罗纪时期，地球被大片海洋覆盖，各类史前生物生活在这片广袤的海洋里。达克龙为了给儿子达达炼制补脑鱼油誓言要抓住小鱼龙宝儿，宝儿在一场混战中与妈妈失散，为了找到鱼龙群，他踏上了历险的征途。一路上危机重重，最终，爱的力量战胜了个人恩怨，宝儿和强哥帮助达达救起了危在旦夕的达克龙。宝儿终于到达深海，和妈妈团聚。
+</string>
     <string name="dragon_name">片名：鱼龙勇士</string>
     <string name="dragon_time">片长：17分钟</string>
     <string name="dragon_address">影院：上海电影博物馆4D影厅（上海市漕溪北路595号）</string>
@@ -244,5 +245,6 @@
     <string name="title_activity_review_screening">ReviewScreeningActivity</string>
     <string name="title_activity_heaven">HeavenActivity</string>
     <string name="title_activity_dragon">DragonActivity</string>
+    <string name="inteli_navi">智能导览模式</string>
 
 </resources>
