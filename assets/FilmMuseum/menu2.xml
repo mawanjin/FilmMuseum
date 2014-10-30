@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <menu>
+        <id>1</id>
+        <type>player</type>
+        <src>film3.mp4</src>
+		<title></title>
+		<text></text>
+		</menu>
+    <menu>
+        <id>2</id>
+        <type>player</type>
+        <src>film3.mp4</src>
+		<title></title>
+		<text></text>
+    </menu>
+   
+
+</resources>

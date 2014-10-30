@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <layer>
+        <id>1</id>
+
+        <visible>1</visible>
+
+        <type>image</type>
+
+        <src>pause.png</src>
+
+        <width>100</width>
+
+        <height>100</height>
+
+        <x>15</x>
+
+        <y>1193</y>
+
+        <textsize>0</textsize>
+    </layer>
+    <layer>
+        <id>2</id>
+
+        <visible>1</visible>
+
+        <type>image</type>
+
+        <src>suki.png</src>
+
+        <width>640</width>
+
+        <height>397</height>
+
+        <x>1250</x>
+
+        <y>1350</y>
+
+        <textsize>0</textsize>
+    </layer>
+    <layer>
+        <id>3</id>
+
+        <visible>1</visible>
+
+        <type>image</type>
+
+        <src>down.png</src>
+
+        <width>640</width>
+
+        <height>397</height>
+
+        <x>1400</x>
+
+        <y>1350</y>
+
+        <textsize>0</textsize>
+    </layer>
+    <layer>
+        <id>4</id>
+
+        <visible>1</visible>
+
+        <type>text</type>
+
+        <src></src>
+
+        <width>1500</width>
+
+        <height>100</height>
+
+        <x>50</x>
+
+        <y>1550</y>
+
+        <textsize>35</textsize>
+    </layer>
+    <layer>
+        <id>5</id>
+
+        <visible>1</visible>
+
+        <type>text</type>
+
+        <src></src>
+
+        <width>1500</width>
+
+        <height>100</height>
+
+        <x>50</x>
+        <y>1740</y>
+
+        <textsize>27</textsize>
+    </layer>
+	<layer>
+        <id>6</id>
+
+        <visible>1</visible>
+
+        <type>seekbar</type>
+
+        <src></src>
+
+        <width>1400</width>
+
+        <height>800</height>
+
+        <x>107</x>
+
+        <y>1222</y>
+
+        <textsize>0</textsize>
+    </layer>
+	
+</resources>
