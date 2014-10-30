@@ -1,9 +1,16 @@
 package com.example.intelligent;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
 	private Integer major;
 	private Integer minor;
+    private Integer floor;
 	private String url;
+    private int locationX;
+    private int locationY;
+    private String locationMarker;
+
 	public Integer getMajor() {
 		return major;
 	}
@@ -22,11 +29,12 @@ public class Person {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public Person(Integer major, Integer minor, String url) {
+	public Person(Integer major, Integer minor,Integer floor, String url) {
 		super();
 		this.major = major;
 		this.minor = minor;
 		this.url = url;
+        this.floor = floor;
 	}
 	public Person() {
 		super();
@@ -46,7 +54,36 @@ public class Person {
 	{
 		return url;
 	}
-	
-	
-	
+
+    public Integer getFloor() {
+        return floor;
+    }
+
+    public void setFloor(Integer floor) {
+        this.floor = floor;
+    }
+
+    public int getLocationX() {
+        return locationX;
+    }
+
+    public void setLocationX(int locationX) {
+        this.locationX = locationX;
+    }
+
+    public int getLocationY() {
+        return locationY;
+    }
+
+    public void setLocationY(int locationY) {
+        this.locationY = locationY;
+    }
+
+    public String getLocationMarker() {
+        return locationMarker;
+    }
+
+    public void setLocationMarker(String locationMarker) {
+        this.locationMarker = locationMarker;
+    }
 }

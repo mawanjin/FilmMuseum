@@ -1,16 +1,14 @@
 package com.example.intelligent;
 
+import android.sax.Element;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import android.sax.Element;
-import android.util.Xml;
 
 public class PersonService {
 	public static List<Person> getPersons(String path) throws Exception {
@@ -46,6 +44,15 @@ public class PersonService {
 					if ("url".equals(pullParser.getName())) {
 						String url = pullParser.nextText();
 						person.setUrl(url);
+					}if ("location_x".equals(pullParser.getName())) {
+						person.setLocationX(Integer.parseInt(pullParser.nextText()));
+					}if ("location_y".equals(pullParser.getName())) {
+						person.setLocationY(Integer.parseInt(pullParser.nextText()));
+					}if ("location_marker".equals(pullParser.getName())) {
+						person.setLocationMarker(pullParser.nextText());
+					}if ("floor".equals(pullParser.getName())) {
+						int floor = Integer.parseInt(pullParser.nextText());
+						person.setFloor(floor);
 					}
 					break;
 				case XmlPullParser.END_TAG:

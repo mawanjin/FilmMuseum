@@ -3,8 +3,6 @@ package com.example.arthighlights;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.*;
@@ -16,11 +14,11 @@ import android.view.*;
 import android.view.SurfaceHolder.Callback;
 import android.widget.*;
 import android.widget.RelativeLayout.LayoutParams;
+import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.example.util.ArtContent;
 import com.example.util.ArtContentVideo;
-import com.example.util.Download;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
@@ -68,7 +66,6 @@ public class VideoActivity extends Activity implements Callback,
 		// 隐藏标题栏
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.video);
-		regToWx();
 		WindowManager wm = (WindowManager) this
 				.getSystemService(Context.WINDOW_SERVICE);
 		x = wm.getDefaultDisplay().getWidth();
@@ -76,6 +73,26 @@ public class VideoActivity extends Activity implements Callback,
 		SysApplication.getInstance().addActivity(this);
 
 		seekBar = (SeekBar) findViewById(R.id.sb_player);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                seekBar.setProgress(i);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                int value = seekBar.getProgress() * mediaPlayer.getDuration() // 计算进度条需要前进的位置数据大小
+                        / seekBar.getMax();
+                mediaPlayer.seekTo(value);
+            }
+        });
+
 		tv = (TextView) findViewById(R.id.tv_title);
 		tv2 = (TextView) findViewById(R.id.tv_video);
 		tv3 = (TextView) findViewById(R.id.tv2_video);
@@ -84,21 +101,17 @@ public class VideoActivity extends Activity implements Callback,
 		iv3 = (ImageView) findViewById(R.id.iv_download);
 
 		tv.setText("动画电影工作室");
-		Download dow = new Download();
-		List<ArtContent> list = dow.readConXml(getExternalStoragePath()
-				+ "/FilmMuseum/system/content.xml");
-		List<ArtContentVideo> video = dow
-				.readConXmlVideo(getExternalStoragePath()
-						+ "/FilmMuseum/system/content3.xml");
+
+        List<ArtContent> list = MagicFactory.getArtContents();
+
+        //渲染播放器
+		List<ArtContentVideo> video = MagicFactory.getArtContentVideos();
 		for (ArtContentVideo vi : video) {
 			if (vi.getType().equals("image")) {
 				if (vi.getId() == 1) {
-					Bitmap bm = BitmapFactory
-							.decodeFile(getExternalStoragePath()
-									+ "/FilmMuseum/system/image/" + vi.getSrc());
 					LayoutParams params = new LayoutParams(vi.getWidth(),
 							vi.getHeight());
-					iv1.setImageBitmap(bm);
+					iv1.setImageBitmap(MagicFactory.getBitmap(vi.getSrc()));
 					iv1.setLayoutParams(params);
 				}
 //				if (vi.getId() == 2) {
@@ -135,13 +148,14 @@ public class VideoActivity extends Activity implements Callback,
 		}
 		Bundle bundle = getIntent().getExtras();
 		int id = bundle.getInt("id");
+
 		for (ArtContent art : list) {
 			if (id == art.getId()) {
 				tv.setText(art.getTitle());
 				tv2.setText(art.getTitle());
 				tv3.setText(art.getContent());
-				path = getExternalStoragePath() + "/FilmMuseum/system/image/"
-						+ art.getSrc();
+				path = MagicFactory.getPlayUrl(art.getSrc());
+                break;
 			}
 		}
 
@@ -206,17 +220,6 @@ public class VideoActivity extends Activity implements Callback,
 
 	}
 
-	// 获取sd卡的路径
-	public static String getExternalStoragePath() {
-		String state = android.os.Environment.getExternalStorageState();
-		if (android.os.Environment.MEDIA_MOUNTED.equals(state)) {
-			if (android.os.Environment.getExternalStorageDirectory().canRead()) {
-				return android.os.Environment.getExternalStorageDirectory()
-						.getPath();
-			}
-		}
-		return null;
-	}
 
 	@SuppressLint("HandlerLeak")
 	Handler mHandler = new Handler() {

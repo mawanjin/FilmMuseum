@@ -1,5 +1,8 @@
 package com.example.util;
 
+/**
+ * 对应content2.xml中的数据。音频信息。
+ */
 public class ArtContentAudio {
 	private int id;
 	private int visible;

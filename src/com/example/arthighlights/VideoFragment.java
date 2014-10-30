@@ -2,8 +2,6 @@ package com.example.arthighlights;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.*;
@@ -16,11 +14,11 @@ import android.view.*;
 import android.view.SurfaceHolder.Callback;
 import android.widget.*;
 import android.widget.RelativeLayout.LayoutParams;
+import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.example.util.ArtContent;
 import com.example.util.ArtContentVideo;
-import com.example.util.Download;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
@@ -73,7 +71,6 @@ public class VideoFragment extends Fragment implements Callback,
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.video,null);
-//		regToWx();
 		WindowManager wm = (WindowManager) getActivity()
 				.getSystemService(Context.WINDOW_SERVICE);
 		x = wm.getDefaultDisplay().getWidth();
@@ -81,6 +78,26 @@ public class VideoFragment extends Fragment implements Callback,
 
 
 		seekBar = (SeekBar) view.findViewById(R.id.sb_player);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                seekBar.setProgress(i);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                int value = seekBar.getProgress() * mediaPlayer.getDuration() // 计算进度条需要前进的位置数据大小
+                        / seekBar.getMax();
+                mediaPlayer.seekTo(value);
+            }
+        });
+
 		tv = (TextView) view.findViewById(R.id.tv_title);
 		tv2 = (TextView) view.findViewById(R.id.tv_video);
 		tv3 = (TextView) view.findViewById(R.id.tv2_video);
@@ -89,21 +106,15 @@ public class VideoFragment extends Fragment implements Callback,
 		iv3 = (ImageView) view.findViewById(R.id.iv_download);
 
 		tv.setText("动画电影工作室");
-		Download dow = new Download();
-		List<ArtContent> list = dow.readConXml(getExternalStoragePath()
-				+ "/FilmMuseum/system/content.xml");
-		List<ArtContentVideo> video = dow
-				.readConXmlVideo(getExternalStoragePath()
-						+ "/FilmMuseum/system/content3.xml");
+
+        List<ArtContent> list = MagicFactory.getArtContents();
+        List<ArtContentVideo> video = MagicFactory.getArtContentVideos();
 		for (ArtContentVideo vi : video) {
 			if (vi.getType().equals("image")) {
 				if (vi.getId() == 1) {
-					Bitmap bm = BitmapFactory
-							.decodeFile(getExternalStoragePath()
-									+ "/FilmMuseum/system/image/" + vi.getSrc());
 					LayoutParams params = new LayoutParams(vi.getWidth(),
 							vi.getHeight());
-					iv1.setImageBitmap(bm);
+					iv1.setImageBitmap(MagicFactory.getBitmap(vi.getSrc()));
 					iv1.setLayoutParams(params);
 				}
 //				if (vi.getId() == 2) {
@@ -144,8 +155,7 @@ public class VideoFragment extends Fragment implements Callback,
 				tv.setText(art.getTitle());
 				tv2.setText(art.getTitle());
 				tv3.setText(art.getContent());
-				path = getExternalStoragePath() + "/FilmMuseum/system/image/"
-						+ art.getSrc();
+				path = MagicFactory.getPlayUrl(art.getSrc());
 			}
 		}
 
@@ -210,17 +220,6 @@ public class VideoFragment extends Fragment implements Callback,
         return view;
 	}
 
-	// 获取sd卡的路径
-	public static String getExternalStoragePath() {
-		String state = android.os.Environment.getExternalStorageState();
-		if (android.os.Environment.MEDIA_MOUNTED.equals(state)) {
-			if (android.os.Environment.getExternalStorageDirectory().canRead()) {
-				return android.os.Environment.getExternalStorageDirectory()
-						.getPath();
-			}
-		}
-		return null;
-	}
 
 	@SuppressLint("HandlerLeak")
 	Handler mHandler = new Handler() {
@@ -406,4 +405,24 @@ public class VideoFragment extends Fragment implements Callback,
 	public void surfaceDestroyed(SurfaceHolder arg0) {
 	}
 
+    public void switchURL(int _id){
+        if(mediaPlayer==null)return;
+        List<ArtContent> list = MagicFactory.getArtContents();
+        id = _id;
+        for (ArtContent art : list) {
+            if (id == art.getId()) {
+                path = MagicFactory.getPlayUrl(art.getSrc());
+            }
+        }
+        try {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.setDataSource(path);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }

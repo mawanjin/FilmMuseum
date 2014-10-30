@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import com.example.data.MagicFactory;
 import com.example.data.MarkerPointer;
 import com.example.filmmuseum.R;
+import com.example.intelligent.Person;
 import org.melonframwork.android.TouchImageView;
 
 import java.util.List;
@@ -22,9 +24,11 @@ public class FloorFragment extends Fragment {
 
     private TouchImageView touchImageView;
     private List<MarkerPointer> pointers;
+    private Person person;
 
-    public FloorFragment(List<MarkerPointer> pointers){
+    public FloorFragment(List<MarkerPointer> pointers,Person person){
         this.pointers = pointers;
+        this.person = person;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class FloorFragment extends Fragment {
             pointer.clickable = false;
         }
 
-        touchImageView = new TouchImageView(getActivity(), R.drawable.f1, pointers);
+        touchImageView = new TouchImageView(getActivity(), MagicFactory.getBitmap( MagicFactory.getFloor(getActivity(),person.getFloor()).getBackground()), pointers);
         touchImageView.setmActivity(getActivity());
 //        touchImageView.setOnTouchListener(new View.OnTouchListener() {
 //            @Override

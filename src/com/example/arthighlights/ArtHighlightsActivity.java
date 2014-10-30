@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.*;
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
+import com.example.data.MagicFactory;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SukiActivity;
@@ -24,7 +24,6 @@ import com.example.screening.NowScreeningActivity;
 import com.example.screening.ReviewScreeningActivity;
 import com.example.screening.ScreeningActivity;
 import com.example.util.ArtMenu;
-import com.example.util.Download;
 import com.slidingmenu.lib.SlidingMenu;
 
 import java.util.*;
@@ -335,31 +334,15 @@ public class ArtHighlightsActivity extends Activity implements
 
 	private static boolean isExit = false;
 
-	// 获取sd卡的路径
-	public static String getExternalStoragePath() {
-		String state = android.os.Environment.getExternalStorageState();
-		if (android.os.Environment.MEDIA_MOUNTED.equals(state)) {
-			if (android.os.Environment.getExternalStorageDirectory().canRead()) {
-				return android.os.Environment.getExternalStorageDirectory()
-						.getPath();
-			}
-		}
-		return null;
-	}
 
 	private List<Map<String, Object>> list;
-	private Bitmap bm;
 
 	private List<Map<String, Object>> getData() {
 		list = new ArrayList<Map<String, Object>>();
 		Map<String, Object> map = new HashMap<String, Object>();
-		Download dow = new Download();
-		List<ArtMenu> menu = dow.readMenuXml(getExternalStoragePath()
-				+ "/FilmMuseum/system/menu.xml");
+		List<ArtMenu> menu = MagicFactory.getArtMenus();
 		for (ArtMenu art : menu) {
-			bm = BitmapFactory.decodeFile(getExternalStoragePath()
-					+ "/FilmMuseum/system/image/" + art.getSrc());
-			map.put("image", bm);
+			map.put("image", MagicFactory.getBitmap(art.getSrc()));
 			map.put("title", art.getTitle());
 			id.add(art.getId());
 			type.add(art.getType());
@@ -415,10 +398,6 @@ public class ArtHighlightsActivity extends Activity implements
 
 	protected void onDestroy() {
 		list = null;
-		if (bm.isRecycled() == false && bm != null) {
-			bm.recycle();
-			System.gc();
-		}
 		super.onDestroy();
 	}
 

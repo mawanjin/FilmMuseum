@@ -9,6 +9,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.Window;
 import com.example.data.FloorLegendFactory;
 import com.example.filmmuseum.R;
+import com.example.intelligent.Person;
 import com.example.view.ViewPagerFixed;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import java.util.List;
 public class AudioFragmentActivity extends FragmentActivity {
     ViewPagerFixed viewpager;
     private List<Fragment> fragments = new ArrayList<Fragment>(0);
+    Person person;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,8 @@ public class AudioFragmentActivity extends FragmentActivity {
         viewpager = (ViewPagerFixed) findViewById(R.id.viewpager);
         AudioFragment audioFragment = new AudioFragment(getIntent().getIntExtra("id",0));
         //todo 这里根据id去查找对应的楼层数据
-        FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation());
+        person  = (Person) getIntent().getSerializableExtra("person");
+        FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
         fragments.add(floorFragment);
         fragments.add(audioFragment);
 

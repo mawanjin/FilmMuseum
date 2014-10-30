@@ -280,7 +280,7 @@
             android:alpha="0.3"
             android:background="#00000000"
             android:gravity="left|center_vertical"
-            android:text="展映回顾"
+            android:text="展映计划"
             android:textColor="#d4d7da"
             android:textSize="32sp" />
 

@@ -17,9 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/include_service_centre"
-        android:layout_marginLeft="20dp"
         android:contentDescription="@string/image_contentDescription"
-        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/normal_margin_img_top"
         android:src="@drawable/center" />
 
     <ImageView

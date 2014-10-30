@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/include_contact"
          android:contentDescription="@string/image_contentDescription"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/contact" />
 
     <TextView

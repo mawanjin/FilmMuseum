@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import com.example.filmmuseum.R;
+import com.example.intelligent.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,13 +163,24 @@ public class FloorLegendFactory {
         return viewItems;
     }
 
-    public List<MarkerPointer> getViewItemsWithLocation() {
+    public List<MarkerPointer> getViewItemsWithLocation(Context context,Person person) {
 
-        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.location_marker);
-        MarkerPointer location = new MarkerPointer(context, bitmap, 1136, 1800);
+        List<MarkerPointer> pointers = null;
 
-        viewItems.add(location);
-        return viewItems;
+        List<Floor> floors = MagicFactory.getFloors(context);
+        for(Floor floor:floors){
+            if(floor.getId()==person.getFloor()){
+                pointers = floor.getPointers();
+                break;
+            }
+        }
+
+//        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.location_marker);
+        Bitmap bitmap = MagicFactory.getBitmap(person.getLocationMarker());
+        MarkerPointer location = new MarkerPointer(context, bitmap, person.getLocationX(), person.getLocationY());
+
+        pointers.add(location);
+        return pointers;
     }
 
 

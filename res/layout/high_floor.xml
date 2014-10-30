@@ -26,52 +26,11 @@
             android:layout_width="fill_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
             android:background="@drawable/header"
             android:gravity="center_vertical|center_horizontal">
 
-        <ImageView
-                android:id="@+id/highfloor_iv1"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/floor"
-                android:contentDescription="@string/image_contentDescription"
-                android:paddingBottom="18dp"
-                android:paddingTop="18dp"/>
 
-        <ImageView
-                android:id="@+id/highfloor_iv2"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/floor"
-                android:contentDescription="@string/image_contentDescription"
-                android:paddingBottom="18dp"
-                android:paddingTop="18dp"/>
-
-        <ImageView
-                android:id="@+id/highfloor_iv3"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/floor"
-                android:contentDescription="@string/image_contentDescription"
-                android:paddingBottom="18dp"
-                android:paddingTop="18dp"/>
-
-        <ImageView
-                android:id="@+id/highfloor_iv4"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/floor"
-                android:contentDescription="@string/image_contentDescription"
-                android:paddingBottom="18dp"
-                android:paddingTop="18dp"/>
     </LinearLayout>
 
     <!--Header-->

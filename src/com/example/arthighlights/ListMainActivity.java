@@ -8,6 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.Window;
 import com.example.data.FloorLegendFactory;
 import com.example.filmmuseum.R;
+import com.example.intelligent.Person;
 import com.example.util.ArtMenu;
 import com.example.view.ViewPagerFixed;
 
@@ -24,7 +25,7 @@ public class ListMainActivity extends FragmentActivity {
 
     private ViewPagerFixed viewpager;
     private List<Fragment> fragments = new ArrayList<Fragment>(0);
-
+    private Person person;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,8 @@ public class ListMainActivity extends FragmentActivity {
 
         //todo 根据该id去找到对应的楼层图数据
         int id = getIntent().getIntExtra("id",0);
-
-        FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation());
+        person  = (Person) getIntent().getSerializableExtra("person");
+        FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
         fragments.add(floorFragment);
         fragments.add(listFragment);
 

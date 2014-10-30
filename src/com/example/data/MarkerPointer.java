@@ -12,6 +12,11 @@ import org.melonframwork.android.Pointer;
 public class MarkerPointer extends Pointer {
     /** 对应xml中的id*/
     private int id=1;
+    private int contentId;
+
+    public MarkerPointer(){
+
+    }
 
     public MarkerPointer(Context context, Bitmap _bitmap, float _immutableX, float _immutableY) {
         super(context, _bitmap, _immutableX, _immutableY);
@@ -26,5 +31,13 @@ public class MarkerPointer extends Pointer {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getContentId() {
+        return contentId;
+    }
+
+    public void setContentId(int contentId) {
+        this.contentId = contentId;
     }
 }
