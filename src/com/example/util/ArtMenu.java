@@ -10,6 +10,10 @@ public class ArtMenu implements Serializable{
 	private String title;
 	private String text;
 
+    /**用作‘先睹为快’中*/
+    private String img;
+
+
     private List<ListItem> items;
 
 	public ArtMenu(){}
@@ -51,6 +55,14 @@ public class ArtMenu implements Serializable{
 	public void setText(String text) {
 		this.text = text;
 	}
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public List<ListItem> getItems() {
         return items;

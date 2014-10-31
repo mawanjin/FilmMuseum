@@ -14,7 +14,9 @@ import android.view.View;
 import android.view.Window;
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
+import com.example.adapter.EagernessAdapter;
 import com.example.arthighlights.ArtHighlightsActivity;
+import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.example.information.*;
@@ -27,7 +29,6 @@ import com.example.screening.NowScreeningActivity;
 import com.example.screening.ReviewScreeningActivity;
 import com.example.screening.ScreeningActivity;
 import com.example.util.ArtMenu;
-import com.example.util.Download;
 import com.slidingmenu.lib.SlidingMenu;
 
 import java.util.*;
@@ -45,6 +46,7 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 
 	private SlidingMenu menu;
 	private ImageView ivMenu;
+    List<ArtMenu> datas;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -54,6 +56,7 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 		SysApplication.getInstance().addActivity(this);
 		tv = (TextView) findViewById(R.id.tv_title);
 		tv.setText("先睹为快");
+        datas = MagicFactory.getEagerness();
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -62,27 +65,24 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 			}
 		});
 		lv = (ListView) findViewById(R.id.lv_eagerness);
-		SimpleAdapter adapter = new SimpleAdapter(getApplicationContext(),
-				getList(), R.layout.item_eagerness, new String[] { "image",
-						"title", "image2" }, new int[] { R.id.iv_eagerness,
-						R.id.tv_eagerness, R.id.iv3_eagerness });
-		lv.setAdapter(adapter);
+//		SimpleAdapter adapter = new SimpleAdapter(getApplicationContext(),
+//				getList(), R.layout.item_eagerness, new String[] { "image",
+//						"title", "image2" }, new int[] { R.id.iv_eagerness,
+//						R.id.tv_eagerness, R.id.iv3_eagerness });
+
+
+
+		lv.setAdapter(new EagernessAdapter(this,datas));
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
-				Download dow = new Download();
-				List<ArtMenu> menu = dow.readMenuXml(getExternalStoragePath()
-						+ "/FilmMuseum/system/menu2.xml");
+
 				Intent intent = new Intent();
-				for(ArtMenu m:menu)
-				{
 					Bundle bundle = new Bundle();
-					bundle.putString("src", m.getSrc());
+					bundle.putString("src", datas.get(position).getSrc());
 					intent.putExtras(bundle);
 					intent.setClass(EagernessActivity.this,MovieActivity.class);
 					startActivity(intent);
-					break;
-				}
 			}
 		});
 		ivMenu = (ImageView) findViewById(R.id.iv_menu);
@@ -139,18 +139,6 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 		// 联系方式
 		view.findViewById(R.id.btn_phone).setOnClickListener(this);
 
-	}
-
-	// 获取sd卡的路径
-	public static String getExternalStoragePath() {
-		String state = android.os.Environment.getExternalStorageState();
-		if (android.os.Environment.MEDIA_MOUNTED.equals(state)) {
-			if (android.os.Environment.getExternalStorageDirectory().canRead()) {
-				return android.os.Environment.getExternalStorageDirectory()
-						.getPath();
-			}
-		}
-		return null;
 	}
 
 	public void onClick(View view) {
@@ -303,6 +291,8 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 	private List<Map<String, Object>> list;
 	public List<Map<String, Object>> getList() {
 		list = new ArrayList<Map<String, Object>>();
+
+
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("image", R.drawable.banner1);
 		map.put("title", "微电影");
@@ -330,11 +320,6 @@ public class EagernessActivity extends Activity implements View.OnClickListener 
 	
 	protected void onDestroy() {
 		Log.v("HTTWs","--->Eagerness进入ondestroy");
-		if(list.size()!=0)
-		{
-			list = null;
-			System.gc();
-		}
 		super.onDestroy();
 	}
 	

@@ -25,6 +25,10 @@ public class MagicFactory {
     private static List<ArtMenu> artMenus;
     private static List<Person> persons;
     private static List<Floor> floors;
+    private static List<ArtContentVideo> videoLayers;
+    private static List<ArtMenu> eagerness;
+    private static Glance glances;
+
 
     /**
      * 转化音频数据content2.xml
@@ -148,12 +152,52 @@ public class MagicFactory {
         return floors;
     }
 
+    /**
+     * 图层数据
+     * @param context
+     * @param index
+     * @return
+     */
     public static Floor getFloor(Context context, int index) {
         getFloors(context);
         if (floors != null) {
             return floors.get(index);
         }
         return null;
+    }
+
+    /**
+     * 对应content4.xml 视频UI
+     * @return
+     */
+    public static List<ArtContentVideo> getVideoLayer(){
+
+        if(videoLayers==null){
+            Download dow = new Download();
+            videoLayers = dow.readConXmlVideo(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/content4.xml");
+        }
+        return videoLayers;
+    }
+
+    public static List<ArtMenu> getEagerness(){
+
+        if(eagerness==null){
+            Download dow = new Download();
+            eagerness = dow.readMenuXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/eagerness.xml");
+        }
+
+        return eagerness;
+    }
+
+    public static Glance getGlance(){
+        if(glances==null){
+            Download dow = new Download();
+            glances = dow.readGlanceXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/glance.xml");
+        }
+        return glances;
     }
 
 

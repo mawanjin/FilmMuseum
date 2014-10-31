@@ -30,7 +30,7 @@
 
     <SeekBar
         android:id="@+id/movie_seekbar"
-        android:layout_width="720dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         
         android:progressDrawable="@drawable/player_setting_bright_progressbar"
