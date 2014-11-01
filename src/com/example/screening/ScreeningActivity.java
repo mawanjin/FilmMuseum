@@ -12,6 +12,8 @@ import android.view.Window;
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 import com.example.arthighlights.ArtHighlightsActivity;
+import com.example.data.MagicFactory;
+import com.example.data.Screen;
 import com.example.eagerness.EagernessActivity;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
@@ -37,6 +39,7 @@ public class ScreeningActivity extends Activity implements OnClickListener {
 
 	private SlidingMenu menu;
 	private ImageView ivMenu;
+    private List<Screen> screens;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,6 +47,9 @@ public class ScreeningActivity extends Activity implements OnClickListener {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.screening);
 		SysApplication.getInstance().addActivity(this);
+
+        screens = MagicFactory.getScreens();
+
 		tv = (TextView) findViewById(R.id.tv_title);
 		tv.setText("展映活动");
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
@@ -287,15 +293,22 @@ public class ScreeningActivity extends Activity implements OnClickListener {
 
 	public List<Map<String, Object>> getList() {
 		list = new ArrayList<Map<String, Object>>();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("title", "当前展映");
-		list.add(map);
-		map = new HashMap<String, Object>();
-		map.put("title", "展映回顾");
-		list.add(map);
-		map = new HashMap<String, Object>();
-		map.put("title", "展映计划");
-		list.add(map);
+
+        for(Screen screen:screens){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("title", screen.getTitle());
+            list.add(map);
+        }
+
+//		Map<String, Object> map = new HashMap<String, Object>();
+//		map.put("title", "当前展映");
+//		list.add(map);
+//		map = new HashMap<String, Object>();
+//		map.put("title", "展映回顾");
+//		list.add(map);
+//		map = new HashMap<String, Object>();
+//		map.put("title", "展映计划");
+//		list.add(map);
 		return list;
 	}
 

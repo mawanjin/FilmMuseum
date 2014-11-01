@@ -27,7 +27,10 @@ public class MagicFactory {
     private static List<Floor> floors;
     private static List<ArtContentVideo> videoLayers;
     private static List<ArtMenu> eagerness;
+    private static List<Recommend> recommends;
     private static Glance glances;
+    private static List<Screen> screens;
+
 
 
     /**
@@ -198,6 +201,24 @@ public class MagicFactory {
                     + "/FilmMuseum/system/FilmMuseum/glance.xml");
         }
         return glances;
+    }
+
+    public static List<Recommend> getRecommends(){
+        if(recommends==null){
+            Download dow = new Download();
+            recommends = dow.readRecommendXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/recommend.xml");
+        }
+        return recommends;
+    }
+
+    public static List<Screen> getScreens(){
+        if(screens==null){
+            Download dow = new Download();
+            screens = dow.readScreenXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/screen.xml");
+        }
+        return screens;
     }
 
 

@@ -465,4 +465,121 @@ public class Download {
         return list;
     }
 
+    public List<Recommend> readRecommendXml(String path) {
+        List<Recommend> recommends = new ArrayList<Recommend>(0);
+        Recommend recommend = null;
+
+
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("router".equals(xpp.getName())) {
+                                recommend = new Recommend();
+                                recommends.add(recommend);
+                            } else if ("indicator".equals(xpp.getName())) {
+                                recommend.setIndicator(xpp.nextText());
+                            } else if ("indicator_selected".equals(xpp.getName())) {
+                                recommend.setIndicator_selected(xpp.nextText());
+                            } else if ("img".equals(xpp.getName())) {
+                                recommend.setImg(xpp.nextText());
+                            }
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return recommends;
+    }
+
+    public List<Screen> readScreenXml(String path) {
+        List<Screen> screens = new ArrayList<Screen>(0);
+        Screen screen = null;
+        List<ScreenItem> screenItems = null;
+        ScreenItem screenItem = null;
+        ScreenItemContent screenItemContent = null;
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("screen".equals(xpp.getName())) {
+                                screen = new Screen();
+                                screens.add(screen);
+                            } else if ("type".equals(xpp.getName())) {
+                                screen.setType(Integer.parseInt(xpp.nextText()));
+                            } else if ("title".equals(xpp.getName())) {
+                                screen.setTitle(xpp.nextText());
+                            } else if ("items".equals(xpp.getName())) {
+                                screenItems = new ArrayList<ScreenItem>(0);
+                                screen.setScreenItems(screenItems);
+                            } else if ("item".equals(xpp.getName())) {
+                                screenItem = new ScreenItem();
+                                screenItems.add(screenItem);
+                            } else if ("id".equals(xpp.getName())) {
+                                screenItem.setId(Integer.parseInt(xpp.nextText()));
+                            } else if ("img".equals(xpp.getName())) {
+                                screenItem.setImg(xpp.nextText());
+                            } else if ("name".equals(xpp.getName())) {
+                                screenItem.setName(xpp.nextText());
+                            } else if ("titleTime".equals(xpp.getName())) {
+                                screenItem.setTitleTime(xpp.nextText());
+                            } else if ("time".equals(xpp.getName())) {
+                                screenItem.setTime(xpp.nextText());
+                            } else if ("titleExhiTime".equals(xpp.getName())) {
+                                screenItem.setTitleExhiTime(xpp.nextText());
+                            } else if ("exhiTime".equals(xpp.getName())) {
+                                screenItem.setExhiTime(xpp.nextText());
+                            } else if ("content".equals(xpp.getName())) {
+                                screenItemContent = new ScreenItemContent();
+                                screenItem.setContent(screenItemContent);
+                            } else if ("cimg".equals(xpp.getName())) {
+                                screenItemContent.setImg(xpp.nextText());
+                            } else if ("csummary".equals(xpp.getName())) {
+                                screenItemContent.setSummary(xpp.nextText());
+                            }else if ("summary".equals(xpp.getName())) {
+                                screenItem.setSummary(xpp.nextText());
+                            }else if ("detailTitle".equals(xpp.getName())) {
+                                screenItem.setDetailTitle(xpp.nextText());
+                            }else if ("detail".equals(xpp.getName())) {
+                                screenItem.setDetail(xpp.nextText());
+                            }
+
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        return screens;
+    }
 }

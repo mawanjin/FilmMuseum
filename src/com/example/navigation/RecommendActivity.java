@@ -1,24 +1,32 @@
 package com.example.navigation;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.data.MagicFactory;
+import com.example.data.Recommend;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.slidingmenu.lib.SlidingMenu;
 
-public class RecommendActivity extends Activity implements OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * 推荐路线
+ */
+public class RecommendActivity extends Activity  {
 
 	private TextView tv;
 
@@ -32,12 +40,19 @@ public class RecommendActivity extends Activity implements OnClickListener {
 	private ImageView ivMenu;
 	private Bitmap bm;
 
-	protected void onCreate(Bundle savedInstanceState) {
+    private List<Recommend> recommends;
+    private LinearLayout menuContainer;
+    private List<ImageView> imageViews = new ArrayList<ImageView>(0);
+    private ImageView imageView;
+
+    protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// 隐藏标题栏
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.recommend);
 		SysApplication.getInstance().addActivity(this);
+        recommends = MagicFactory.getRecommends();
+
 		tv = (TextView) findViewById(R.id.tv_title);
 		tv.setText("推荐路线");
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
@@ -47,60 +62,47 @@ public class RecommendActivity extends Activity implements OnClickListener {
 				overridePendingTransition(R.anim.a2, R.anim.a1);
 			}
 		});
-		ivCon = (ImageView) findViewById(R.id.iv_recommend);
-		iv1 = (ImageView) findViewById(R.id.iv1_recommend);
-		iv2 = (ImageView) findViewById(R.id.iv2_recommend);
-		iv3 = (ImageView) findViewById(R.id.iv3_recommend);
-		iv4 = (ImageView) findViewById(R.id.iv4_recommend);
-		iv1.setImageResource(R.drawable.submenu1_2);
-		iv2.setImageResource(R.drawable.submenu2_1);
-		iv3.setImageResource(R.drawable.submenu3_1);
-		iv4.setImageResource(R.drawable.submenu4_1);
-		iv1.setOnClickListener(this);
-		iv2.setOnClickListener(this);
-		iv3.setOnClickListener(this);
-		iv4.setOnClickListener(this);
+        menuContainer = (LinearLayout) findViewById(R.id.menuContainer);
+
+        ivCon = (ImageView) findViewById(R.id.iv_recommend);
+        init();
+        if(imageViews!=null&&imageViews.size()>0)
+        imageViews.get(0).performClick();
+
 		ivMenu = (ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
 	}
 
-	public void onClick(View view) {
-		switch (view.getId()) {
-		case R.id.iv1_recommend:
-			ivCon.setImageResource(R.drawable.main1);
-			iv1.setImageResource(R.drawable.submenu1_2);
-			iv2.setImageResource(R.drawable.submenu2_1);
-			iv3.setImageResource(R.drawable.submenu3_1);
-			iv4.setImageResource(R.drawable.submenu4_1);
-			break;
-		// 三小时路线
-		case R.id.iv2_recommend:
-			ivCon.setImageResource(R.drawable.main2);
-			iv2.setImageResource(R.drawable.submenu2_2);
-			iv1.setImageResource(R.drawable.submenu1_1);
-			iv3.setImageResource(R.drawable.submenu3_1);
-			iv4.setImageResource(R.drawable.submenu4_1);
-			break;
-		// 亲子游路线
-		case R.id.iv3_recommend:
-			ivCon.setImageResource(R.drawable.main3);
-			iv3.setImageResource(R.drawable.submenu3_2);
-			iv2.setImageResource(R.drawable.submenu2_1);
-			iv1.setImageResource(R.drawable.submenu1_1);
-			iv4.setImageResource(R.drawable.submenu4_1);
-			break;
-		// 老年游路线
-		case R.id.iv4_recommend:
-			ivCon.setImageResource(R.drawable.main4);
-			iv4.setImageResource(R.drawable.submenu4_2);
-			iv2.setImageResource(R.drawable.submenu2_1);
-			iv3.setImageResource(R.drawable.submenu3_1);
-			iv1.setImageResource(R.drawable.submenu1_1);
-			break;
-		default:
-			break;
-		}
-	}
+    private void init() {
+       for(int i=0;i<recommends.size();i++){
+           final Recommend recommend = recommends.get(i);
+           imageView = new ImageView(this);
+           LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
+           params.weight = 1;
+           imageView.setLayoutParams(params);
+           imageView.setImageBitmap(MagicFactory.getBitmap(recommend.getIndicator()));
+           imageViews.add(imageView);
+           menuContainer.addView(imageView);
+           imageView.setOnClickListener(new OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   for(int j=0;j<imageViews.size();j++){
+                       ImageView imageView1 =imageViews.get(j);
+                       if(view==imageView1){
+                           imageView1.setImageBitmap(MagicFactory.getBitmap(recommends.get(j).getIndicator_selected()));
+                           Bitmap bitmap = MagicFactory.getBitmap(recommends.get(j).getImg());
+                           ivCon.setImageBitmap(bitmap);
+                                   }else
+                           imageView1.setImageBitmap(MagicFactory.getBitmap(recommends.get(j).getIndicator()));
+                   }
+
+               }
+           });
+
+
+       }
+    }
+
 
 	// 菜单键
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
