@@ -30,14 +30,14 @@
             android:id="@+id/iv2_dragon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_above="@+id/tv_dragon"
+            android:layout_above="@+id/content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="34dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/image_contentDescription"/>
 
         <TextView
-            android:id="@+id/tv_dragon"
+            android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv1_dragon"
@@ -46,83 +46,6 @@
             android:text="@string/dragon"
             android:textColor="#f5f5f5"
             android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/tv1_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv_dragon"
-            android:layout_below="@+id/tv_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/content"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tv2_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv1_dragon"
-            android:layout_below="@+id/tv1_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/dragon_name"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp"/>
-
-        <TextView
-            android:id="@+id/tv3_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv2_dragon"
-            android:layout_below="@+id/tv2_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/dragon_time"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp"/>
-
-        <TextView
-            android:id="@+id/tv4_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv3_dragon"
-            android:layout_below="@+id/tv3_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/dragon_address"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tv5_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv4_dragon"
-            android:layout_below="@+id/tv4_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/dragon_piece"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tv6_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv5_dragon"
-            android:layout_below="@+id/tv5_dragon"
-            android:layout_marginTop="8dp"
-            android:text="@string/dragon_price"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tv7_dragon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tv6_dragon"
-            android:layout_below="@+id/tv6_dragon"
-            android:layout_marginTop="20dp"
-            android:text="@string/dragon_message"
-            android:textColor="#f5f5f5"
-            android:textSize="26sp" />
 
         <ImageView
             android:id="@+id/iv_dragon"

@@ -43,5 +43,6 @@
   <color name="viewfinder_laser">#ffff0000</color>
   <color name="viewfinder_mask">#60000000</color>
   <color name="glance_title">#5d5d5d</color>
+  <color name="gray">#d4d7da</color>
 
 </resources>

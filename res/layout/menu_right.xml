@@ -1,501 +1,512 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg5"
-        android:orientation="vertical" >
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg5"
+            android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg4"
-            android:gravity="center"
-            android:text="主页"
-            android:textColor="#222626"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg4"
+                android:gravity="center"
+                android:text="主页"
+                android:textColor="#222626"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
 
         <ImageButton
-            android:id="@+id/btn_right"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:src="@drawable/button3" />
+                android:id="@+id/btn_right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:src="@drawable/button3"/>
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_right"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_alignRight="@+id/textView1"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line1" />
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_right"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_alignRight="@+id/textView1"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line1"/>
         <!-- 艺术亮点 -->
 
         <Button
-            android:id="@+id/btn_art"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_right"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView1"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="艺术亮点"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_art"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_right"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="艺术亮点"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_art"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line1" />
+                android:id="@+id/imageView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_art"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line1"/>
         <!-- 先睹为快 -->
 
         <Button
-            android:id="@+id/btn_eag"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_art"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView2"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="先睹为快"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_eag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_art"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="先睹为快"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_eag"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line1" />
+                android:id="@+id/imageView3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_eag"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line1"/>
         <!-- 展馆导航 -->
 
         <Button
-            android:id="@+id/btn_navigation"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView3"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="展馆导航"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView3"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="展馆导航"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_navigation"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_navigation"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
         <!-- 博物馆楼层图 -->
 
         <Button
-            android:id="@+id/btn_flo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView4"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="博物馆楼层图"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_flo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView4"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="博物馆楼层图"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_flo"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_flo"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
         <!-- 速览 -->
 
         <Button
-            android:id="@+id/btn_glance"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView5"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="速览"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_glance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView5"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="速览"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_glance"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_glance"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
         <!-- 参观路线 -->
 
         <Button
-            android:id="@+id/btn_route"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView6"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="参观路线"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_route"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView6"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="参观路线"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_route"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line1" />
+                android:id="@+id/imageView7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_route"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line1"/>
         <!-- 展映活动 -->
 
         <Button
-            android:id="@+id/btn_screening"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView7"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="展映活动"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_screening"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView7"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="展映活动"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_screening"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_screening"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line2"/>
+
+        <!--动态生成展映-->
+        <LinearLayout
+                android:id="@+id/screeningContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_below="@+id/imageView8">
+
+        </LinearLayout>
 
         <!-- 当前展映 -->
 
-        <Button
-            android:id="@+id/btn_exhibition"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView8"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="当前展映"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+        <!--<Button-->
+                <!--android:id="@+id/btn_exhibition"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView8"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="当前展映"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="fill_parent"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_exhibition"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView9"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_exhibition"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line2"/>-->
 
-        <!-- 展映回顾 -->
+        <!--&lt;!&ndash; 展映回顾 &ndash;&gt;-->
 
-        <Button
-            android:id="@+id/btn_review"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView9"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="展映回顾"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+        <!--<Button-->
+                <!--android:id="@+id/btn_review"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView9"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="展映回顾"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_review"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView10"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_review"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line2"/>-->
 
-        <!-- 展映计划 -->
+        <!--&lt;!&ndash; 展映计划 &ndash;&gt;-->
 
-        <Button
-            android:id="@+id/btn_program"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView10"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="展映计划"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+        <!--<Button-->
+                <!--android:id="@+id/btn_program"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView10"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="展映计划"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_program"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line1" />
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView11"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_program"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line1"/>-->
         <!-- 参观资讯 -->
 
         <Button
-            android:id="@+id/btn_information"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView11"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="参观资讯"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_information"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/screeningContainer"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="参观资讯"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_below="@+id/btn_information"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_below="@+id/btn_information"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
 
         <!-- 博物馆简介 -->
 
         <Button
-            android:id="@+id/btn_museum"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView12"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="博物馆简介"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_museum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView12"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="博物馆简介"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_museum"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_museum"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
 
         <!-- 开放时间 -->
 
         <Button
-            android:id="@+id/btn_business"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView13"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="开放时间"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_business"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView13"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="开放时间"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_business"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_business"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line2"/>
 
         <!-- 购票指南 -->
 
         <Button
-            android:id="@+id/btn_guide"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView14"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="购票指南"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_guide"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView14"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="购票指南"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_guide"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_guide"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line2"/>
         <!-- 配套服务 -->
 
         <Button
-            android:id="@+id/btn_supporting"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView15"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="配套服务"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_supporting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView15"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="配套服务"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_supporting"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_supporting"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line2"/>
         <!-- 参观须知 -->
 
         <Button
-            android:id="@+id/btn_notes"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView16"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="参观须知"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_notes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView16"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="参观须知"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_notes"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image_contentDescription"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView17"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_notes"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/image_contentDescription"
+                android:src="@drawable/line2"/>
 
         <!-- 加入我们 -->
 
         <Button
-            android:id="@+id/btn_join"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView17"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="加入我们"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_join"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView17"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="加入我们"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_join"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView18"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_join"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
 
         <!-- 联系方式 -->
 
         <Button
-            android:id="@+id/btn_phone"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btn_eag"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imageView18"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="#00000000"
-            android:gravity="left|center_vertical"
-            android:text="联系方式"
-            android:textColor="#d4d7da"
-            android:textSize="32sp" />
+                android:id="@+id/btn_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_eag"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView18"
+                android:layout_marginTop="10dp"
+                android:alpha="0.3"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:text="联系方式"
+                android:textColor="#d4d7da"
+                android:textSize="32sp"/>
 
         <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/image_contentDescription"
-            android:layout_below="@+id/btn_phone"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/line2" />
+                android:id="@+id/imageView19"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image_contentDescription"
+                android:layout_below="@+id/btn_phone"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line2"/>
     </RelativeLayout>
 
 </ScrollView>

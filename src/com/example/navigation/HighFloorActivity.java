@@ -79,19 +79,6 @@ public class HighFloorActivity extends Activity  {
         if(footFloors!=null&&footFloors.size()>0)
         footFloors.get(0).performClick();
 
-//        iv1 = (ImageView) findViewById(R.id.highfloor_iv1);
-//        iv2 = (ImageView) findViewById(R.id.highfloor_iv2);
-//        iv3 = (ImageView) findViewById(R.id.highfloor_iv3);
-//        iv4 = (ImageView) findViewById(R.id.highfloor_iv4);
-//        iv1.setImageResource(R.drawable.f1_2);
-//        iv2.setImageResource(R.drawable.f2_1);
-//        iv3.setImageResource(R.drawable.f3_1);
-//        iv4.setImageResource(R.drawable.f4_1);
-//        iv1.setOnClickListener(this);
-//        iv2.setOnClickListener(this);
-//        iv3.setOnClickListener(this);
-//        iv4.setOnClickListener(this);
-
         ivMenu = (ImageView) findViewById(R.id.iv_menu);
         ivMenu.setVisibility(View.GONE);
     }
@@ -193,43 +180,7 @@ public class HighFloorActivity extends Activity  {
         container.addView(touchImageView);
     }
 
-//    public void onClick(View view) {
-//        if (pop != null && pop.isShowing()) {
-//            pop.dismiss();
-//        }
-//        switch (view.getId()) {
-//            case R.id.highfloor_iv1:
-//                iv1.setImageResource(R.drawable.f1_2);
-//                iv2.setImageResource(R.drawable.f2_1);
-//                iv3.setImageResource(R.drawable.f3_1);
-//                iv4.setImageResource(R.drawable.f4_1);
-//                switchFloor(1);
-//                break;
-//            case R.id.highfloor_iv2:
-//                iv1.setImageResource(R.drawable.f1_1);
-//                iv2.setImageResource(R.drawable.f2_2);
-//                iv3.setImageResource(R.drawable.f3_1);
-//                iv4.setImageResource(R.drawable.f4_1);
-//                switchFloor(2);
-//                break;
-//            case R.id.highfloor_iv3:
-//                iv1.setImageResource(R.drawable.f1_1);
-//                iv2.setImageResource(R.drawable.f2_1);
-//                iv3.setImageResource(R.drawable.f3_2);
-//                iv4.setImageResource(R.drawable.f4_1);
-//                switchFloor(3);
-//                break;
-//            case R.id.highfloor_iv4:
-//                iv1.setImageResource(R.drawable.f1_1);
-//                iv2.setImageResource(R.drawable.f2_1);
-//                iv3.setImageResource(R.drawable.f3_1);
-//                iv4.setImageResource(R.drawable.f4_2);
-//                switchFloor(4);
-//                break;
-//            default:
-//                break;
-//        }
-//    }
+
 
     // ²Ëµ¥¼ü
     @SuppressWarnings("static-access")

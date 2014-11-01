@@ -1,28 +1,31 @@
 package com.example.screening;
 
-import com.example.filmmuseum.R;
-import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
-import android.view.Display;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.data.MagicFactory;
+import com.example.data.ScreenItem;
+import com.example.filmmuseum.R;
+import com.example.filmmuseum.SysApplication;
 
+/**
+ * 展映回顾详情
+ */
 public class LovelyActivity extends Activity {
 
 	private TextView tv;
 
 	private ImageView ivReturn,iv,ivMenu;
 	private Bitmap bm;
+    private ScreenItem screenItem;
+    private TextView detailTitle,detail;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,12 +33,11 @@ public class LovelyActivity extends Activity {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.lovely);
 		SysApplication.getInstance().addActivity(this);
-//		获取屏幕分辨率
-//		Display display=getWindowManager().getDefaultDisplay();
-//		Log.v("HTTWs","---width="+display.getWidth()+"  "+"---height="+display.getHeight());
-		
+
+        screenItem = (ScreenItem) getIntent().getSerializableExtra("screenItem");
+        detail = (TextView) findViewById(R.id.lovely_tv4);
 		tv = (TextView) findViewById(R.id.tv_title);
-		tv.setText("《恋爱与义务》");
+		tv.setText(screenItem.getName());
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -46,8 +48,13 @@ public class LovelyActivity extends Activity {
 		iv=(ImageView) findViewById(R.id.lovely_iv);
 		ivMenu=(ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
+
 		bm=BitmapFactory.decodeResource(getResources(), R.drawable.lovely);
-		iv.setImageBitmap(bm);
+		iv.setImageBitmap(MagicFactory.getBitmap(screenItem.getDetailImg()));
+
+        detailTitle = (TextView) findViewById(R.id.lovely_tv1);
+        detailTitle.setText(screenItem.getDetailTitle());
+        detail.setText(Html.fromHtml(screenItem.getDetail()));
 		
 	}
 

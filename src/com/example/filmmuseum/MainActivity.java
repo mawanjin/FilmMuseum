@@ -1,40 +1,30 @@
 package com.example.filmmuseum;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.example.intelligent.BeaconActivity;
-import com.example.util.ZipExtractorTask;
-
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
+import com.example.data.Index;
+import com.example.data.MagicFactory;
+import com.example.intelligent.BeaconActivity;
+import com.example.util.FileSysUtils;
+import com.example.util.ZipExtractorTask;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -45,7 +35,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	// 小圆点
 	private LinearLayout viewGroup;
 	// 存储小圆点图片
-	private ImageView dot, dots[];
+	private ImageView logo, dot, dots[];
 
 	private Runnable runnable;
 
@@ -58,6 +48,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	private int positions = 0;
 
 	private String[] str;
+    private Index index;
+    public static boolean isUnzipCompleted=false;
+
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -66,41 +59,40 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.main);
 		// 将activity装入集合
 		SysApplication.getInstance().addActivity(this);
-
+        logo = (ImageView) findViewById(R.id.imageView3);
 		btn1 = (Button) findViewById(R.id.main_btn1);
 		btn2 = (Button) findViewById(R.id.main_btn2);
 		tv2 = (TextView) findViewById(R.id.main_tv2);
-		str = new String[3];
-		str[0] = "上海电影博物馆是一座融展示与活动、参观与体验为一体，\n涵盖文物收藏、学术研究、社会教育、\n陈列展示等功能的行业博物馆";
-		str[1] = "博物馆展分为四大主题展区，五号摄影棚及一座艺术影厅。\n上海电影博物馆呈现了百年上海电影的魅力，\n生动演绎了电影人、电影事和电影背后的故事";
-		str[2] = "满足大众电影文化需求的艺术圣殿，\n也是上海电影乃至中国电影最为重要的展示窗口之一";
+//		str = new String[3];
+//		str[0] = "上海电影博物馆是一座融展示与活动、参观与体验为一体，\n涵盖文物收藏、学术研究、社会教育、\n陈列展示等功能的行业博物馆";
+//		str[1] = "博物馆展分为四大主题展区，五号摄影棚及一座艺术影厅。\n上海电影博物馆呈现了百年上海电影的魅力，\n生动演绎了电影人、电影事和电影背后的故事";
+//		str[2] = "满足大众电影文化需求的艺术圣殿，\n也是上海电影乃至中国电影最为重要的展示窗口之一";
 
-		tv2.setText(str[0]);
+//		tv2.setText(str[0]);
 		btn1.setOnClickListener(this);
 		btn2.setOnClickListener(this);
-		initViewPager();
+        if(!FileSysUtils.isExist()){
+            FileSysUtils.initSysData(this);
 
-		File destDir = new File(getExternalStoragePath()
-				+ "/FilmMuseum/download");
-		if (!destDir.exists()) {
-			destDir.mkdirs();
-		}
-		destDir = new File(getExternalStoragePath() + "/FilmMuseum/system");
-		if (!destDir.exists()) {
-			destDir.mkdirs();
-		}
-		destDir = new File(getExternalStoragePath() + "/FilmMuseum/collection");
-		if (!destDir.exists()) {
-			destDir.mkdirs();
-		}
-		String path = getExternalStoragePath()
-				+ "/FilmMuseum/download/FilmMuseum.zip";
-		try {
-			copyBigDataToSD(path);
-			doZipExtractorWork();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
+            ZipExtractorTask task = new ZipExtractorTask(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/download/FilmMuseum.zip",
+                    FileSysUtils.getExternalStoragePath() + "/FilmMuseum/system/", this, true,new Handler(){
+                @Override
+                public void handleMessage(Message msg) {
+                    super.handleMessage(msg);
+                    index  = MagicFactory.getIndex();
+                    logo.setImageBitmap(MagicFactory.getBitmap(index.getLogo()));
+                    tv2.setText(Html.fromHtml(index.getIndexItems().get(0).getDescription()));
+                    initViewPager();
+                }
+            });
+            task.execute();
+        }else{
+            index  = MagicFactory.getIndex();
+            logo.setImageBitmap(MagicFactory.getBitmap(index.getLogo()));
+            tv2.setText(Html.fromHtml(index.getIndexItems().get(0).getDescription()));
+            initViewPager();
+        }
 
 	}
 
@@ -120,40 +112,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	// 获取sdcard路径
-	public static String getExternalStoragePath() {
-		File sdDir = null;
-		boolean sdCardExist = Environment.getExternalStorageState().equals(
-				android.os.Environment.MEDIA_MOUNTED);
-		if (sdCardExist) {
-			sdDir = Environment.getExternalStorageDirectory();
-		}
-		return sdDir.toString();
-	}
 
-	// 拷贝文件到SD卡
-	private void copyBigDataToSD(String strOutFileName) throws IOException {
-		InputStream myInput;
-		OutputStream myOutputStream = new FileOutputStream(strOutFileName);
-		myInput = this.getAssets().open("FilmMuseum.zip");
-		byte[] buffer = new byte[1024];
-		int length = myInput.read(buffer);
-		while (length > 0) {
-			myOutputStream.write(buffer, 0, length);
-			length = myInput.read(buffer);
-		}
-		myOutputStream.flush();
-		myInput.close();
-		myOutputStream.close();
-	}
 
-	// 解压zip
-	public void doZipExtractorWork() {
-		ZipExtractorTask task = new ZipExtractorTask(getExternalStoragePath()
-				+ "/FilmMuseum/download/FilmMuseum.zip",
-				getExternalStoragePath() + "/FilmMuseum/system/", this, true);
-		task.execute();
-	}
+
+
+
+
 
 	// 退出程序，点击返回键之后的2秒内再点击
 	@SuppressWarnings("static-access")
@@ -186,7 +150,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	private void initViewPager() {
 		adapter = new TestAdapter(this);
-		adapter.change(getList());
+		adapter.change(index.getIndexItems());
 		
 		viewpager = (ViewPager) findViewById(R.id.viewpager);
 		viewpager.setAdapter(adapter);
@@ -259,7 +223,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		public void onPageSelected(int arg0) {
 			setCurDot(arg0);
 			positions = arg0;
-			tv2.setText(str[positions]);
+
+			tv2.setText(Html.fromHtml(index.getIndexItems().get(positions).getDescription()));
 			viewHandler.removeCallbacks(runnable);
 			viewHandler.postDelayed(runnable, autoChangeTime);
 		}

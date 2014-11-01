@@ -9,7 +9,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
+import com.example.adapter.OnlineAdapter;
 import com.example.arthighlights.ArtHighlightsActivity;
+import com.example.data.MagicFactory;
+import com.example.data.Online;
 import com.example.eagerness.EagernessActivity;
 import com.example.information.InformationActivity;
 import com.example.navigation.NavigationActivity;
@@ -25,6 +28,8 @@ public class MenuInterfaceActivity extends Activity {
 	private ListView lv;
 	//菜单按钮，返回按钮
 	private ImageView ivMenu,ivReturn;
+    private List<Online> onlines;
+
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,6 +38,9 @@ public class MenuInterfaceActivity extends Activity {
 		setContentView(R.layout.menurface);
 		//将activity装入集合
 		SysApplication.getInstance().addActivity(this);
+
+        onlines = MagicFactory.getOnlines();
+
 		ivMenu=(ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
 		
@@ -51,7 +59,7 @@ public class MenuInterfaceActivity extends Activity {
 		
 		//给listview赋值
 		SimpleAdapter adp=new SimpleAdapter(getApplicationContext(), getData(), R.layout.item, new String[]{"image","text"}, new int[]{R.id.menuIv,R.id.menu_tv});
-		lv.setAdapter(adp);
+		lv.setAdapter(new OnlineAdapter(this,onlines));
 		
 		//listview的点击事件
 		lv.setOnItemClickListener(new OnItemClickListener() {
@@ -99,31 +107,15 @@ public class MenuInterfaceActivity extends Activity {
 	private List<Map<String, Object>> list;
 	private List<Map<String, Object>> getData() {
 		list = new ArrayList<Map<String, Object>>();
-		Map<String, Object> map = new HashMap<String, Object>();
 
-		map.put("image", R.drawable.btn1);
-		map.put("text", "艺术亮点");
-		list.add(map);
+        for(Online online:onlines){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("image", R.drawable.btn1);
+            map.put("text", "艺术亮点");
+            list.add(map);
+        }
 
-		map = new HashMap<String, Object>();
-		map.put("image", R.drawable.btn2);
-		map.put("text", "先睹为快");
-		list.add(map);
 
-		map = new HashMap<String, Object>();
-		map.put("image", R.drawable.btn3);
-		map.put("text", "展馆导航");
-		list.add(map);
-
-		map = new HashMap<String, Object>();
-		map.put("image", R.drawable.btn4);
-		map.put("text", "展映活动");
-		list.add(map);
-
-		map = new HashMap<String, Object>();
-		map.put("image", R.drawable.btn5);
-		map.put("text", "参观资讯");
-		list.add(map);
 		return list;
 	}
 	

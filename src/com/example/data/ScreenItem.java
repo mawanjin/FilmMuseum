@@ -1,12 +1,14 @@
 package com.example.data;
 
+import java.io.Serializable;
+
 /**
  * User: mawanjin@join-cn.com
  * Date: 14/11/1
  * Time: 15:35
  * 展映计划中的条目内容
  */
-public class ScreenItem {
+public class ScreenItem implements Serializable{
     private int id;
     /** 左侧缩略图*/
     private String img;
@@ -28,6 +30,7 @@ public class ScreenItem {
     private String summary;
     private String detailTitle;
     private String detail;
+    private String detailImg;
 
     public int getId() {
         return id;
@@ -123,5 +126,13 @@ public class ScreenItem {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public String getDetailImg() {
+        return detailImg;
+    }
+
+    public void setDetailImg(String detailImg) {
+        this.detailImg = detailImg;
     }
 }

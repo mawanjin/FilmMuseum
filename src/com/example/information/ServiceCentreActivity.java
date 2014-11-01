@@ -1,49 +1,28 @@
 package com.example.information;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.Window;
+import android.widget.*;
+import com.example.data.InfoItem;
+import com.example.data.MagicFactory;
+import com.example.filmmuseum.R;
+import com.example.filmmuseum.SysApplication;
+import com.example.util.FileSysUtils;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.example.arthighlights.ArtHighlightsActivity;
-import com.example.eagerness.EagernessActivity;
-import com.example.filmmuseum.R;
-import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.id;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
-import com.example.navigation.GlanceActivity;
-import com.example.navigation.HighFloorActivity;
-import com.example.navigation.NavigationActivity;
-import com.example.navigation.RouteActivity;
-import com.example.screening.FutureScreeningActivity;
-import com.example.screening.NowScreeningActivity;
-import com.example.screening.ReviewScreeningActivity;
-import com.example.screening.ScreeningActivity;
-import com.slidingmenu.lib.SlidingMenu;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
-
+/**
+ * 配套服务--》第二种排版的详情
+ */
 public class ServiceCentreActivity extends Activity {
 
 	private TextView tv;
@@ -53,6 +32,8 @@ public class ServiceCentreActivity extends Activity {
 	private ListView lv;
 	private ImageView ivMenu,iv;
 	private Bitmap bm;
+    private InfoItem infoItem;
+    private TextView content;
 	// 服务中心
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,8 +41,30 @@ public class ServiceCentreActivity extends Activity {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.service_centre);
 		SysApplication.getInstance().addActivity(this);
+
+        infoItem = (InfoItem) getIntent().getSerializableExtra("infoItem");
+        content = (TextView) findViewById(R.id.container);
+        String summary = infoItem.getContent();
+
+        if(summary.contains("<img")){
+            summary = summary.replaceAll("<img src=\"", "<img src=\""+ FileSysUtils.getImagePath());
+        }
+        final Html.ImageGetter imageGetter = new Html.ImageGetter() {
+
+            public Drawable getDrawable(String source) {
+                Drawable drawable=null;
+                drawable=Drawable.createFromPath(source);
+                if(drawable!=null){
+                    int width = drawable.getIntrinsicWidth()*2;
+                    int height = drawable.getIntrinsicHeight()*2;
+                    drawable.setBounds(0, 0, width, height);
+                }
+
+                return drawable;};
+        };
+        content.setText(Html.fromHtml(summary,imageGetter,null));
 		tv = (TextView) findViewById(R.id.tv_title);
-		tv.setText("服务中心");
+		tv.setText(infoItem.getName());
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -73,7 +76,8 @@ public class ServiceCentreActivity extends Activity {
 		ivMenu.setVisibility(View.GONE);
 		iv=(ImageView) findViewById(R.id.center_iv);
 		bm=BitmapFactory.decodeResource(getResources(), R.drawable.servicecen1);
-		iv.setImageBitmap(bm);
+		iv.setImageBitmap(MagicFactory.getBitmap(infoItem.getImage()));
+
 	}
 
 	// 菜单键

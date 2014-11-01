@@ -469,7 +469,6 @@ public class Download {
         List<Recommend> recommends = new ArrayList<Recommend>(0);
         Recommend recommend = null;
 
-
         File xmlFile = new File(path);
         if (xmlFile.exists()) {
             InputStream slideInputStream = null;
@@ -563,10 +562,14 @@ public class Download {
                                 screenItemContent.setImg(xpp.nextText());
                             } else if ("csummary".equals(xpp.getName())) {
                                 screenItemContent.setSummary(xpp.nextText());
+                            } else if ("ctitle".equals(xpp.getName())) {
+                                screenItemContent.setTitle(xpp.nextText());
                             }else if ("summary".equals(xpp.getName())) {
                                 screenItem.setSummary(xpp.nextText());
                             }else if ("detailTitle".equals(xpp.getName())) {
                                 screenItem.setDetailTitle(xpp.nextText());
+                            }else if ("detailImg".equals(xpp.getName())) {
+                                screenItem.setDetailImg(xpp.nextText());
                             }else if ("detail".equals(xpp.getName())) {
                                 screenItem.setDetail(xpp.nextText());
                             }
@@ -581,5 +584,153 @@ public class Download {
 
         }
         return screens;
+    }
+
+    public List<Info> readInfoXml(String path) {
+        List<Info> infos = new ArrayList<Info>(0);
+        Info info = null;
+        List<InfoItem> items = null;
+        InfoItem infoItem = null;
+
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("info".equals(xpp.getName())) {
+                                info = new Info();
+                                infos.add(info);
+                            } else if ("type".equals(xpp.getName())) {
+                                info.setType(Integer.parseInt(xpp.nextText()));
+                            } else if ("name".equals(xpp.getName())) {
+                                info.setName(xpp.nextText());
+                            } else if ("img".equals(xpp.getName())) {
+                                info.setImg(xpp.nextText());
+                            } else if ("summary".equals(xpp.getName())) {
+                                info.setSummary(xpp.nextText());
+                            } else if ("title".equals(xpp.getName())) {
+                                info.setTitle(xpp.nextText());
+                            } else if ("items".equals(xpp.getName())) {
+                                items = new ArrayList<InfoItem>(0);
+                                info.setInfoItems(items);
+                            } else if ("item".equals(xpp.getName())) {
+                                infoItem = new InfoItem();
+                                items.add(infoItem);
+                            } else if ("iname".equals(xpp.getName())) {
+                                infoItem.setName(xpp.nextText());
+                            } else if ("iimage".equals(xpp.getName())) {
+                                infoItem.setImage(xpp.nextText());
+                            } else if ("content".equals(xpp.getName())) {
+                                infoItem.setContent(xpp.nextText());
+                            }
+
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return infos;
+    }
+
+    public Index readIndexXml(String path) {
+        Index index = new Index();
+        List<IndexItem> indexItems = null;
+        IndexItem indexItem = null;
+
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("logo".equals(xpp.getName())) {
+                                index.setLogo(xpp.nextText());
+                            } else if ("items".equals(xpp.getName())) {
+                                indexItems = new ArrayList<IndexItem>(0);
+                                index.setIndexItems(indexItems);
+                            } else if ("item".equals(xpp.getName())) {
+                                indexItem = new IndexItem();
+                                indexItems.add(indexItem);
+                            } else if ("img".equals(xpp.getName())) {
+                                indexItem.setImg(xpp.nextText());
+                            } else if ("description".equals(xpp.getName())) {
+                                indexItem.setDescription(xpp.nextText());
+                            }
+
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return index;
+    }
+
+    public List<Online> readOnlineXml(String path) {
+        List<Online> onlines = new ArrayList<Online>(0);
+        Online online = null;
+
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("item".equals(xpp.getName())) {
+                                online = new Online();
+                                onlines.add(online);
+                            } else if ("img".equals(xpp.getName())) {
+                                online.setImg(xpp.nextText());
+                            } else if ("name".equals(xpp.getName())) {
+                                online.setName(xpp.nextText());
+                            }
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return onlines;
     }
 }

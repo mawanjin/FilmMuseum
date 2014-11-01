@@ -1,23 +1,15 @@
 package com.example.util;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.util.Log;
+
+import java.io.*;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.os.AsyncTask;
-import android.util.Log;
 
 public class ZipExtractorTask extends AsyncTask<Void, Integer, Long> {
 	private final String TAG = "ZipExtractorTask";
@@ -26,10 +18,12 @@ public class ZipExtractorTask extends AsyncTask<Void, Integer, Long> {
 	private int mProgress = 0;
 	private final Context mContext;
 	private boolean mReplaceAll;
+    private Handler mHandler;
 
 	public ZipExtractorTask(String in, String out, Context context,
-			boolean replaceAll) {
+			boolean replaceAll,Handler handler) {
 		super();
+        mHandler = handler;
 		mInput = new File(in);
 		mOutput = new File(out);
 		if (!mOutput.exists()) {
@@ -53,11 +47,12 @@ public class ZipExtractorTask extends AsyncTask<Void, Integer, Long> {
 
 	@Override
 	protected void onPostExecute(Long result) {
-		// TODO Auto-generated method stub
-		// super.onPostExecute(result);
-		if (isCancelled())
-			return;
-	}
+		mHandler.sendEmptyMessage(0);
+		super.onPostExecute(result);
+//		if (isCancelled())
+//			return;
+
+    }
 
 	@Override
 	protected void onPreExecute() {

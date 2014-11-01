@@ -1,49 +1,36 @@
 package com.example.information;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.example.arthighlights.ArtHighlightsActivity;
-import com.example.eagerness.EagernessActivity;
-import com.example.filmmuseum.R;
-import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
-import com.example.navigation.GlanceActivity;
-import com.example.navigation.HighFloorActivity;
-import com.example.navigation.NavigationActivity;
-import com.example.navigation.RouteActivity;
-import com.example.screening.FutureScreeningActivity;
-import com.example.screening.NowScreeningActivity;
-import com.example.screening.ReviewScreeningActivity;
-import com.example.screening.ScreeningActivity;
-import com.slidingmenu.lib.SlidingMenu;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.data.Info;
+import com.example.data.MagicFactory;
+import com.example.filmmuseum.R;
+import com.example.filmmuseum.SysApplication;
+import com.example.util.FileSysUtils;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * 第一种排版
+ */
 public class IntroductionActivity extends Activity{
 
 	private TextView tv;
 
 	private ImageView ivReturn;
 	private ImageView ivMenu,iv;
-	private Bitmap bm;
+    private Info info;
+    private TextView title,detail;
 	//博物馆简介
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,8 +38,31 @@ public class IntroductionActivity extends Activity{
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.introduction);
 		SysApplication.getInstance().addActivity(this);
+        info = (Info) getIntent().getSerializableExtra("info");
+
 		tv=(TextView) findViewById(R.id.tv_title);
-		tv.setText("博物馆简介");
+
+		tv.setText(info.getName());
+
+        title = (TextView) findViewById(R.id.introduction_tv1);
+        title.setText(info.getTitle());
+
+        detail = (TextView) findViewById(R.id.introduction_tv2);
+        String content = info.getSummary();
+        if(content.contains("<img")){
+            content = content.replaceAll("<img src=\"", "<img src=\""+FileSysUtils.getImagePath());
+        }
+        final Html.ImageGetter imageGetter = new Html.ImageGetter() {
+
+            public Drawable getDrawable(String source) {
+                Drawable drawable=null;
+                drawable=Drawable.createFromPath(source);
+                drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+                return drawable;};
+        };
+
+        detail.setText(Html.fromHtml(content, imageGetter, null));
+
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -63,8 +73,12 @@ public class IntroductionActivity extends Activity{
 		ivMenu = (ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
 		iv=(ImageView) findViewById(R.id.introduction_iv);
-		bm=BitmapFactory.decodeResource(getResources(), R.drawable.introduction);
-		iv.setImageBitmap(bm);
+//		bm=BitmapFactory.decodeResource(getResources(), R.drawable.introduction);
+
+		if(info.getImg()==null||info.getImg().equals("")){
+            iv.setVisibility(View.GONE);
+        }else
+		    iv.setImageBitmap(MagicFactory.getBitmap(info.getImg()));
 
 	}
 
@@ -98,11 +112,6 @@ public class IntroductionActivity extends Activity{
 	
 	protected void onDestroy() {
 		Log.v("HTTWs", "introductionActivity进入ondestroy");
-		if(bm.isRecycled() == false)
-		{
-			bm.recycle();
-			System.gc();
-		}
 		super.onDestroy();
 	}
 }

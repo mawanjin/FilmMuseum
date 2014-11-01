@@ -1,36 +1,40 @@
 package com.example.screening;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.example.filmmuseum.R;
-import com.example.filmmuseum.SysApplication;
-import com.example.filmmuseum.R.layout;
-import com.example.filmmuseum.R.menu;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.data.MagicFactory;
+import com.example.data.ScreenItem;
+import com.example.data.ScreenItemContent;
+import com.example.filmmuseum.R;
+import com.example.filmmuseum.SysApplication;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * 展映活动详情页
+ */
 public class DragonActivity extends Activity {
 
-	private TextView tv;
+	private TextView tv,content;
 	
 	private ImageView iv1,iv2,iv3;
 	private Bitmap bm1,bm2,bm3;
 	
 	private ImageView ivReturn,ivMenu;
+
+    private ScreenItem screenItem;
+    private ScreenItemContent screenItemContent;
 
 	// 鱼龙勇士
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +43,15 @@ public class DragonActivity extends Activity {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.dragon);
 		SysApplication.getInstance().addActivity(this);
+
+
+        screenItem = (ScreenItem) getIntent().getSerializableExtra("screenItem");
+        screenItemContent = screenItem.getContent();
+
 		tv = (TextView) findViewById(R.id.tv_title);
-		tv.setText("《鱼龙勇士》");
+        content = (TextView) findViewById(R.id.content);
+
+		tv.setText(screenItemContent.getTitle());
 		ivReturn = (ImageView) findViewById(R.id.ivReturn);
 		ivMenu = (ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
@@ -57,11 +68,12 @@ public class DragonActivity extends Activity {
 		bm1=BitmapFactory.decodeResource(getResources(), R.drawable.dragons);
 		bm2=BitmapFactory.decodeResource(getResources(), R.drawable.suki);
 		bm3=BitmapFactory.decodeResource(getResources(), R.drawable.down);
-		iv1.setImageBitmap(bm1);
+
+		iv1.setImageBitmap(MagicFactory.getBitmap(screenItemContent.getImg()));
 		iv2.setImageBitmap(bm2);
 		iv3.setImageBitmap(bm3);
-		
-		
+
+        content.setText(Html.fromHtml(screenItemContent.getSummary()));
 	}
 
 	// 退出程序

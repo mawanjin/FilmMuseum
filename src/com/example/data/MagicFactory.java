@@ -30,6 +30,9 @@ public class MagicFactory {
     private static List<Recommend> recommends;
     private static Glance glances;
     private static List<Screen> screens;
+    private static List<Info> infos;
+    private static Index index;
+    private static List<Online> onlines;
 
 
 
@@ -221,5 +224,32 @@ public class MagicFactory {
         return screens;
     }
 
+    public static List<Info> getInfos(){
+        if(infos==null){
+            Download dow = new Download();
+            infos = dow.readInfoXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/info.xml");
+        }
+        return infos;
+    }
+
+    public static Index getIndex(){
+        if(index==null){
+            Download dow = new Download();
+            index = dow.readIndexXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/indexdata.xml");
+        }
+        return index;
+    }
+
+    public static List<Online> getOnlines(){
+
+        if(onlines==null){
+            Download dow = new Download();
+            onlines = dow.readOnlineXml(FileSysUtils.getExternalStoragePath()
+                    + "/FilmMuseum/system/FilmMuseum/online.xml");
+        }
+        return onlines;
+    }
 
 }

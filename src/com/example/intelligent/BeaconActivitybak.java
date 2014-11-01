@@ -24,7 +24,6 @@ import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
 import com.example.util.ArtMenu;
-import com.example.util.ZipExtractorTask;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -369,12 +368,12 @@ public class BeaconActivitybak extends Activity {
         myOutputStream.close();
     }
 
-    // Ω‚—πzip
-    public void doZipExtractorWork() {
-        ZipExtractorTask task = new ZipExtractorTask(getExternalStoragePath()
-                + "/FilmMuseum/download/FilmMuseum.zip",
-                getExternalStoragePath() + "/FilmMuseum/system/", this, true);
-        task.execute();
-    }
+//    // Ω‚—πzip
+//    public void doZipExtractorWork() {
+//        ZipExtractorTask task = new ZipExtractorTask(getExternalStoragePath()
+//                + "/FilmMuseum/download/FilmMuseum.zip",
+//                getExternalStoragePath() + "/FilmMuseum/system/", this, true);
+//        task.execute();
+//    }
 
 }

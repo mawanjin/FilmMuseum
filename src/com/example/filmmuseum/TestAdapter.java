@@ -1,36 +1,32 @@
 package com.example.filmmuseum;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import com.example.data.IndexItem;
+import com.example.data.MagicFactory;
+
+import java.util.List;
 
 public class TestAdapter extends PagerAdapter {
 
-	private List<Integer> mPaths;
+	private List<IndexItem> indexItems;
 	private Context mContext;
 
 	public TestAdapter(Context cx) {
 		mContext = cx;
 	}
 
-	public void change(List<Integer> paths) {
-		mPaths = paths;
+	public void change(List<IndexItem> _indexItems) {
+        indexItems = _indexItems;
 	}
 
 	public int getCount() {
-		return mPaths.size();
+		return indexItems.size();
 	}
 
 	public boolean isViewFromObject(View view, Object obj) {
@@ -42,9 +38,7 @@ public class TestAdapter extends PagerAdapter {
 	public Object instantiateItem(ViewGroup container, int position) {
 		ImageView iv = new ImageView(mContext);
 		try {
-			bm = BitmapFactory.decodeResource(mContext.getResources(),
-					mPaths.get(position));// ‘ÿ»Îbitmap
-			iv.setImageBitmap(bm);
+			iv.setImageBitmap(MagicFactory.getBitmap(indexItems.get(position).getImg()));
 		} catch (OutOfMemoryError e) {
 			if(bm!=null && bm.isRecycled()== false)
 			{
