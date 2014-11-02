@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
+    
     <string name="image_contentDescription">图片</string>
     <string name="main_button1">智能导览模式</string>
     <string name="main_button2">博物馆在线</string>

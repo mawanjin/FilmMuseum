@@ -253,318 +253,305 @@ public final class R {
         public static final int tweet_user_color=0x7f02006d;
     }
     public static final class id {
-        public static final int action_settings=0x7f080135;
+        public static final int action_settings=0x7f080128;
         public static final int audio_iv=0x7f08000f;
         public static final int audio_iv2=0x7f080010;
         public static final int audio_iv3=0x7f080011;
-        public static final int audio_iv4=0x7f080012;
-        public static final int audio_iv5=0x7f080013;
-        public static final int audio_seekbar=0x7f080016;
+        public static final int audio_seekbar=0x7f080014;
         /**  Messages IDs 
          */
         public static final int auto_focus=0x7f080000;
-        public static final int btn_art=0x7f080096;
-        public static final int btn_business=0x7f0800ad;
-        public static final int btn_eag=0x7f080098;
-        public static final int btn_exhibition=0x7f0800a3;
-        public static final int btn_flo=0x7f08009b;
-        public static final int btn_glance=0x7f08009d;
-        public static final int btn_guide=0x7f0800af;
-        public static final int btn_information=0x7f0800a9;
-        public static final int btn_join=0x7f0800b5;
-        public static final int btn_museum=0x7f0800ab;
-        public static final int btn_navigation=0x7f080099;
-        public static final int btn_notes=0x7f0800b3;
-        public static final int btn_phone=0x7f0800b7;
-        public static final int btn_program=0x7f0800a7;
-        public static final int btn_review=0x7f0800a5;
-        public static final int btn_right=0x7f080095;
-        public static final int btn_route=0x7f08009f;
-        public static final int btn_screening=0x7f0800a1;
-        public static final int btn_supporting=0x7f0800b1;
-        public static final int business_iv=0x7f08001a;
-        public static final int business_tv1=0x7f08001b;
-        public static final int business_tv2=0x7f08001c;
-        public static final int business_tv3=0x7f08001d;
-        public static final int button1=0x7f0800cf;
-        public static final int center_iv=0x7f0800d7;
-        public static final int center_iv2=0x7f0800d8;
-        public static final int center_iv3=0x7f0800da;
-        public static final int center_iv4=0x7f0800dc;
-        public static final int center_iv5=0x7f0800de;
-        public static final int center_tv=0x7f0800d9;
-        public static final int center_tv10=0x7f0800e5;
-        public static final int center_tv11=0x7f0800e6;
-        public static final int center_tv12=0x7f0800e7;
-        public static final int center_tv2=0x7f0800db;
-        public static final int center_tv3=0x7f0800dd;
-        public static final int center_tv4=0x7f0800df;
-        public static final int center_tv5=0x7f0800e0;
-        public static final int center_tv6=0x7f0800e1;
-        public static final int center_tv7=0x7f0800e2;
-        public static final int center_tv8=0x7f0800e3;
-        public static final int center_tv9=0x7f0800e4;
-        public static final int constitution_tv=0x7f08001f;
-        public static final int constitution_tv10=0x7f080028;
-        public static final int constitution_tv11=0x7f080029;
-        public static final int constitution_tv12=0x7f08002a;
-        public static final int constitution_tv13=0x7f08002b;
-        public static final int constitution_tv14=0x7f08002c;
-        public static final int constitution_tv15=0x7f08002d;
-        public static final int constitution_tv2=0x7f080020;
-        public static final int constitution_tv3=0x7f080021;
-        public static final int constitution_tv4=0x7f080022;
-        public static final int constitution_tv5=0x7f080023;
-        public static final int constitution_tv6=0x7f080024;
-        public static final int constitution_tv7=0x7f080025;
-        public static final int constitution_tv8=0x7f080026;
-        public static final int constitution_tv9=0x7f080027;
-        public static final int contact_iv=0x7f08002f;
-        public static final int contact_tv1=0x7f080030;
-        public static final int contact_tv2=0x7f080031;
-        public static final int contact_tv3=0x7f080032;
-        public static final int contact_tv4=0x7f080033;
+        public static final int btn_art=0x7f080093;
+        public static final int btn_business=0x7f0800aa;
+        public static final int btn_eag=0x7f080095;
+        public static final int btn_exhibition=0x7f0800a0;
+        public static final int btn_flo=0x7f080098;
+        public static final int btn_glance=0x7f08009a;
+        public static final int btn_guide=0x7f0800ac;
+        public static final int btn_information=0x7f0800a6;
+        public static final int btn_join=0x7f0800b2;
+        public static final int btn_museum=0x7f0800a8;
+        public static final int btn_navigation=0x7f080096;
+        public static final int btn_notes=0x7f0800b0;
+        public static final int btn_phone=0x7f0800b4;
+        public static final int btn_program=0x7f0800a4;
+        public static final int btn_review=0x7f0800a2;
+        public static final int btn_route=0x7f08009c;
+        public static final int btn_screening=0x7f08009e;
+        public static final int btn_supporting=0x7f0800ae;
+        public static final int business_iv=0x7f080018;
+        public static final int business_tv1=0x7f080019;
+        public static final int business_tv2=0x7f08001a;
+        public static final int business_tv3=0x7f08001b;
+        public static final int button1=0x7f0800cb;
+        public static final int center_iv=0x7f0800d3;
+        public static final int center_iv2=0x7f0800d4;
+        public static final int center_iv3=0x7f0800d6;
+        public static final int center_iv4=0x7f0800d8;
+        public static final int center_iv5=0x7f0800da;
+        public static final int center_tv=0x7f0800d5;
+        public static final int center_tv10=0x7f0800e1;
+        public static final int center_tv11=0x7f0800e2;
+        public static final int center_tv12=0x7f0800e3;
+        public static final int center_tv2=0x7f0800d7;
+        public static final int center_tv3=0x7f0800d9;
+        public static final int center_tv4=0x7f0800db;
+        public static final int center_tv5=0x7f0800dc;
+        public static final int center_tv6=0x7f0800dd;
+        public static final int center_tv7=0x7f0800de;
+        public static final int center_tv8=0x7f0800df;
+        public static final int center_tv9=0x7f0800e0;
+        public static final int constitution_tv=0x7f08001d;
+        public static final int constitution_tv10=0x7f080026;
+        public static final int constitution_tv11=0x7f080027;
+        public static final int constitution_tv12=0x7f080028;
+        public static final int constitution_tv13=0x7f080029;
+        public static final int constitution_tv14=0x7f08002a;
+        public static final int constitution_tv15=0x7f08002b;
+        public static final int constitution_tv2=0x7f08001e;
+        public static final int constitution_tv3=0x7f08001f;
+        public static final int constitution_tv4=0x7f080020;
+        public static final int constitution_tv5=0x7f080021;
+        public static final int constitution_tv6=0x7f080022;
+        public static final int constitution_tv7=0x7f080023;
+        public static final int constitution_tv8=0x7f080024;
+        public static final int constitution_tv9=0x7f080025;
+        public static final int contact_iv=0x7f08002d;
+        public static final int contact_tv1=0x7f08002e;
+        public static final int contact_tv2=0x7f08002f;
+        public static final int contact_tv3=0x7f080030;
+        public static final int contact_tv4=0x7f080031;
         public static final int decode=0x7f080001;
         public static final int decode_failed=0x7f080002;
         public static final int decode_succeeded=0x7f080003;
-        public static final int editText1=0x7f080131;
-        public static final int editText2=0x7f080132;
-        public static final int editText3=0x7f080133;
-        public static final int editText4=0x7f080134;
         public static final int encode_failed=0x7f080004;
         public static final int encode_succeeded=0x7f080005;
-        public static final int glance_iv=0x7f080045;
-        public static final int glance_iv2=0x7f080048;
-        public static final int glance_tv=0x7f080046;
-        public static final int glance_tv2=0x7f080047;
-        public static final int glance_tv3=0x7f080049;
-        public static final int glance_tv4=0x7f08004a;
-        public static final int goddess_iv=0x7f08004c;
-        public static final int goddess_tv1=0x7f08004d;
-        public static final int goddess_tv2=0x7f08004e;
+        public static final int glance_iv=0x7f080043;
+        public static final int glance_iv2=0x7f080046;
+        public static final int glance_tv=0x7f080044;
+        public static final int glance_tv2=0x7f080045;
+        public static final int glance_tv3=0x7f080047;
+        public static final int glance_tv4=0x7f080048;
+        public static final int goddess_iv=0x7f08004a;
+        public static final int goddess_tv1=0x7f08004b;
+        public static final int goddess_tv2=0x7f08004c;
         public static final int gv_highlights=0x7f08000d;
-        public static final int high_content=0x7f080074;
-        public static final int high_image=0x7f080072;
-        public static final int high_title=0x7f080073;
-        public static final int highfloor_iv1=0x7f08005d;
-        public static final int highfloor_iv2=0x7f08005e;
-        public static final int highfloor_iv3=0x7f08005f;
-        public static final int highfloor_iv4=0x7f080060;
-        public static final int imageButton1=0x7f0800c7;
-        public static final int imageView1=0x7f080076;
-        public static final int imageView10=0x7f0800a6;
-        public static final int imageView11=0x7f0800a8;
-        public static final int imageView12=0x7f0800aa;
-        public static final int imageView13=0x7f0800ac;
-        public static final int imageView14=0x7f0800ae;
-        public static final int imageView15=0x7f0800b0;
-        public static final int imageView16=0x7f0800b2;
-        public static final int imageView17=0x7f0800b4;
-        public static final int imageView18=0x7f0800b6;
-        public static final int imageView19=0x7f0800b8;
-        public static final int imageView2=0x7f080097;
-        public static final int imageView3=0x7f080091;
-        public static final int imageView4=0x7f08009a;
-        public static final int imageView5=0x7f08009c;
-        public static final int imageView6=0x7f08009e;
-        public static final int imageView7=0x7f0800a0;
-        public static final int imageView8=0x7f0800a2;
-        public static final int imageView9=0x7f0800a4;
-        public static final int include2_movie=0x7f0800bc;
-        public static final int include2_video=0x7f080119;
+        public static final int high_content=0x7f080072;
+        public static final int high_image=0x7f080070;
+        public static final int high_title=0x7f080071;
+        public static final int highfloor_iv1=0x7f08005b;
+        public static final int highfloor_iv2=0x7f08005c;
+        public static final int highfloor_iv3=0x7f08005d;
+        public static final int highfloor_iv4=0x7f08005e;
+        public static final int imageButton1=0x7f0800c3;
+        public static final int imageView1=0x7f080074;
+        public static final int imageView10=0x7f0800a3;
+        public static final int imageView11=0x7f0800a5;
+        public static final int imageView12=0x7f0800a7;
+        public static final int imageView13=0x7f0800a9;
+        public static final int imageView14=0x7f0800ab;
+        public static final int imageView15=0x7f0800ad;
+        public static final int imageView16=0x7f0800af;
+        public static final int imageView17=0x7f0800b1;
+        public static final int imageView18=0x7f0800b3;
+        public static final int imageView19=0x7f0800b5;
+        public static final int imageView2=0x7f080094;
+        public static final int imageView3=0x7f08008f;
+        public static final int imageView4=0x7f080097;
+        public static final int imageView5=0x7f080099;
+        public static final int imageView6=0x7f08009b;
+        public static final int imageView7=0x7f08009d;
+        public static final int imageView8=0x7f08009f;
+        public static final int imageView9=0x7f0800a1;
+        public static final int include2_movie=0x7f0800b9;
+        public static final int include2_video=0x7f080115;
         public static final int include_arthighlight=0x7f08000c;
         public static final int include_audo=0x7f08000e;
-        public static final int include_beacon=0x7f080017;
-        public static final int include_business=0x7f080019;
-        public static final int include_constitution=0x7f08001e;
-        public static final int include_contact=0x7f08002e;
-        public static final int include_dragon=0x7f080034;
-        public static final int include_eagerness=0x7f080040;
-        public static final int include_future=0x7f080042;
-        public static final int include_glance=0x7f080044;
-        public static final int include_goddess=0x7f08004b;
-        public static final int include_heaven=0x7f08004f;
-        public static final int include_highfloor=0x7f08005a;
-        public static final int include_information=0x7f080061;
-        public static final int include_intelligence=0x7f080063;
-        public static final int include_introduction=0x7f080065;
-        public static final int include_join=0x7f080086;
-        public static final int include_lovely=0x7f080088;
-        public static final int include_menurface=0x7f0800b9;
-        public static final int include_movie=0x7f0800bb;
-        public static final int include_navigation=0x7f0800c1;
-        public static final int include_nowscreening=0x7f0800c3;
-        public static final int include_optional=0x7f0800c5;
-        public static final int include_recommed=0x7f0800c9;
-        public static final int include_reviewscreening=0x7f0800d0;
-        public static final int include_route=0x7f0800d2;
-        public static final int include_screening=0x7f0800d4;
-        public static final int include_service_centre=0x7f0800d6;
-        public static final int include_shops=0x7f0800f1;
-        public static final int include_studiostar=0x7f0800fb;
-        public static final int include_suki=0x7f080105;
-        public static final int include_supservices=0x7f080107;
-        public static final int include_ticket=0x7f08010b;
-        public static final int include_video=0x7f080118;
-        public static final int include_visit=0x7f080120;
-        public static final int include_volunteer=0x7f08012c;
-        public static final int introduction_iv=0x7f080066;
-        public static final int introduction_tv1=0x7f080067;
-        public static final int introduction_tv2=0x7f080068;
-        public static final int iv1_dragon=0x7f080035;
-        public static final int iv1_heaven=0x7f080050;
-        public static final int iv1_recommend=0x7f0800cb;
-        public static final int iv1_review_screening=0x7f08007a;
-        public static final int iv1_screening=0x7f080080;
-        public static final int iv2_dragon=0x7f080037;
-        public static final int iv2_eagerness=0x7f080071;
-        public static final int iv2_heaven=0x7f080052;
-        public static final int iv2_recommend=0x7f0800cc;
-        public static final int iv2_review_screening=0x7f08007c;
-        public static final int iv3_eagerness=0x7f08006f;
-        public static final int iv3_recommend=0x7f0800cd;
-        public static final int iv4_recommend=0x7f0800ce;
-        public static final int ivReturn=0x7f080115;
-        public static final int iv_download=0x7f08011d;
-        public static final int iv_dragon=0x7f080036;
-        public static final int iv_eagerness=0x7f08006e;
-        public static final int iv_heaven=0x7f080051;
-        public static final int iv_highfloor=0x7f08005b;
-        public static final int iv_intelligence=0x7f080078;
-        public static final int iv_menu=0x7f080117;
-        public static final int iv_navigation=0x7f080079;
-        public static final int iv_player=0x7f08011a;
-        public static final int iv_recommend=0x7f0800ca;
-        public static final int iv_screening=0x7f08007f;
-        public static final int iv_suki=0x7f08011c;
+        public static final int include_beacon=0x7f080015;
+        public static final int include_business=0x7f080017;
+        public static final int include_constitution=0x7f08001c;
+        public static final int include_contact=0x7f08002c;
+        public static final int include_dragon=0x7f080032;
+        public static final int include_eagerness=0x7f08003e;
+        public static final int include_future=0x7f080040;
+        public static final int include_glance=0x7f080042;
+        public static final int include_goddess=0x7f080049;
+        public static final int include_heaven=0x7f08004d;
+        public static final int include_highfloor=0x7f080058;
+        public static final int include_information=0x7f08005f;
+        public static final int include_intelligence=0x7f080061;
+        public static final int include_introduction=0x7f080063;
+        public static final int include_join=0x7f080084;
+        public static final int include_lovely=0x7f080086;
+        public static final int include_menurface=0x7f0800b6;
+        public static final int include_movie=0x7f0800b8;
+        public static final int include_navigation=0x7f0800be;
+        public static final int include_nowscreening=0x7f0800c0;
+        public static final int include_recommed=0x7f0800c5;
+        public static final int include_reviewscreening=0x7f0800cc;
+        public static final int include_route=0x7f0800ce;
+        public static final int include_screening=0x7f0800d0;
+        public static final int include_service_centre=0x7f0800d2;
+        public static final int include_shops=0x7f0800ed;
+        public static final int include_studiostar=0x7f0800f7;
+        public static final int include_suki=0x7f080101;
+        public static final int include_supservices=0x7f080103;
+        public static final int include_ticket=0x7f080107;
+        public static final int include_video=0x7f080114;
+        public static final int include_visit=0x7f08011c;
+        public static final int introduction_iv=0x7f080064;
+        public static final int introduction_tv1=0x7f080065;
+        public static final int introduction_tv2=0x7f080066;
+        public static final int iv1_dragon=0x7f080033;
+        public static final int iv1_heaven=0x7f08004e;
+        public static final int iv1_recommend=0x7f0800c7;
+        public static final int iv1_review_screening=0x7f080078;
+        public static final int iv1_screening=0x7f08007e;
+        public static final int iv2_dragon=0x7f080035;
+        public static final int iv2_eagerness=0x7f08006f;
+        public static final int iv2_heaven=0x7f080050;
+        public static final int iv2_recommend=0x7f0800c8;
+        public static final int iv2_review_screening=0x7f08007a;
+        public static final int iv3_eagerness=0x7f08006d;
+        public static final int iv3_recommend=0x7f0800c9;
+        public static final int iv4_recommend=0x7f0800ca;
+        public static final int ivReturn=0x7f080111;
+        public static final int iv_download=0x7f080119;
+        public static final int iv_dragon=0x7f080034;
+        public static final int iv_eagerness=0x7f08006c;
+        public static final int iv_heaven=0x7f08004f;
+        public static final int iv_highfloor=0x7f080059;
+        public static final int iv_intelligence=0x7f080076;
+        public static final int iv_menu=0x7f080113;
+        public static final int iv_navigation=0x7f080077;
+        public static final int iv_player=0x7f080116;
+        public static final int iv_recommend=0x7f0800c6;
+        public static final int iv_screening=0x7f08007d;
+        public static final int iv_suki=0x7f080118;
         public static final int launch_product_query=0x7f080006;
-        public static final int listView1=0x7f080106;
-        public static final int lovely_iv=0x7f080089;
-        public static final int lovely_tv1=0x7f08008a;
-        public static final int lovely_tv2=0x7f08008d;
-        public static final int lovely_tv3=0x7f08008c;
-        public static final int lovely_tv4=0x7f08008b;
-        public static final int lv=0x7f0800ba;
-        public static final int lvFloor=0x7f0800c2;
-        public static final int lv_beacon=0x7f080018;
-        public static final int lv_eagerness=0x7f080041;
-        public static final int lv_future=0x7f080043;
-        public static final int lv_information=0x7f080062;
-        public static final int lv_intelligence=0x7f080064;
-        public static final int lv_join=0x7f080087;
-        public static final int lv_now=0x7f0800c4;
-        public static final int lv_review_screening=0x7f0800d1;
-        public static final int lv_route=0x7f0800d3;
-        public static final int lv_screening=0x7f0800d5;
-        public static final int lv_sup_services=0x7f080108;
-        public static final int main_btn1=0x7f080093;
-        public static final int main_btn2=0x7f080092;
-        public static final int main_tv2=0x7f080090;
-        public static final int menu=0x7f08005c;
-        public static final int menuIv=0x7f08006a;
-        public static final int menu_iv2=0x7f08006c;
-        public static final int menu_tv=0x7f08006b;
-        public static final int movie_down=0x7f0800c0;
-        public static final int movie_player=0x7f0800bd;
-        public static final int movie_seekbar=0x7f0800be;
-        public static final int movie_suki=0x7f0800bf;
+        public static final int listView1=0x7f080102;
+        public static final int lovely_iv=0x7f080087;
+        public static final int lovely_tv1=0x7f080088;
+        public static final int lovely_tv2=0x7f08008b;
+        public static final int lovely_tv3=0x7f08008a;
+        public static final int lovely_tv4=0x7f080089;
+        public static final int lv=0x7f0800b7;
+        public static final int lvFloor=0x7f0800bf;
+        public static final int lv_beacon=0x7f080016;
+        public static final int lv_eagerness=0x7f08003f;
+        public static final int lv_future=0x7f080041;
+        public static final int lv_information=0x7f080060;
+        public static final int lv_intelligence=0x7f080062;
+        public static final int lv_join=0x7f080085;
+        public static final int lv_now=0x7f0800c1;
+        public static final int lv_review_screening=0x7f0800cd;
+        public static final int lv_route=0x7f0800cf;
+        public static final int lv_screening=0x7f0800d1;
+        public static final int lv_sup_services=0x7f080104;
+        public static final int main_btn1=0x7f080091;
+        public static final int main_btn2=0x7f080090;
+        public static final int main_tv2=0x7f08008e;
+        public static final int menu=0x7f08005a;
+        public static final int menuIv=0x7f080068;
+        public static final int menu_iv2=0x7f08006a;
+        public static final int menu_tv=0x7f080069;
+        public static final int movie_down=0x7f0800bd;
+        public static final int movie_player=0x7f0800ba;
+        public static final int movie_seekbar=0x7f0800bb;
+        public static final int movie_suki=0x7f0800bc;
         public static final int quit=0x7f080007;
-        public static final int re_menurface=0x7f080069;
-        public static final int relative=0x7f08006d;
+        public static final int re_menurface=0x7f080067;
+        public static final int relative=0x7f08006b;
         public static final int restart_preview=0x7f080008;
         public static final int return_scan_result=0x7f080009;
-        public static final int sb_player=0x7f08011b;
+        public static final int sb_player=0x7f080117;
         public static final int search_book_contents_failed=0x7f08000a;
         public static final int search_book_contents_succeeded=0x7f08000b;
-        public static final int share_btn=0x7f0800ed;
-        public static final int share_iv=0x7f0800e8;
-        public static final int share_iv2=0x7f0800ea;
-        public static final int share_iv3=0x7f0800eb;
-        public static final int share_iv4=0x7f0800f0;
-        public static final int share_tv=0x7f0800e9;
-        public static final int share_tv2=0x7f0800ee;
-        public static final int share_tv3=0x7f0800ef;
-        public static final int share_tv4=0x7f0800ec;
-        public static final int shop_iv=0x7f0800f2;
-        public static final int shop_iv2=0x7f0800f3;
-        public static final int shop_iv3=0x7f0800f5;
-        public static final int shop_iv4=0x7f0800f7;
-        public static final int shop_iv5=0x7f0800f9;
-        public static final int shop_tv=0x7f0800f4;
-        public static final int shop_tv2=0x7f0800f6;
-        public static final int shop_tv3=0x7f0800f8;
-        public static final int shop_tv4=0x7f0800fa;
-        public static final int star_iv=0x7f0800fc;
-        public static final int star_iv2=0x7f0800fd;
-        public static final int star_iv3=0x7f0800ff;
-        public static final int star_iv4=0x7f080101;
-        public static final int star_iv5=0x7f080103;
-        public static final int star_tv=0x7f0800fe;
-        public static final int star_tv2=0x7f080100;
-        public static final int star_tv3=0x7f080102;
-        public static final int star_tv4=0x7f080104;
-        public static final int surface=0x7f0800c6;
-        public static final int test_iv=0x7f080109;
-        public static final int textView1=0x7f080094;
-        public static final int textView2=0x7f08012d;
-        public static final int textView3=0x7f08012f;
-        public static final int textView4=0x7f08012e;
-        public static final int textView5=0x7f080130;
-        public static final int ticket_iv=0x7f08010c;
-        public static final int ticket_tv1=0x7f08010d;
-        public static final int ticket_tv2=0x7f08010e;
-        public static final int ticket_tv3=0x7f08010f;
-        public static final int ticket_tv4=0x7f080110;
-        public static final int ticket_tv5=0x7f080111;
-        public static final int ticket_tv6=0x7f080112;
-        public static final int ticket_tv7=0x7f080113;
-        public static final int ticket_tv8=0x7f080114;
-        public static final int tv1_dragon=0x7f080039;
-        public static final int tv1_review_screening=0x7f08007b;
-        public static final int tv1_screening=0x7f080082;
-        public static final int tv2_Audio=0x7f080015;
-        public static final int tv2_dragon=0x7f08003a;
-        public static final int tv2_heaven=0x7f080054;
-        public static final int tv2_review_screening=0x7f08007d;
-        public static final int tv2_screening=0x7f080083;
-        public static final int tv2_video=0x7f08011f;
-        public static final int tv3_dragon=0x7f08003b;
-        public static final int tv3_heaven=0x7f080055;
-        public static final int tv3_screening=0x7f080084;
-        public static final int tv4_dragon=0x7f08003c;
-        public static final int tv4_heaven=0x7f080056;
-        public static final int tv4_screening=0x7f080085;
-        public static final int tv5_dragon=0x7f08003d;
-        public static final int tv5_heaven=0x7f080057;
-        public static final int tv6_dragon=0x7f08003e;
-        public static final int tv6_heaven=0x7f080058;
-        public static final int tv7_dragon=0x7f08003f;
-        public static final int tv7_heaven=0x7f080059;
-        public static final int tv_Audio=0x7f080014;
-        public static final int tv_dragon=0x7f080038;
-        public static final int tv_eagerness=0x7f080070;
-        public static final int tv_heaven=0x7f080053;
-        public static final int tv_information=0x7f080075;
-        public static final int tv_intelligence=0x7f080077;
-        public static final int tv_pre_web=0x7f0800c8;
-        public static final int tv_route=0x7f08007e;
-        public static final int tv_screening=0x7f080081;
-        public static final int tv_title=0x7f080116;
-        public static final int tv_video=0x7f08011e;
-        public static final int txtResult=0x7f08010a;
-        public static final int viewGroup=0x7f08008f;
-        public static final int viewpager=0x7f08008e;
-        public static final int visit_tv=0x7f080121;
-        public static final int visit_tv10=0x7f08012a;
-        public static final int visit_tv11=0x7f08012b;
-        public static final int visit_tv2=0x7f080122;
-        public static final int visit_tv3=0x7f080123;
-        public static final int visit_tv4=0x7f080124;
-        public static final int visit_tv5=0x7f080125;
-        public static final int visit_tv6=0x7f080126;
-        public static final int visit_tv7=0x7f080127;
-        public static final int visit_tv8=0x7f080128;
-        public static final int visit_tv9=0x7f080129;
+        public static final int share_btn=0x7f0800e9;
+        public static final int share_iv=0x7f0800e4;
+        public static final int share_iv2=0x7f0800e6;
+        public static final int share_iv3=0x7f0800e7;
+        public static final int share_iv4=0x7f0800ec;
+        public static final int share_tv=0x7f0800e5;
+        public static final int share_tv2=0x7f0800ea;
+        public static final int share_tv3=0x7f0800eb;
+        public static final int share_tv4=0x7f0800e8;
+        public static final int shop_iv=0x7f0800ee;
+        public static final int shop_iv2=0x7f0800ef;
+        public static final int shop_iv3=0x7f0800f1;
+        public static final int shop_iv4=0x7f0800f3;
+        public static final int shop_iv5=0x7f0800f5;
+        public static final int shop_tv=0x7f0800f0;
+        public static final int shop_tv2=0x7f0800f2;
+        public static final int shop_tv3=0x7f0800f4;
+        public static final int shop_tv4=0x7f0800f6;
+        public static final int star_iv=0x7f0800f8;
+        public static final int star_iv2=0x7f0800f9;
+        public static final int star_iv3=0x7f0800fb;
+        public static final int star_iv4=0x7f0800fd;
+        public static final int star_iv5=0x7f0800ff;
+        public static final int star_tv=0x7f0800fa;
+        public static final int star_tv2=0x7f0800fc;
+        public static final int star_tv3=0x7f0800fe;
+        public static final int star_tv4=0x7f080100;
+        public static final int surface=0x7f0800c2;
+        public static final int test_iv=0x7f080105;
+        public static final int textView1=0x7f080092;
+        public static final int ticket_iv=0x7f080108;
+        public static final int ticket_tv1=0x7f080109;
+        public static final int ticket_tv2=0x7f08010a;
+        public static final int ticket_tv3=0x7f08010b;
+        public static final int ticket_tv4=0x7f08010c;
+        public static final int ticket_tv5=0x7f08010d;
+        public static final int ticket_tv6=0x7f08010e;
+        public static final int ticket_tv7=0x7f08010f;
+        public static final int ticket_tv8=0x7f080110;
+        public static final int tv1_dragon=0x7f080037;
+        public static final int tv1_review_screening=0x7f080079;
+        public static final int tv1_screening=0x7f080080;
+        public static final int tv2_Audio=0x7f080013;
+        public static final int tv2_dragon=0x7f080038;
+        public static final int tv2_heaven=0x7f080052;
+        public static final int tv2_review_screening=0x7f08007b;
+        public static final int tv2_screening=0x7f080081;
+        public static final int tv2_video=0x7f08011b;
+        public static final int tv3_dragon=0x7f080039;
+        public static final int tv3_heaven=0x7f080053;
+        public static final int tv3_screening=0x7f080082;
+        public static final int tv4_dragon=0x7f08003a;
+        public static final int tv4_heaven=0x7f080054;
+        public static final int tv4_screening=0x7f080083;
+        public static final int tv5_dragon=0x7f08003b;
+        public static final int tv5_heaven=0x7f080055;
+        public static final int tv6_dragon=0x7f08003c;
+        public static final int tv6_heaven=0x7f080056;
+        public static final int tv7_dragon=0x7f08003d;
+        public static final int tv7_heaven=0x7f080057;
+        public static final int tv_Audio=0x7f080012;
+        public static final int tv_dragon=0x7f080036;
+        public static final int tv_eagerness=0x7f08006e;
+        public static final int tv_heaven=0x7f080051;
+        public static final int tv_information=0x7f080073;
+        public static final int tv_intelligence=0x7f080075;
+        public static final int tv_pre_web=0x7f0800c4;
+        public static final int tv_route=0x7f08007c;
+        public static final int tv_screening=0x7f08007f;
+        public static final int tv_title=0x7f080112;
+        public static final int tv_video=0x7f08011a;
+        public static final int txtResult=0x7f080106;
+        public static final int viewGroup=0x7f08008d;
+        public static final int viewpager=0x7f08008c;
+        public static final int visit_tv=0x7f08011d;
+        public static final int visit_tv10=0x7f080126;
+        public static final int visit_tv11=0x7f080127;
+        public static final int visit_tv2=0x7f08011e;
+        public static final int visit_tv3=0x7f08011f;
+        public static final int visit_tv4=0x7f080120;
+        public static final int visit_tv5=0x7f080121;
+        public static final int visit_tv6=0x7f080122;
+        public static final int visit_tv7=0x7f080123;
+        public static final int visit_tv8=0x7f080124;
+        public static final int visit_tv9=0x7f080125;
     }
     public static final class layout {
         public static final int art_highlights=0x7f030000;
@@ -601,28 +588,26 @@ public final class R {
         public static final int movie=0x7f03001f;
         public static final int navigation=0x7f030020;
         public static final int now_screening=0x7f030021;
-        public static final int optional=0x7f030022;
-        public static final int player=0x7f030023;
-        public static final int popview=0x7f030024;
-        public static final int pre_web=0x7f030025;
-        public static final int recommend=0x7f030026;
-        public static final int reg=0x7f030027;
-        public static final int review_screening=0x7f030028;
-        public static final int route=0x7f030029;
-        public static final int screening=0x7f03002a;
-        public static final int service_centre=0x7f03002b;
-        public static final int share=0x7f03002c;
-        public static final int shops=0x7f03002d;
-        public static final int studio_star=0x7f03002e;
-        public static final int suki=0x7f03002f;
-        public static final int sup_services=0x7f030030;
-        public static final int test=0x7f030031;
-        public static final int ticket=0x7f030032;
-        public static final int top=0x7f030033;
-        public static final int video=0x7f030034;
-        public static final int visit=0x7f030035;
-        public static final int volunteer=0x7f030036;
-        public static final int wxentry=0x7f030037;
+        public static final int player=0x7f030022;
+        public static final int popview=0x7f030023;
+        public static final int pre_web=0x7f030024;
+        public static final int recommend=0x7f030025;
+        public static final int reg=0x7f030026;
+        public static final int review_screening=0x7f030027;
+        public static final int route=0x7f030028;
+        public static final int screening=0x7f030029;
+        public static final int service_centre=0x7f03002a;
+        public static final int share=0x7f03002b;
+        public static final int shops=0x7f03002c;
+        public static final int studio_star=0x7f03002d;
+        public static final int suki=0x7f03002e;
+        public static final int sup_services=0x7f03002f;
+        public static final int test=0x7f030030;
+        public static final int ticket=0x7f030031;
+        public static final int top=0x7f030032;
+        public static final int video=0x7f030033;
+        public static final int visit=0x7f030034;
+        public static final int wxentry=0x7f030035;
     }
     public static final class menu {
         public static final int animation=0x7f0b0000;
@@ -687,76 +672,76 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f090006;
         public static final int address=0x7f09000b;
-        public static final int animation_content=0x7f09002e;
+        public static final int animation_content=0x7f09002b;
         /**  动画电影工作室 
  动画电影工作室 
  动画电影工作室 
  动画电影工作室 
          */
-        public static final int animation_title=0x7f09002d;
+        public static final int animation_title=0x7f09002a;
         public static final int app_name=0x7f090005;
-        public static final int artclass_content=0x7f090028;
+        public static final int artclass_content=0x7f090025;
         /**  艺术影厅 
  艺术影厅 
  艺术影厅 
  艺术影厅 
          */
-        public static final int artclass_title=0x7f090027;
+        public static final int artclass_title=0x7f090024;
         public static final int beacon_tv=0x7f090003;
-        public static final int brilliant_content=0x7f090022;
+        public static final int brilliant_content=0x7f09001f;
         /**  百年辉煌 
  百年辉煌 
  百年辉煌 
  百年辉煌 
          */
-        public static final int brilliant_title=0x7f090021;
-        public static final int business_content=0x7f090042;
-        public static final int business_content2=0x7f090043;
+        public static final int brilliant_title=0x7f09001e;
+        public static final int business_content=0x7f09003f;
+        public static final int business_content2=0x7f090040;
         /**  开放时间 
 开放时间  
          */
-        public static final int business_title=0x7f090041;
-        public static final int clothing_content=0x7f090032;
+        public static final int business_title=0x7f09003e;
+        public static final int clothing_content=0x7f09002f;
         /**  化妆服装工作室 
  化妆服装工作室 
  化妆服装工作室 
  化妆服装工作室 
          */
-        public static final int clothing_title=0x7f090031;
-        public static final int constitution_content=0x7f090065;
-        public static final int constitution_content2=0x7f090067;
-        public static final int constitution_content2_2=0x7f090068;
-        public static final int constitution_content2_title=0x7f090066;
-        public static final int constitution_content3=0x7f09006a;
-        public static final int constitution_content3_2=0x7f09006b;
-        public static final int constitution_content3_3=0x7f09006c;
-        public static final int constitution_content3_4=0x7f09006d;
-        public static final int constitution_content3_5=0x7f09006e;
-        public static final int constitution_content3_6=0x7f09006f;
-        public static final int constitution_content3_7=0x7f090070;
-        public static final int constitution_content3_8=0x7f090071;
-        public static final int constitution_content3_9=0x7f090073;
-        public static final int constitution_content3_9_title=0x7f090072;
-        public static final int constitution_content3_title=0x7f090069;
+        public static final int clothing_title=0x7f09002e;
+        public static final int constitution_content=0x7f090062;
+        public static final int constitution_content2=0x7f090064;
+        public static final int constitution_content2_2=0x7f090065;
+        public static final int constitution_content2_title=0x7f090063;
+        public static final int constitution_content3=0x7f090067;
+        public static final int constitution_content3_2=0x7f090068;
+        public static final int constitution_content3_3=0x7f090069;
+        public static final int constitution_content3_4=0x7f09006a;
+        public static final int constitution_content3_5=0x7f09006b;
+        public static final int constitution_content3_6=0x7f09006c;
+        public static final int constitution_content3_7=0x7f09006d;
+        public static final int constitution_content3_8=0x7f09006e;
+        public static final int constitution_content3_9=0x7f090070;
+        public static final int constitution_content3_9_title=0x7f09006f;
+        public static final int constitution_content3_title=0x7f090066;
         /**  会员章程 
 会员章程  
          */
-        public static final int constitution_title=0x7f090064;
-        public static final int contact_content=0x7f090061;
-        public static final int contact_content2=0x7f090062;
-        public static final int contact_content3=0x7f090063;
+        public static final int constitution_title=0x7f090061;
+        public static final int contact_content=0x7f09005e;
+        public static final int contact_content2=0x7f09005f;
+        public static final int contact_content3=0x7f090060;
         /**  联系方式 
 联系方式  
          */
-        public static final int contact_title=0x7f090060;
+        public static final int contact_title=0x7f09005d;
         public static final int content=0x7f090010;
-        public static final int crow_content=0x7f090026;
+        public static final int crow_content=0x7f090023;
         /**  乌鸦与麻雀 
  乌鸦与麻雀 
  乌鸦与麻雀 
  乌鸦与麻雀 
          */
-        public static final int crow_title=0x7f090025;
+        public static final int crow_title=0x7f090022;
         public static final int dragon=0x7f09000f;
         public static final int dragon_address=0x7f090013;
         public static final int dragon_message=0x7f090016;
@@ -764,199 +749,216 @@ public final class R {
         public static final int dragon_piece=0x7f090014;
         public static final int dragon_price=0x7f090015;
         public static final int dragon_time=0x7f090012;
-        public static final int encyclopedia_content=0x7f090034;
+        public static final int encyclopedia_content=0x7f090031;
         /**  电影百科 
  电影百科 
  电影百科 
  电影百科 
          */
-        public static final int encyclopedia_title=0x7f090033;
-        public static final int first_content=0x7f090024;
+        public static final int encyclopedia_title=0x7f090030;
+        public static final int first_content=0x7f090021;
         /**  影史第一 
  影史第一 
  影史第一 
  影史第一 
          */
-        public static final int first_title=0x7f090023;
-        public static final int glance_content=0x7f0900ae;
-        public static final int glance_content2=0x7f0900b0;
+        public static final int first_title=0x7f090020;
+        public static final int glance_content=0x7f09009b;
+        public static final int glance_content2=0x7f09009d;
         /** 速览  
          */
-        public static final int glance_title1=0x7f0900ad;
-        public static final int glance_title2=0x7f0900af;
-        public static final int goddess_content=0x7f09003e;
+        public static final int glance_title1=0x7f09009a;
+        public static final int glance_title2=0x7f09009c;
+        public static final int goddess_content=0x7f09003b;
         /**  神女 
  神女 
          */
-        public static final int goddess_title=0x7f09003d;
+        public static final int goddess_title=0x7f09003a;
         public static final int hello_world=0x7f090007;
         public static final int image_contentDescription=0x7f090000;
         public static final int introduction=0x7f09001d;
-        public static final int introduction_content=0x7f090040;
+        public static final int introduction_content=0x7f09003d;
         /**  博物馆简介 
 博物馆简介  
          */
-        public static final int introduction_title=0x7f09003f;
-        public static final int later_content=0x7f090030;
+        public static final int introduction_title=0x7f09003c;
+        public static final int later_content=0x7f09002d;
         /**  后期工作室 
  后期工作室 
  后期工作室 
  后期工作室 
          */
-        public static final int later_title=0x7f09002f;
-        public static final int love_content1=0x7f09003a;
-        public static final int love_content2=0x7f09003b;
-        public static final int love_content3=0x7f09003c;
+        public static final int later_title=0x7f09002c;
+        public static final int love_content1=0x7f090037;
+        public static final int love_content2=0x7f090038;
+        public static final int love_content3=0x7f090039;
         /**  恋爱与义务 
  恋爱与义务 
          */
-        public static final int love_title=0x7f090039;
+        public static final int love_title=0x7f090036;
         public static final int main_button1=0x7f090001;
         public static final int main_button2=0x7f090002;
         public static final int message=0x7f09000e;
         public static final int piece=0x7f09000c;
         public static final int price=0x7f09000d;
-        public static final int recoding_content=0x7f09002c;
+        public static final int recoding_content=0x7f090029;
         /**  一号录音棚 
  一号录音棚 
  一号录音棚 
  一号录音棚 
          */
-        public static final int recoding_title=0x7f09002b;
-        public static final int river_content=0x7f090038;
+        public static final int recoding_title=0x7f090028;
+        public static final int river_content=0x7f090035;
         /**  光影长河 
  光影长河 
  光影长河 
  光影长河 
          */
-        public static final int river_title=0x7f090037;
-        public static final int scan_text=0x7f09008d;
-        public static final int service_centre_content=0x7f09004d;
-        public static final int service_centre_content10=0x7f090056;
-        public static final int service_centre_content11=0x7f090057;
-        public static final int service_centre_content2=0x7f09004e;
-        public static final int service_centre_content3=0x7f09004f;
-        public static final int service_centre_content4=0x7f090050;
-        public static final int service_centre_content5=0x7f090051;
-        public static final int service_centre_content6=0x7f090052;
-        public static final int service_centre_content7=0x7f090053;
-        public static final int service_centre_content8=0x7f090054;
-        public static final int service_centre_content9=0x7f090055;
+        public static final int river_title=0x7f090034;
+        public static final int service_centre_content=0x7f09004a;
+        public static final int service_centre_content10=0x7f090053;
+        public static final int service_centre_content11=0x7f090054;
+        public static final int service_centre_content2=0x7f09004b;
+        public static final int service_centre_content3=0x7f09004c;
+        public static final int service_centre_content4=0x7f09004d;
+        public static final int service_centre_content5=0x7f09004e;
+        public static final int service_centre_content6=0x7f09004f;
+        public static final int service_centre_content7=0x7f090050;
+        public static final int service_centre_content8=0x7f090051;
+        public static final int service_centre_content9=0x7f090052;
         /**  服务中心 
 服务中心  
          */
-        public static final int service_centre_title=0x7f09004c;
+        public static final int service_centre_title=0x7f090049;
         public static final int setBehindOffset=0x7f090004;
-        public static final int shadow_content=0x7f090036;
+        public static final int shadow_content=0x7f090033;
         /**  影海溯源 
  影海溯源 
  影海溯源 
  影海溯源 
          */
-        public static final int shadow_title=0x7f090035;
-        public static final int shops_content=0x7f090059;
-        public static final int shops_content2=0x7f09005a;
-        public static final int shops_content3=0x7f09005b;
+        public static final int shadow_title=0x7f090032;
+        public static final int shops_content=0x7f090056;
+        public static final int shops_content2=0x7f090057;
+        public static final int shops_content3=0x7f090058;
         /**  博物馆商店 
 博物馆商店  
          */
-        public static final int shops_title=0x7f090058;
-        public static final int star_content=0x7f09005d;
-        public static final int star_content2=0x7f09005e;
-        public static final int star_content3=0x7f09005f;
+        public static final int shops_title=0x7f090055;
+        public static final int star_content=0x7f09005a;
+        public static final int star_content2=0x7f09005b;
+        public static final int star_content3=0x7f09005c;
         /**  片场星吧 
 片场星吧  
          */
-        public static final int star_title=0x7f09005c;
-        public static final int studio_content=0x7f09002a;
+        public static final int star_title=0x7f090059;
+        public static final int studio_content=0x7f090027;
         /**  一号摄影棚 
  一号摄影棚 
  一号摄影棚 
  一号摄影棚 
          */
-        public static final int studio_title=0x7f090029;
-        public static final int ticket_content=0x7f090045;
-        public static final int ticket_content2=0x7f090046;
-        public static final int ticket_content3=0x7f090047;
-        public static final int ticket_content4=0x7f090048;
-        public static final int ticket_content5=0x7f090049;
-        public static final int ticket_content6=0x7f09004a;
-        public static final int ticket_content7=0x7f09004b;
+        public static final int studio_title=0x7f090026;
+        public static final int ticket_content=0x7f090042;
+        public static final int ticket_content2=0x7f090043;
+        public static final int ticket_content3=0x7f090044;
+        public static final int ticket_content4=0x7f090045;
+        public static final int ticket_content5=0x7f090046;
+        public static final int ticket_content6=0x7f090047;
+        public static final int ticket_content7=0x7f090048;
         /**  购票指南 
 购票指南  
          */
-        public static final int ticket_title=0x7f090044;
+        public static final int ticket_title=0x7f090041;
         public static final int time=0x7f09000a;
         public static final int title=0x7f090009;
-        public static final int title_activity_animation=0x7f090095;
-        public static final int title_activity_art_class=0x7f090092;
-        public static final int title_activity_art_highlights=0x7f090088;
-        public static final int title_activity_audio=0x7f090083;
+        /** 艺术亮点  
+         */
+        public static final int title_activity_art_highlights=0x7f090082;
+        /**  音频播放 
+         */
+        public static final int title_activity_audio=0x7f09007f;
         public static final int title_activity_beacon=0x7f090017;
-        public static final int title_activity_brilliant=0x7f09008e;
-        public static final int title_activity_business=0x7f09009c;
-        public static final int title_activity_clothing=0x7f090097;
-        public static final int title_activity_constitution=0x7f0900a5;
-        public static final int title_activity_contact=0x7f0900a1;
-        public static final int title_activity_crow=0x7f090091;
-        public static final int title_activity_dimensional=0x7f090085;
-        public static final int title_activity_dragon=0x7f0900ab;
-        public static final int title_activity_eagerness=0x7f090089;
-        public static final int title_activity_encyclopedia=0x7f090098;
-        public static final int title_activity_first=0x7f090090;
-        public static final int title_activity_future_screening=0x7f0900a8;
+        /**  开放时间 
+         */
+        public static final int title_activity_business=0x7f090089;
+        public static final int title_activity_constitution=0x7f090092;
+        public static final int title_activity_contact=0x7f09008e;
+        public static final int title_activity_dragon=0x7f090098;
+        /**  先睹为快 
+         */
+        public static final int title_activity_eagerness=0x7f090083;
+        public static final int title_activity_future_screening=0x7f090095;
         public static final int title_activity_glance=0x7f090018;
-        public static final int title_activity_goddess=0x7f090081;
-        public static final int title_activity_heaven=0x7f0900aa;
-        public static final int title_activity_high_floor=0x7f09008f;
-        public static final int title_activity_information=0x7f09008c;
-        public static final int title_activity_intelligence=0x7f09001e;
-        public static final int title_activity_introduction=0x7f09009b;
-        public static final int title_activity_join=0x7f0900a0;
-        public static final int title_activity_later_studio=0x7f090096;
-        public static final int title_activity_login=0x7f090084;
-        public static final int title_activity_lovely=0x7f090080;
-        public static final int title_activity_menu_interface=0x7f090086;
+        /**  神女 
+         */
+        public static final int title_activity_goddess=0x7f09007d;
+        public static final int title_activity_heaven=0x7f090097;
+        /**  博物馆楼层图 
+         */
+        public static final int title_activity_high_floor=0x7f090087;
+        /**  参观资讯 
+         */
+        public static final int title_activity_information=0x7f090086;
+        /** 博物馆简介  
+         */
+        public static final int title_activity_introduction=0x7f090088;
+        /**  加入我们 
+         */
+        public static final int title_activity_join=0x7f09008d;
+        /**  标题 
+         */
+        public static final int title_activity_login=0x7f090080;
+        /**  恋爱与义务 
+         */
+        public static final int title_activity_lovely=0x7f09007c;
+        /**  博物馆在线 
+         */
+        public static final int title_activity_menu_interface=0x7f090081;
         public static final int title_activity_movie=0x7f09001c;
-        public static final int title_activity_navigation=0x7f09008a;
-        public static final int title_activity_now_screening=0x7f0900a7;
+        /**  展馆导航 
+         */
+        public static final int title_activity_navigation=0x7f090084;
+        public static final int title_activity_now_screening=0x7f090094;
         public static final int title_activity_optional=0x7f09001b;
-        public static final int title_activity_pre_web=0x7f09001f;
-        public static final int title_activity_recoding=0x7f090094;
         public static final int title_activity_recommend=0x7f09001a;
-        public static final int title_activity_review_screening=0x7f0900a9;
-        public static final int title_activity_river=0x7f09009a;
+        public static final int title_activity_review_screening=0x7f090096;
         public static final int title_activity_route=0x7f090019;
-        public static final int title_activity_screening=0x7f09008b;
-        public static final int title_activity_service_centre=0x7f0900a2;
-        public static final int title_activity_shadow=0x7f090099;
-        public static final int title_activity_shops=0x7f0900a4;
-        public static final int title_activity_studio=0x7f090093;
-        public static final int title_activity_studio_star=0x7f0900a3;
-        public static final int title_activity_suki=0x7f090020;
-        public static final int title_activity_sup_services=0x7f09009e;
-        public static final int title_activity_ticket=0x7f09009d;
-        public static final int title_activity_video=0x7f090082;
-        public static final int title_activity_visit=0x7f09009f;
-        public static final int title_activity_volunteer=0x7f0900a6;
-        public static final int title_activity_web=0x7f090087;
-        public static final int title_activity_wxentry=0x7f09007f;
+        /**  展映活动 
+         */
+        public static final int title_activity_screening=0x7f090085;
+        public static final int title_activity_service_centre=0x7f09008f;
+        public static final int title_activity_shops=0x7f090091;
+        public static final int title_activity_studio_star=0x7f090090;
+        /**  配套服务 
+         */
+        public static final int title_activity_sup_services=0x7f09008b;
+        /**  购票指南 
+         */
+        public static final int title_activity_ticket=0x7f09008a;
+        /**  视频播放 
+         */
+        public static final int title_activity_video=0x7f09007e;
+        /**  参观须知 
+         */
+        public static final int title_activity_visit=0x7f09008c;
+        public static final int title_activity_volunteer=0x7f090093;
         public static final int title_name=0x7f090008;
-        public static final int tv_preweb=0x7f0900ac;
-        public static final int visit_content=0x7f090075;
-        public static final int visit_content10=0x7f09007e;
-        public static final int visit_content2=0x7f090076;
-        public static final int visit_content3=0x7f090077;
-        public static final int visit_content4=0x7f090078;
-        public static final int visit_content5=0x7f090079;
-        public static final int visit_content6=0x7f09007a;
-        public static final int visit_content7=0x7f09007b;
-        public static final int visit_content8=0x7f09007c;
-        public static final int visit_content9=0x7f09007d;
+        public static final int tv_preweb=0x7f090099;
+        public static final int visit_content=0x7f090072;
+        public static final int visit_content10=0x7f09007b;
+        public static final int visit_content2=0x7f090073;
+        public static final int visit_content3=0x7f090074;
+        public static final int visit_content4=0x7f090075;
+        public static final int visit_content5=0x7f090076;
+        public static final int visit_content6=0x7f090077;
+        public static final int visit_content7=0x7f090078;
+        public static final int visit_content8=0x7f090079;
+        public static final int visit_content9=0x7f09007a;
         /**  参观须知 
 参观须知  
          */
-        public static final int visit_title=0x7f090074;
+        public static final int visit_title=0x7f090071;
     }
     public static final class style {
         /** 

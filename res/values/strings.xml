@@ -34,9 +34,6 @@
     <string name="introduction">上海电影博物馆位于徐汇区漕溪北路595号上海电影集团大楼1至4楼，总体面积达1.5万平方米，是一座融展示与活动、参观与体验
 	    为一体，涵盖文物收藏、学术研究、社会教育、陈列展示等功能的行业博物馆。博物馆分为四大主题展区，五号摄影棚及一座艺术影厅。上海电影博物馆呈现了百年上海电影的魅力，
 	    生动演绎了电影人、电影事和电影背后的故事，是满足大众电影文化需求的艺术圣殿，也是上海乃至中国电影最为重要的展示窗口之一，更将成为上海城市威化的新地标。</string>
-    <string name="title_activity_intelligence">IntelligenceActivity</string>
-    <string name="title_activity_pre_web">PreWebActivity</string>
-    <string name="title_activity_suki">SukiActivity</string>
 
     <!-- 百年辉煌 -->
     <string name="brilliant_title">百年辉煌</string>
@@ -200,39 +197,41 @@
     <string name="visit_content8">8、   请保管好您随身携带的物品。 </string>
     <string name="visit_content9">9、   若为学校团体， 请教师务必全程带领参观， 维持学生的安全和秩序。 </string>
     <string name="visit_content10">10、  本馆遇有重大活动或重要设备设施维修保养时， 可根据需要临时闭馆， 届时将预先告示公众。 </string>
-    <string name="title_activity_wxentry">WXEntryActivity</string>
+    <!-- 恋爱与义务 -->
     <string name="title_activity_lovely">LovelyActivity</string>
+    <!-- 神女 -->
     <string name="title_activity_goddess">GoddessActivity</string>
+    <!-- 视频播放 -->
     <string name="title_activity_video">VideoActivity</string>
+    <!-- 音频播放 -->
     <string name="title_activity_audio">AudioActivity</string>
+    <!-- 标题 -->
     <string name="title_activity_login">上海电影博物馆</string>
-    <string name="title_activity_dimensional">DimensionalActivity</string>
+    <!-- 博物馆在线 -->
     <string name="title_activity_menu_interface">MenuInterfaceActivity</string>
-    <string name="title_activity_web">WebActivity</string>
+    <!--艺术亮点  -->
     <string name="title_activity_art_highlights">ArtHighlightsActivity</string>
+    <!-- 先睹为快 -->
     <string name="title_activity_eagerness">EagernessActivity</string>
+    <!-- 展馆导航 -->
     <string name="title_activity_navigation">NavigationActivity</string>
+    <!-- 展映活动 -->
     <string name="title_activity_screening">ScreeningActivity</string>
+    <!-- 参观资讯 -->
     <string name="title_activity_information">InformationActivity</string>
-    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
-    <string name="title_activity_brilliant">BrilliantActivity</string>
+    <!-- 博物馆楼层图 -->
     <string name="title_activity_high_floor">HighFloorActivity</string>
-    <string name="title_activity_first">FirstActivity</string>
-    <string name="title_activity_crow">CrowActivity</string>
-    <string name="title_activity_art_class">ArtClassActivity</string>
-    <string name="title_activity_studio">StudioActivity</string>
-    <string name="title_activity_recoding">RecodingActivity</string>
-    <string name="title_activity_animation">AnimationActivity</string>
-    <string name="title_activity_later_studio">LaterStudioActivity</string>
-    <string name="title_activity_clothing">ClothingActivity</string>
-    <string name="title_activity_encyclopedia">EncyclopediaActivity</string>
-    <string name="title_activity_shadow">ShadowActivity</string>
-    <string name="title_activity_river">RiverActivity</string>
+    <!--博物馆简介  -->
     <string name="title_activity_introduction">IntroductionActivity</string>
+    <!-- 开放时间 -->
     <string name="title_activity_business">BusinessActivity</string>
+    <!-- 购票指南 -->
     <string name="title_activity_ticket">TicketActivity</string>
+    <!-- 配套服务 -->
     <string name="title_activity_sup_services">SupServicesActivity</string>
+    <!-- 参观须知 -->
     <string name="title_activity_visit">VisitActivity</string>
+    <!-- 加入我们 -->
     <string name="title_activity_join">JoinActivity</string>
     <string name="title_activity_contact">ContactActivity</string>
     <string name="title_activity_service_centre">Service_centreActivity</string>
