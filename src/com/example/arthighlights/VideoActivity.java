@@ -60,6 +60,7 @@ public class VideoActivity extends Activity implements Callback,
 	// ÊÓÆµµÄ¿í¸ß
 	private int videoWidth = 0;
 	private int videoHeight = 0;
+    private LinearLayout seekbarContainer;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,7 +72,7 @@ public class VideoActivity extends Activity implements Callback,
 		x = wm.getDefaultDisplay().getWidth();
 		y = wm.getDefaultDisplay().getHeight();
 		SysApplication.getInstance().addActivity(this);
-
+        seekbarContainer = (LinearLayout) findViewById(R.id.seekbarContainer);
 		seekBar = (SeekBar) findViewById(R.id.sb_player);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -381,8 +382,9 @@ public class VideoActivity extends Activity implements Callback,
 				}
 			}
 		}
+        seekbarContainer.setY(videoHeight);
 		seekBar.setX(100);
-		seekBar.setY(videoHeight+20);
+		seekBar.setY(videoHeight+30);
 		iv1.setX(10);
 		iv1.setY(videoHeight);
 		surface.setLayoutParams(new RelativeLayout.LayoutParams(videoWidth,

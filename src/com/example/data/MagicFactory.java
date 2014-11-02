@@ -6,7 +6,10 @@ import android.graphics.BitmapFactory;
 import com.example.intelligent.Person;
 import com.example.intelligent.PersonService;
 import com.example.util.*;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -33,7 +36,7 @@ public class MagicFactory {
     private static List<Info> infos;
     private static Index index;
     private static List<Online> onlines;
-
+    private static Version version;
 
 
     /**
@@ -250,6 +253,76 @@ public class MagicFactory {
                     + "/FilmMuseum/system/FilmMuseum/online.xml");
         }
         return onlines;
+    }
+
+    public static Version getVersion(Context context){
+        if(version==null){
+            version = new Version();
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = context.getResources().getAssets().open("version.xml");
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("areaId".equals(xpp.getName())) {
+                                version.setAreaId(Integer.parseInt(xpp.nextText()));
+                            } else if ("versionCode".equals(xpp.getName())) {
+                                version.setVersionCode(Integer.parseInt(xpp.nextText()));
+                            } else if ("checkUrl".equals(xpp.getName())) {
+                                version.setCheckUrl(xpp.nextText());
+                            } else if ("downloadUrl".equals(xpp.getName())) {
+                                version.setDownloadUrl(xpp.nextText());
+                            }
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        return version;
+    }
+
+    public static Version parseVersionXml(InputStream inputStream){
+        try {
+            Version version1 = new Version();
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            factory.setNamespaceAware(true);
+            XmlPullParser xpp = factory.newPullParser();
+            xpp.setInput(inputStream, "UTF-8");
+            int eventType = xpp.getEventType();
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                switch (eventType) {
+                    case XmlPullParser.START_DOCUMENT:
+                        break;
+                    case XmlPullParser.START_TAG:
+                        if ("areaId".equals(xpp.getName())) {
+                            version.setAreaId(Integer.parseInt(xpp.nextText()));
+                        } else if ("versionCode".equals(xpp.getName())) {
+                            version.setVersionCode(Integer.parseInt(xpp.nextText()));
+                        } else if ("checkUrl".equals(xpp.getName())) {
+                            version.setCheckUrl(xpp.nextText());
+                        } else if ("downloadUrl".equals(xpp.getName())) {
+                            version.setDownloadUrl(xpp.nextText());
+                        }
+                        break;
+                }
+                eventType = xpp.next();
+            }
+            return version1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

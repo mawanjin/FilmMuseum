@@ -32,58 +32,49 @@
         <service
                 android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"
                 android:exported="false"/>
-        <service
-                android:name="com.aprilbrother.aprilbeacondemo.NotifyService"
-                android:exported="false">
-        </service>
+        <!--<service-->
+                <!--android:name="com.aprilbrother.aprilbeacondemo.NotifyService"-->
+                <!--android:exported="false">-->
+        <!--</service>-->
 
         <activity android:name="com.example.filmmuseum.TestActivity">
 
         </activity>
         <activity
                 android:name="com.example.filmmuseum.MainActivity"
-                android:label="@string/app_name"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name="com.example.intelligent.DimensionalActivity"
-                android:configChanges="orientation|keyboardHidden"
-                android:screenOrientation="portrait"
-                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-                android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.intelligent.DimensionalActivity"-->
+                <!--android:configChanges="orientation|keyboardHidden"-->
+                <!--android:screenOrientation="portrait"-->
+                <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+                <!--android:windowSoftInputMode="stateAlwaysHidden">-->
+        <!--</activity>-->
         <activity
                 android:name="com.example.filmmuseum.MenuInterfaceActivity"
                 android:label="@string/title_activity_menu_interface"
                 android:screenOrientation="portrait">
         </activity>
-        <activity
-                android:name="com.example.intelligent.WebActivity"
-                android:label="@string/title_activity_web"
-                android:screenOrientation="portrait">
-        </activity>
+
         <activity
                 android:name="com.example.arthighlights.ArtHighlightsActivity"
-                android:label="@string/title_activity_art_highlights"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.eagerness.EagernessActivity"
-                android:label="@string/title_activity_eagerness"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.navigation.NavigationActivity"
-                android:label="@string/title_activity_navigation"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.screening.ScreeningActivity"
-                android:label="@string/title_activity_screening"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -91,159 +82,141 @@
                 android:label="@string/title_activity_information"
                 android:screenOrientation="portrait">
         </activity>
-        <activity
-                android:name="com.example.arthighlights.BrilliantActivity"
-                android:label="@string/title_activity_brilliant"
-                android:screenOrientation="portrait">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.BrilliantActivity"-->
+                <!--android:label="@string/title_activity_brilliant"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
         <activity
                 android:name="com.example.navigation.HighFloorActivity"
-                android:label="@string/title_activity_high_floor"
                 android:screenOrientation="portrait">
         </activity>
-        <activity
-                android:name="com.example.arthighlights.FirstActivity"
-                android:label="@string/title_activity_first"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.CrowActivity"
-                android:label="@string/title_activity_crow"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.ArtClassActivity"
-                android:label="@string/title_activity_art_class"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.StudioActivity"
-                android:label="@string/title_activity_studio"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.RecodingActivity"
-                android:label="@string/title_activity_recoding"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.AnimationActivity"
-                android:label="@string/title_activity_animation"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.LaterStudioActivity"
-                android:label="@string/title_activity_later_studio"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.ClothingActivity"
-                android:label="@string/title_activity_clothing"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.EncyclopediaActivity"
-                android:label="@string/title_activity_encyclopedia"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.ShadowActivity"
-                android:label="@string/title_activity_shadow"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.arthighlights.RiverActivity"
-                android:label="@string/title_activity_river"
-                android:screenOrientation="portrait">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.FirstActivity"-->
+                <!--android:label="@string/title_activity_first"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.CrowActivity"-->
+                <!--android:label="@string/title_activity_crow"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.ArtClassActivity"-->
+                <!--android:label="@string/title_activity_art_class"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.StudioActivity"-->
+                <!--android:label="@string/title_activity_studio"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.RecodingActivity"-->
+                <!--android:label="@string/title_activity_recoding"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.AnimationActivity"-->
+                <!--android:label="@string/title_activity_animation"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.LaterStudioActivity"-->
+                <!--android:label="@string/title_activity_later_studio"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.ClothingActivity"-->
+                <!--android:label="@string/title_activity_clothing"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.EncyclopediaActivity"-->
+                <!--android:label="@string/title_activity_encyclopedia"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.ShadowActivity"-->
+                <!--android:label="@string/title_activity_shadow"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.arthighlights.RiverActivity"-->
+                <!--android:label="@string/title_activity_river"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
         <activity
                 android:name="com.example.information.IntroductionActivity"
-                android:label="@string/title_activity_introduction"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.BusinessActivity"
-                android:label="@string/title_activity_business"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.TicketActivity"
-                android:label="@string/title_activity_ticket"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.SupServicesActivity"
-                android:label="@string/title_activity_sup_services"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.VisitActivity"
-                android:label="@string/title_activity_visit"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.JoinActivity"
-                android:label="@string/title_activity_join"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.ContactActivity"
-                android:label="@string/title_activity_contact"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.ServiceCentreActivity"
-                android:label="@string/title_activity_service_centre"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.StudioStarActivity"
-                android:label="@string/title_activity_studio_star"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.ShopsActivity"
-                android:label="@string/title_activity_shops"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.information.ConstitutionActivity"
-                android:label="@string/title_activity_constitution"
                 android:screenOrientation="portrait">
         </activity>
-        <activity
-                android:name="com.example.information.VolunteerActivity"
-                android:label="@string/title_activity_volunteer"
-                android:screenOrientation="portrait">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.information.VolunteerActivity"-->
+                <!--android:label="@string/title_activity_volunteer"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
         <activity
                 android:name="com.example.screening.NowScreeningActivity"
-                android:label="@string/title_activity_now_screening"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.screening.FutureScreeningActivity"
-                android:label="@string/title_activity_future_screening"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.screening.ReviewScreeningActivity"
-                android:label="@string/title_activity_review_screening"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.screening.HeavenActivity"
-                android:label="@string/title_activity_heaven"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.screening.DragonActivity"
-                android:label="@string/title_activity_dragon"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.intelligent.BeaconActivity"
-                android:label="@string/title_activity_beacon"
                 android:screenOrientation="portrait">
 
         </activity>
@@ -254,48 +227,42 @@
         </activity>
         <activity
                 android:name="com.example.navigation.RouteActivity"
-                android:label="@string/title_activity_route"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.navigation.RecommendActivity"
-                android:label="@string/title_activity_recommend"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.navigation.OptionalActivity"
-                android:label="@string/title_activity_optional"
                 android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name="com.example.eagerness.MovieActivity"
-                android:label="@string/title_activity_movie"
                 android:screenOrientation="landscape">
         </activity>
-        <activity
-                android:name="com.example.intelligent.IntelligenceActivity"
-                android:label="@string/title_activity_intelligence"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.example.intelligent.PreWebActivity"
-                android:label="@string/title_activity_pre_web">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.intelligent.IntelligenceActivity"-->
+                <!--android:label="@string/title_activity_intelligence"-->
+                <!--android:screenOrientation="portrait">-->
+        <!--</activity>-->
+        <!--<activity-->
+                <!--android:name="com.example.intelligent.PreWebActivity"-->
+                <!--android:label="@string/title_activity_pre_web">-->
+        <!--</activity>-->
         <activity
                 android:name="com.example.filmmuseum.SukiActivity"
-                android:label="@string/title_activity_suki">
+                >
         </activity>
         <activity
                 android:name="com.example.screening.LovelyActivity"
-                android:label="@string/title_activity_lovely">
+                >
         </activity>
         <activity
-                android:name="com.example.screening.GoddessActivity"
-                android:label="@string/title_activity_goddess">
+                android:name="com.example.screening.GoddessActivity">
         </activity>
         <activity
                 android:name="com.example.arthighlights.VideoActivity"
-                android:label="@string/title_activity_video"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -323,10 +290,10 @@
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name="com.example.filmmuseum.wxapi.WXEntryActivity"
-                android:label="@string/title_activity_wxentry">
-        </activity>
+        <!--<activity-->
+                <!--android:name="com.example.filmmuseum.wxapi.WXEntryActivity"-->
+                <!--android:label="@string/title_activity_wxentry">-->
+        <!--</activity>-->
 
         <activity
                 android:name="com.example.arthighlights.ListMainActivity">

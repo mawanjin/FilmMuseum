@@ -62,6 +62,7 @@ public class VideoFragment extends Fragment implements Callback,
 	private int videoHeight = 0;
 
     private int id;
+    private LinearLayout seekbarContainer;
 
     public VideoFragment(int id){
         this.id = id;
@@ -76,7 +77,7 @@ public class VideoFragment extends Fragment implements Callback,
 		x = wm.getDefaultDisplay().getWidth();
 		y = wm.getDefaultDisplay().getHeight();
 
-
+        seekbarContainer = (LinearLayout) view.findViewById(R.id.seekbarContainer);
 		seekBar = (SeekBar) view.findViewById(R.id.sb_player);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -375,8 +376,9 @@ public class VideoFragment extends Fragment implements Callback,
 				}
 			}
 		}
+        seekbarContainer.setY(videoHeight);
 		seekBar.setX(100);
-		seekBar.setY(videoHeight+20);
+		seekBar.setY(videoHeight+30);
 		iv1.setX(10);
 		iv1.setY(videoHeight);
 		surface.setLayoutParams(new LayoutParams(videoWidth,

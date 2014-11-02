@@ -35,6 +35,7 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 	private TextView tv, tv2, tv3;
 	@SuppressWarnings("unused")
 	private ImageView ivReturn, ivMenu, iv, iv2, iv3, iv4, iv5;
+    private LinearLayout seekbarContainer;
 	private PopupWindow pop;
 	private MediaPlayer player = null;
 	private SeekBar seekbar;
@@ -62,16 +63,16 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 		x = wm.getDefaultDisplay().getWidth();
 		y = wm.getDefaultDisplay().getHeight();
 		SysApplication.getInstance().addActivity(getActivity());
+        seekbarContainer = (LinearLayout) view.findViewById(R.id.seekbarContainer);
 		tv = (TextView) view.findViewById(R.id.tv_title);
-
 		tv2 = (TextView) view.findViewById(R.id.tv_Audio);
 		tv3 = (TextView) view.findViewById(R.id.tv2_Audio);
 
 		iv = (ImageView) view.findViewById(R.id.audio_iv);
 		iv2 = (ImageView) view.findViewById(R.id.audio_iv2);
 		iv3 = (ImageView) view.findViewById(R.id.audio_iv3);
-		iv4 = (ImageView) view.findViewById(R.id.audio_iv4);
-		iv5 = (ImageView) view.findViewById(R.id.audio_iv5);
+//		iv4 = (ImageView) view.findViewById(R.id.audio_iv4);
+//		iv5 = (ImageView) view.findViewById(R.id.audio_iv5);
 
 		ivReturn = (ImageView) view.findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
@@ -128,9 +129,9 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 					}
 					if (arts.getId() == 6) {
                         iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
-						iv5.setImageBitmap(bm);
-						iv5.setX(arts.getX());
-						iv5.setY(arts.getY());
+//						iv5.setImageBitmap(bm);
+//						iv5.setX(arts.getX());
+//						iv5.setY(arts.getY());
 					}
 				} else if (arts.getType().equals("text")) {
 					if (arts.getId() == 7) {
@@ -144,17 +145,18 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 						tv3.setTextSize(arts.getTextsize());
 					}
 				} else if (arts.getType().equals("seekbar")) {
+                    seekbarContainer.setY(arts.getY()-25);
 					seekbar.setX(arts.getX());
 					seekbar.setY(arts.getY());
 				}
 			}
 		}
 
-		iv4.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				showPopUp(v);
-			}
-		});
+//		iv4.setOnClickListener(new View.OnClickListener() {
+//			public void onClick(View v) {
+//				showPopUp(v);
+//			}
+//		});
 
 
         ArtContent c = MagicFactory.getPlay(id);

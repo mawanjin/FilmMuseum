@@ -45,6 +45,7 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 	private static final String APP_ID = "wx6462caed59df1b17";
 	// IWXAPI是第三方app和微信通信的openaip接口
 	private IWXAPI api;
+    private LinearLayout seekbarContainer;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,8 +53,10 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.audio);
 
+        seekbarContainer = (LinearLayout) findViewById(R.id.seekbarContainer);
 		WindowManager wm = (WindowManager) this
 				.getSystemService(Context.WINDOW_SERVICE);
+
 		x = wm.getDefaultDisplay().getWidth();
 		y = wm.getDefaultDisplay().getHeight();
 		SysApplication.getInstance().addActivity(this);
@@ -76,6 +79,7 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 		ivMenu = (ImageView) findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
 		player = new MediaPlayer();
+        player.setLooping(true);
 		seekbar = (SeekBar) findViewById(R.id.audio_seekbar);
         seekbar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
@@ -122,7 +126,9 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 						iv5.setX(arts.getX());
 						iv5.setY(arts.getY());
 					}
-				} else if (arts.getType().equals("text")) {
+				}
+
+                if (arts.getType().equals("text")) {
 					if (arts.getId() == 7) {
 						tv2.setX(arts.getX());
 						tv2.setY(arts.getY());
@@ -133,19 +139,24 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 						tv3.setY(arts.getY());
 						tv3.setTextSize(arts.getTextsize());
 					}
-				} else if (arts.getType().equals("seekbar")) {
+				}
+
+                if (arts.getType().equals("seekbar")) {
+                    seekbarContainer.setY(arts.getY()-25);
 					seekbar.setX(arts.getX());
 					seekbar.setY(arts.getY());
 				}
 			}
 		}
 
+
+
         //微信
-		iv4.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				showPopUp(v);
-			}
-		});
+//		iv4.setOnClickListener(new View.OnClickListener() {
+//			public void onClick(View v) {
+//				showPopUp(v);
+//			}
+//		});
 
         //读取content.xml进行播放操作。
 		Bundle bundle = getIntent().getExtras();

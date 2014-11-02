@@ -3,6 +3,7 @@ package com.example.filmmuseum;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,17 +18,22 @@ import android.view.Window;
 import android.widget.*;
 import com.example.data.Index;
 import com.example.data.MagicFactory;
+import com.example.data.Version;
 import com.example.intelligent.BeaconActivity;
 import com.example.util.FileSysUtils;
 import com.example.util.ZipExtractorTask;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends Activity implements OnClickListener {
-
+    //网上最新版本
+    private Version versionNew;
 	// 图片轮播的viewpager
 	private ViewPager viewpager;
 
@@ -50,7 +56,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private String[] str;
     private Index index;
     public static boolean isUnzipCompleted=false;
-
+    private Version version;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -94,6 +100,9 @@ public class MainActivity extends Activity implements OnClickListener {
             initViewPager();
         }
 
+        //check update
+        version = MagicFactory.getVersion(this);
+
 	}
 
 	// 点击事件
@@ -111,13 +120,6 @@ public class MainActivity extends Activity implements OnClickListener {
 			overridePendingTransition(R.anim.a2, R.anim.a1);
 		}
 	}
-
-
-
-
-
-
-
 
 	// 退出程序，点击返回键之后的2秒内再点击
 	@SuppressWarnings("static-access")
@@ -287,5 +289,43 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		super.onDestroy();
 	}
+
+    public class CheckUpdateTask extends AsyncTask{
+
+        @Override
+        protected Boolean doInBackground(Object[] objects) {
+            URL url = null;
+            try {
+                url = new URL(version.getCheckUrl());
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setConnectTimeout(3000);
+                conn.setRequestMethod("GET");
+                if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    InputStream is = conn.getInputStream();
+                    // 这里获取数据直接放在XmlPullParser里面解析
+                    versionNew = MagicFactory.parseVersionXml(is);
+                    if(versionNew.getVersionCode()>version.getVersionCode()){
+                        return true;
+                    }
+
+                } else {
+                    return null;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            super.onPostExecute(o);
+            if((Boolean)o){//todo 发现新版本，弹出下载窗口
+
+            }
+        }
+    }
 
 }

@@ -2,10 +2,7 @@ package com.example;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -72,8 +69,10 @@ public class BaseActivity extends Activity implements View.OnClickListener{
         int i=0;
         for(final Screen screen: MagicFactory.getScreens()){
             Button button = new Button(this);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0,10,0,0);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.LEFT;
+            params.setMargins(-20,10,0,0);
+            button.setGravity(Gravity.LEFT);
             button.setLayoutParams(params);
             button.setText(screen.getTitle());
             button.setTextSize(32);
@@ -124,7 +123,7 @@ public class BaseActivity extends Activity implements View.OnClickListener{
         for(final Info info: MagicFactory.getInfos()){
             Button button = new Button(this);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0,10,0,0);
+            params.setMargins(-20,10,0,0);
             button.setLayoutParams(params);
             button.setText(info.getName());
             button.setTextSize(32);
