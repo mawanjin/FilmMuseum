@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import com.example.data.MagicFactory;
 import com.example.data.Version;
+import com.example.filmmuseum.MainActivity;
 import com.example.util.FileSysUtils;
 
 import java.io.File;
@@ -103,6 +104,9 @@ public class DownloadTask extends AsyncTask {
                 myInput.close();
                 myOutputStream.close();
 
+                //更新本地version.xml文件
+                MagicFactory.updateVersion(context,((MainActivity)context).getVersionNew());
+
                 return true;
             } else {
                 return false;
@@ -116,7 +120,6 @@ public class DownloadTask extends AsyncTask {
     @Override
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
-        complete = true;
     }
 
 

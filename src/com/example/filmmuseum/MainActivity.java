@@ -340,4 +340,11 @@ public class MainActivity extends Activity implements OnClickListener {
         }
     }
 
+    public Version getVersionNew() {
+        return versionNew;
+    }
+
+    public void setVersionNew(Version versionNew) {
+        this.versionNew = versionNew;
+    }
 }

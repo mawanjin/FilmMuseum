@@ -1,6 +1,7 @@
 package com.example.data;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import com.example.intelligent.Person;
@@ -256,8 +257,21 @@ public class MagicFactory {
     }
 
     public static Version getVersion(Context context){
+
         if(version==null){
             version = new Version();
+            SharedPreferences preferences=context.getSharedPreferences("softinfo", Context.MODE_WORLD_READABLE);
+            if(preferences.getInt("areaId",-1)==-1){
+
+            }else{
+                version.setAreaId(preferences.getInt("areaId",0));
+                version.setVersionCode(preferences.getInt("versionCode", 0));
+                version.setCheckUrl(preferences.getString("checkUrl", "0"));
+                version.setDownloadUrl(preferences.getString("downloadUrl", "0"));
+                version.setFileSize(preferences.getString("fileSize", "0"));
+                return version;
+            }
+
             InputStream slideInputStream = null;
             try {
                 slideInputStream = context.getResources().getAssets().open("version.xml");
@@ -291,7 +305,29 @@ public class MagicFactory {
             }
 
         }
+
+        SharedPreferences preferences=context.getSharedPreferences("softinfo", Context.MODE_WORLD_READABLE);
+        SharedPreferences.Editor edit=preferences.edit();
+        edit.putInt("areaId", version.getAreaId());
+        edit.putInt("versionCode",version.getVersionCode());
+        edit.putString("fileSize",version.getFileSize());
+        edit.putString("checkUrl",version.getCheckUrl());
+        edit.putString("downloadUrl",version.getDownloadUrl());
+        edit.commit();
+
         return version;
+    }
+
+    public static void updateVersion(Context context,Version _version){
+        version = _version;
+        SharedPreferences preferences=context.getSharedPreferences("softinfo", Context.MODE_WORLD_READABLE);
+        SharedPreferences.Editor edit=preferences.edit();
+        edit.putInt("areaId", _version.getAreaId());
+        edit.putInt("versionCode",_version.getVersionCode());
+        edit.putString("fileSize",_version.getFileSize());
+        edit.putString("checkUrl",_version.getCheckUrl());
+        edit.putString("downloadUrl",_version.getDownloadUrl());
+        edit.commit();
     }
 
     public static Version parseVersionXml(InputStream inputStream){

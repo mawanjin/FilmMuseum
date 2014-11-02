@@ -54,7 +54,7 @@ public class UpdateDialog extends AlertDialog {
                 findViewById(R.id.downloadView).setVisibility(View.VISIBLE);
                 UpdateDialog.this.setCancelable(false);
                 //¿ªÊ¼ÏÂÔØ
-                new DownloadTask(getContext(),new Handler(){
+                new DownloadTask(context,new Handler(){
                     @Override
                     public void handleMessage(Message msg) {
                         super.handleMessage(msg);
