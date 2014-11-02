@@ -19,6 +19,7 @@ import android.widget.*;
 import com.example.data.Index;
 import com.example.data.MagicFactory;
 import com.example.data.Version;
+import com.example.dialog.UpdateDialog;
 import com.example.intelligent.BeaconActivity;
 import com.example.util.FileSysUtils;
 import com.example.util.ZipExtractorTask;
@@ -57,6 +58,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Index index;
     public static boolean isUnzipCompleted=false;
     private Version version;
+    private UpdateDialog updateDialog;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -102,6 +104,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
         //check update
         version = MagicFactory.getVersion(this);
+        new CheckUpdateTask().execute();
 
 	}
 
@@ -120,6 +123,13 @@ public class MainActivity extends Activity implements OnClickListener {
 			overridePendingTransition(R.anim.a2, R.anim.a1);
 		}
 	}
+
+    public void reloadAfterUpgrade(){
+        index  = MagicFactory.getIndex();
+        logo.setImageBitmap(MagicFactory.getBitmap(index.getLogo()));
+        tv2.setText(Html.fromHtml(index.getIndexItems().get(0).getDescription()));
+        initViewPager();
+    }
 
 	// 退出程序，点击返回键之后的2秒内再点击
 	@SuppressWarnings("static-access")
@@ -309,21 +319,23 @@ public class MainActivity extends Activity implements OnClickListener {
                     }
 
                 } else {
-                    return null;
+                    return false;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
 
-            return null;
+            return false;
         }
 
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
             if((Boolean)o){//todo 发现新版本，弹出下载窗口
-
+                updateDialog = new UpdateDialog(MainActivity.this);
+                updateDialog.setFileSize(versionNew.getFileSize());
+                updateDialog.show();
             }
         }
     }

@@ -279,6 +279,8 @@ public class MagicFactory {
                                 version.setCheckUrl(xpp.nextText());
                             } else if ("downloadUrl".equals(xpp.getName())) {
                                 version.setDownloadUrl(xpp.nextText());
+                            } else if ("fileSize".equals(xpp.getName())) {
+                                version.setFileSize(xpp.nextText());
                             }
                             break;
                     }
@@ -306,14 +308,17 @@ public class MagicFactory {
                         break;
                     case XmlPullParser.START_TAG:
                         if ("areaId".equals(xpp.getName())) {
-                            version.setAreaId(Integer.parseInt(xpp.nextText()));
+                            version1.setAreaId(Integer.parseInt(xpp.nextText()));
                         } else if ("versionCode".equals(xpp.getName())) {
-                            version.setVersionCode(Integer.parseInt(xpp.nextText()));
+                            version1.setVersionCode(Integer.parseInt(xpp.nextText()));
                         } else if ("checkUrl".equals(xpp.getName())) {
-                            version.setCheckUrl(xpp.nextText());
+                            version1.setCheckUrl(xpp.nextText());
                         } else if ("downloadUrl".equals(xpp.getName())) {
-                            version.setDownloadUrl(xpp.nextText());
+                            version1.setDownloadUrl(xpp.nextText());
+                        } else if ("fileSize".equals(xpp.getName())) {
+                            version1.setFileSize(xpp.nextText());
                         }
+
                         break;
                 }
                 eventType = xpp.next();

@@ -10,6 +10,7 @@ public class Version {
     private int versionCode;
     private String checkUrl;
     private String downloadUrl;
+    private String fileSize;
 
     public int getAreaId() {
         return areaId;
@@ -41,5 +42,13 @@ public class Version {
 
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
+    }
+
+    public String getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(String fileSize) {
+        this.fileSize = fileSize;
     }
 }

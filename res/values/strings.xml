@@ -245,5 +245,7 @@
     <string name="title_activity_heaven">HeavenActivity</string>
     <string name="title_activity_dragon">DragonActivity</string>
     <string name="inteli_navi">智能导览模式</string>
+    <string name="update_hasnew">有新内容可用</string>
+    <string name="update_download_now">你想现在就下载吗?</string>
 
 </resources>

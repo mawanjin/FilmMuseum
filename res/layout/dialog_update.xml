@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/downloadView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:background="@android:color/black"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+        <ProgressBar
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"/>
+
+        <TextView
+                android:id="@+id/percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0%"
+                android:textColor="@android:color/white"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/progressBar"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+    android:id="@+id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:background="@android:color/black"
+    android:paddingTop="30dp">
+
+
+    <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/update_hasnew"
+    android:textColor="@android:color/white"/>
+
+    <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    android:text="@string/update_download_now"
+    android:textColor="@android:color/white"/>
+
+    <TextView
+    android:id="@+id/fileSize"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:text="0MB"
+    android:textColor="@color/sbc_snippet_text"/>
+
+    <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/top_line"
+    android:scaleType="fitXY"
+    android:paddingTop="30dp"
+    />
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center_vertical">
+
+    <ImageView
+    android:id="@+id/download"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/download"
+    android:layout_weight="1"/>
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/sline"/>
+
+    <ImageView
+    android:id="@+id/cancel"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/cancle"
+    android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
