@@ -305,6 +305,8 @@
                 <!--android:src="@drawable/line1"/>-->
         <!-- 参观资讯 -->
 
+
+
         <Button
                 android:id="@+id/btn_information"
                 android:layout_width="fill_parent"
@@ -328,185 +330,196 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/line2"/>
 
-        <!-- 博物馆简介 -->
-
-        <Button
-                android:id="@+id/btn_museum"
+        <!--动态生成参观资讯-->
+        <LinearLayout
+                android:id="@+id/infoContainer"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView12"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="博物馆简介"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+                android:layout_below="@+id/imageView12">
 
-        <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_museum"
-                android:contentDescription="@string/image_contentDescription"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/line2"/>
+        </LinearLayout>
 
-        <!-- 开放时间 -->
+        <!--&lt;!&ndash; 博物馆简介 &ndash;&gt;-->
 
-        <Button
-                android:id="@+id/btn_business"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView13"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="开放时间"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--<Button-->
+                <!--android:id="@+id/btn_museum"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView12"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="博物馆简介"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_business"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image_contentDescription"
-                android:src="@drawable/line2"/>
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView13"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_museum"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line2"/>-->
 
-        <!-- 购票指南 -->
+        <!--&lt;!&ndash; 开放时间 &ndash;&gt;-->
 
-        <Button
-                android:id="@+id/btn_guide"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView14"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="购票指南"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--<Button-->
+                <!--android:id="@+id/btn_business"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView13"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="开放时间"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_guide"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image_contentDescription"
-                android:src="@drawable/line2"/>
-        <!-- 配套服务 -->
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView14"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_business"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:src="@drawable/line2"/>-->
 
-        <Button
-                android:id="@+id/btn_supporting"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView15"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="配套服务"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--&lt;!&ndash; 购票指南 &ndash;&gt;-->
 
-        <ImageView
-                android:id="@+id/imageView16"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_supporting"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image_contentDescription"
-                android:src="@drawable/line2"/>
-        <!-- 参观须知 -->
+        <!--<Button-->
+                <!--android:id="@+id/btn_guide"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView14"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="购票指南"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <Button
-                android:id="@+id/btn_notes"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView16"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="参观须知"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView15"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_guide"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:src="@drawable/line2"/>-->
+        <!--&lt;!&ndash; 配套服务 &ndash;&gt;-->
 
-        <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_notes"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/image_contentDescription"
-                android:src="@drawable/line2"/>
+        <!--<Button-->
+                <!--android:id="@+id/btn_supporting"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView15"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="配套服务"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <!-- 加入我们 -->
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView16"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_supporting"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:src="@drawable/line2"/>-->
+        <!--&lt;!&ndash; 参观须知 &ndash;&gt;-->
 
-        <Button
-                android:id="@+id/btn_join"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView17"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="加入我们"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--<Button-->
+                <!--android:id="@+id/btn_notes"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView16"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="参观须知"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_join"
-                android:contentDescription="@string/image_contentDescription"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/line2"/>
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView17"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_notes"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:src="@drawable/line2"/>-->
 
-        <!-- 联系方式 -->
+        <!--&lt;!&ndash; 加入我们 &ndash;&gt;-->
 
-        <Button
-                android:id="@+id/btn_phone"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/btn_eag"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/imageView18"
-                android:layout_marginTop="10dp"
-                android:alpha="0.3"
-                android:background="#00000000"
-                android:gravity="left|center_vertical"
-                android:text="联系方式"
-                android:textColor="#d4d7da"
-                android:textSize="32sp"/>
+        <!--<Button-->
+                <!--android:id="@+id/btn_join"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView17"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="加入我们"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
 
-        <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/image_contentDescription"
-                android:layout_below="@+id/btn_phone"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/line2"/>
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView18"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btn_join"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line2"/>-->
+
+        <!--&lt;!&ndash; 联系方式 &ndash;&gt;-->
+
+        <!--<Button-->
+                <!--android:id="@+id/btn_phone"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/btn_eag"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/imageView18"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.3"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="联系方式"-->
+                <!--android:textColor="#d4d7da"-->
+                <!--android:textSize="32sp"/>-->
+
+        <!--<ImageView-->
+                <!--android:id="@+id/imageView19"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:contentDescription="@string/image_contentDescription"-->
+                <!--android:layout_below="@+id/btn_phone"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/line2"/>-->
     </RelativeLayout>
 
 </ScrollView>
