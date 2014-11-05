@@ -10,10 +10,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.Window;
+import android.view.*;
 import android.widget.*;
 import com.example.arthighlights.AudioActivity;
 import com.example.arthighlights.VideoActivity;
@@ -46,7 +43,7 @@ public class HighFloorActivity extends Activity  {
     private PopupWindow pop;
     private Bitmap bm;
     private LinearLayout layout;
-    private LinearLayout menu;
+    private LinearLayout menu,menubg;
     private FrameLayout container;
     private TouchImageView touchImageView;
     private List<ImageView> footFloors = new ArrayList<ImageView>(0);
@@ -74,6 +71,7 @@ public class HighFloorActivity extends Activity  {
         });
 
         menu = (LinearLayout) findViewById(R.id.menu);
+        menubg = (LinearLayout) findViewById(R.id.menubg);
         //动态生成底部楼层个数
         initFloor();
         if(footFloors!=null&&footFloors.size()>0)
@@ -89,10 +87,21 @@ public class HighFloorActivity extends Activity  {
 
         for (int i=0;i<floors.size();i++) {
             final ImageView imageView = new ImageView(this);
+            final ImageView imagebgView = new ImageView(this);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0,60);
+            LinearLayout.LayoutParams bgparams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
             params.weight = 1;
+            bgparams.weight = 1;
+
             imageView.setImageResource(getFootFloor(i));
             imageView.setLayoutParams(params);
+
+            imagebgView.setLayoutParams(bgparams);
+            imagebgView.setImageDrawable(getResources().getDrawable(R.drawable.floor));
+            imagebgView.setScaleType(ImageView.ScaleType.FIT_XY);
+
+            menubg.addView(imagebgView);
+
             menu.addView(imageView);
             footFloors.add(imageView);
 

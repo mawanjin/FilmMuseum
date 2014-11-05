@@ -180,6 +180,7 @@ public class VideoActivity extends Activity implements Callback,
 		mediaPlayer.setOnPreparedListener(this);
 		mediaPlayer.setOnSeekCompleteListener(this);
 		mediaPlayer.setOnVideoSizeChangedListener(this);
+        mediaPlayer.setLooping(true);
 		try {
 			mediaPlayer.setDataSource(path);
 			mediaPlayer.prepare();
@@ -382,13 +383,15 @@ public class VideoActivity extends Activity implements Callback,
 				}
 			}
 		}
-        seekbarContainer.setY(videoHeight);
+        seekbarContainer.setX(0);
+        seekbarContainer.setY(videoHeight+20);
 		seekBar.setX(100);
-		seekBar.setY(videoHeight+30);
-		iv1.setX(10);
-		iv1.setY(videoHeight);
+		seekBar.setY(videoHeight+55);
+		iv1.setX(0);
+		iv1.setY(videoHeight+20);
 		surface.setLayoutParams(new RelativeLayout.LayoutParams(videoWidth,
 				videoHeight));
+
 		mediaPlayer.start();
 	}
 

@@ -376,11 +376,11 @@ public class VideoFragment extends Fragment implements Callback,
 				}
 			}
 		}
-        seekbarContainer.setY(videoHeight);
+        seekbarContainer.setY(videoHeight+20);
 		seekBar.setX(100);
-		seekBar.setY(videoHeight+30);
+		seekBar.setY(videoHeight+55);
 		iv1.setX(10);
-		iv1.setY(videoHeight);
+		iv1.setY(videoHeight+20);
 		surface.setLayoutParams(new LayoutParams(videoWidth,
 				videoHeight));
 		mediaPlayer.start();

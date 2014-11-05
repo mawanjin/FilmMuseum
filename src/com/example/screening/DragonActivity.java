@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -66,8 +65,8 @@ public class DragonActivity extends Activity {
 		iv2=(ImageView) findViewById(R.id.iv1_dragon);
 		iv3=(ImageView) findViewById(R.id.iv2_dragon);
 		bm1=BitmapFactory.decodeResource(getResources(), R.drawable.dragons);
-		bm2=BitmapFactory.decodeResource(getResources(), R.drawable.suki);
-		bm3=BitmapFactory.decodeResource(getResources(), R.drawable.down);
+//		bm2=BitmapFactory.decodeResource(getResources(), R.drawable.suki);
+//		bm3=BitmapFactory.decodeResource(getResources(), R.drawable.down);
 
 		iv1.setImageBitmap(MagicFactory.getBitmap(screenItemContent.getImg()));
 		iv2.setImageBitmap(bm2);
@@ -102,24 +101,5 @@ public class DragonActivity extends Activity {
 	protected void onStop() {
 		super.onStop();
 	}
-	
-	protected void onDestroy() {
-		Log.v("HTTWs", "DragonActivity½øÈëondestroy");
-		if(!(bm1.isRecycled()))
-		{
-			bm1.recycle();
-			System.gc();
-		}
-		if(!(bm2.isRecycled()))
-		{
-			bm2.recycle();
-			System.gc();
-		}
-		if(!(bm3.isRecycled()))
-		{
-			bm3.recycle();
-			System.gc();
-		}
-		super.onDestroy();
-	}
+
 }

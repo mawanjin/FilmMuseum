@@ -38,6 +38,7 @@ public class MagicFactory {
     private static Index index;
     private static List<Online> onlines;
     private static Version version;
+    private static BeaconExtra beaconExtra;
 
 
     /**
@@ -364,6 +365,15 @@ public class MagicFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static BeaconExtra getBeaconExtra(){
+        if(beaconExtra==null){
+                Download dow = new Download();
+            beaconExtra = dow.readBeaconExtraXml(FileSysUtils.getExternalStoragePath()
+                        + "/FilmMuseum/system/FilmMuseum/beacon_extra.xml");
+        }
+        return beaconExtra;
     }
 
 }

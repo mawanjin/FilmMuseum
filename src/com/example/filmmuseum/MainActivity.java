@@ -187,7 +187,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	// 初始化小圆点
 	private void initDot() {
+
 		viewGroup = (LinearLayout) findViewById(R.id.viewGroup);
+        viewGroup.removeAllViews();
 
 		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
 				20, 20);

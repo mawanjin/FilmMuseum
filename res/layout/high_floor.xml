@@ -13,12 +13,18 @@
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
             />
-    <!--<ImageView-->
-    <!--android:id="@+id/iv_highfloor"-->
-    <!--android:layout_width="fill_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_above="@+id/menu"-->
-    <!--android:layout_below="@+id/include_highfloor"/>-->
+
+
+
+    <!--footer-->
+    <LinearLayout
+            android:id="@+id/menubg"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+            </LinearLayout>
 
     <!--footer-->
     <LinearLayout
@@ -27,7 +33,6 @@
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
-            android:background="@drawable/header"
             android:gravity="center_vertical|center_horizontal">
 
 

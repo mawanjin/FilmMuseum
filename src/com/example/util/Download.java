@@ -733,4 +733,36 @@ public class Download {
 
         return onlines;
     }
+
+    public BeaconExtra readBeaconExtraXml(String path) {
+        BeaconExtra beaconExtra = new BeaconExtra();
+        File xmlFile = new File(path);
+        if (xmlFile.exists()) {
+            InputStream slideInputStream = null;
+            try {
+                slideInputStream = new FileInputStream(path);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser xpp = factory.newPullParser();
+                xpp.setInput(slideInputStream, "UTF-8");
+                int eventType = xpp.getEventType();
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    switch (eventType) {
+                        case XmlPullParser.START_DOCUMENT:
+                            break;
+                        case XmlPullParser.START_TAG:
+                            if ("available_distance".equals(xpp.getName())) {
+                                beaconExtra.setAvailableDistance(Integer.parseInt(xpp.nextText()));
+                            }
+                            break;
+                    }
+                    eventType = xpp.next();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        return beaconExtra;
+    }
 }

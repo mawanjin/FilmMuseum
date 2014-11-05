@@ -117,8 +117,10 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 						LayoutParams params = new LayoutParams(arts.getWidth(),
 								arts.getHeight());
 						iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
-						iv2.setX(arts.getX());
+//						iv2.setX(arts.getX());
 						iv2.setY(arts.getY());
+                        iv2.setX(arts.getX());
+//						iv2.setY(1105);
 						iv2.setLayoutParams(params);
 					}
 					if (arts.getId() == 6) {
@@ -142,9 +144,11 @@ public class AudioActivity extends Activity implements OnSeekBarChangeListener {
 				}
 
                 if (arts.getType().equals("seekbar")) {
-                    seekbarContainer.setY(arts.getY()-25);
+                    seekbarContainer.setY(arts.getY()-40);
+//                    seekbarContainer.setY(1106);
 					seekbar.setX(arts.getX());
 					seekbar.setY(arts.getY());
+//					seekbar.setY(1140);
 				}
 			}
 		}

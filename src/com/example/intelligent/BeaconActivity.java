@@ -19,6 +19,7 @@ import com.aprilbrother.aprilbrothersdk.Region;
 import com.example.arthighlights.AudioFragmentActivity;
 import com.example.arthighlights.ListMainActivity;
 import com.example.arthighlights.VideoFragmentActivity;
+import com.example.data.BeaconExtra;
 import com.example.data.Filter;
 import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
@@ -50,6 +51,9 @@ public class BeaconActivity extends Activity {
 
     private ImageView ivReturn, ivMenu;
     private TextView tv;
+    //有效距离
+    private int distance = 1;
+
 
     @SuppressLint("NewApi")
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,34 +77,8 @@ public class BeaconActivity extends Activity {
         mainlooper = this.getMainLooper();
         handler = new Myhandler(mainlooper);
         init();
-        //test begin
-//        init();
-//        File destDir = new File(getExternalStoragePath()
-//                + "/FilmMuseum/download");
-//        if (!destDir.exists()) {
-//            destDir.mkdirs();
-//        }
-//        destDir = new File(getExternalStoragePath() + "/FilmMuseum/system");
-//        if (!destDir.exists()) {
-//            destDir.mkdirs();
-//        }
-//        destDir = new File(getExternalStoragePath() + "/FilmMuseum/collection");
-//        if (!destDir.exists()) {
-//            destDir.mkdirs();
-//        }
-//        String path = getExternalStoragePath()
-//                + "/FilmMuseum/download/FilmMuseum.zip";
-//        try {
-//            copyBigDataToSD(path);
-//            doZipExtractorWork();
-//        } catch (IOException e1) {
-//            e1.printStackTrace();
-//        }
-//        Message msg = new Message();
-//        msg.obj = "2";
-//        handler.sendMessage(msg);
-        //test end
-        //13
+        BeaconExtra beaconExtra = MagicFactory.getBeaconExtra();
+        if(beaconExtra!=null)distance = beaconExtra.getAvailableDistance();
 
 
     }
@@ -124,7 +102,7 @@ public class BeaconActivity extends Activity {
                         persons = MagicFactory.getPersons();
 
                         if (currentBeacon != major) {//如果当前beacon不是正在播放的，则进行播放操作。
-                            if (beacon.getDistance() <= 1) {
+                            if (beacon.getDistance() <= distance) {
                                 for (Person person : persons) {
                                     if (major == person.getMajor()
                                             && minor == person.getMinor()) {

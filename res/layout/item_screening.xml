@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/tv_screening"
+        android:layout_centerVertical="true"
         android:contentDescription="@string/image_contentDescription"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"

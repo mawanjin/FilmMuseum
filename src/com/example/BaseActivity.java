@@ -153,11 +153,11 @@ public class BaseActivity extends Activity implements View.OnClickListener{
             });
             button1s.add(button);
             infoContainer.addView(button);
-            if(k!=MagicFactory.getScreens().size()-1){
+            if(k!=MagicFactory.getInfos().size()-1){
                 ImageView imageView = new ImageView(this);
                 imageView.setImageDrawable(getResources().getDrawable(R.drawable.line2));
                 imageView.setLayoutParams(params);
-                screeningContainer.addView(imageView);
+                infoContainer.addView(imageView);
             }else{
                 ImageView imageView = new ImageView(this);
                 imageView.setImageDrawable(getResources().getDrawable(R.drawable.line1));

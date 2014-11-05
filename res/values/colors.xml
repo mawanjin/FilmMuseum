@@ -44,6 +44,6 @@
   <color name="viewfinder_mask">#60000000</color>
   <color name="glance_title">#5d5d5d</color>
   <color name="gray">#d4d7da</color>
-    <color name="seekbar_bg">#809E9E9E</color>
+    <color name="seekbar_bg">#c1000000</color>
 
 </resources>

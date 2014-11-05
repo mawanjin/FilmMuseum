@@ -33,8 +33,8 @@
         android:id="@+id/iv2_review_screening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tv2_review_screening"
         android:layout_alignRight="@+id/tv1_review_screening"
+        android:layout_centerVertical="true"
         android:src="@drawable/icon_information" />
 
     <TextView

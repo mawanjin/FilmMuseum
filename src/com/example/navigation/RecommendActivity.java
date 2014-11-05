@@ -42,8 +42,10 @@ public class RecommendActivity extends Activity  {
 
     private List<Recommend> recommends;
     private LinearLayout menuContainer;
+    private LinearLayout bgContainer;
     private List<ImageView> imageViews = new ArrayList<ImageView>(0);
     private ImageView imageView;
+    private ImageView imageViewbg;
 
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class RecommendActivity extends Activity  {
 			}
 		});
         menuContainer = (LinearLayout) findViewById(R.id.menuContainer);
+        bgContainer = (LinearLayout) findViewById(R.id.bgContainer);
 
         ivCon = (ImageView) findViewById(R.id.iv_recommend);
         init();
@@ -77,8 +80,14 @@ public class RecommendActivity extends Activity  {
        for(int i=0;i<recommends.size();i++){
            final Recommend recommend = recommends.get(i);
            imageView = new ImageView(this);
+           imageViewbg = new ImageView(this);
            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
            params.weight = 1;
+           imageViewbg.setLayoutParams(params);
+           imageViewbg.setImageDrawable(getResources().getDrawable(R.drawable.floor));
+           imageViewbg.setScaleType(ImageView.ScaleType.FIT_XY);
+           bgContainer.addView(imageViewbg);
+
            imageView.setLayoutParams(params);
            imageView.setImageBitmap(MagicFactory.getBitmap(recommend.getIndicator()));
            imageViews.add(imageView);
