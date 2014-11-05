@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!--苏州馆-->
+        <areaId>1001</areaId>
+	    <!-- 版本号 -->
+	    <versionCode>1</versionCode>
+	    <!-- 检查链接 -->
+	    <checkUrl>http://192.168.15.78:8080/version.xml?area_id=1001</checkUrl>
+        <!-- 下载链接 -->
+        <downloadUrl>http://192.168.15.78:8080/FilmMuseum.zip</downloadUrl>
+        <!-- 文件大小 -->
+        <fileSize>2MB</fileSize>
+</resources>

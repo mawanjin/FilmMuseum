@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+		<router>
+		<!--路线名称图-->
+			<indicator>submenu1_1.png</indicator>	
+			<indicator_selected>submenu1_2.png</indicator_selected>
+			<!--路线图-->
+			<img>main1.png</img>
+		</router>    	
+		
+		<router>
+		<!--路线名称图-->
+			<indicator>submenu2_1.png</indicator>	
+			<indicator_selected>submenu2_2.png</indicator_selected>
+			<!--路线图-->
+			<img>main2.png</img>
+		</router>    	
+		
+		<router>
+		<!--路线名称图-->
+			<indicator>submenu3_1.png</indicator>	
+			<indicator_selected>submenu3_2.png</indicator_selected>
+			<!--路线图-->
+			<img>main3.png</img>
+		</router>    
+		
+		<router>
+		<!--路线名称图-->
+			<indicator>submenu4_1.png</indicator>	
+			<indicator_selected>submenu4_2.png</indicator_selected>
+			<!--路线图-->
+			<img>main4.png</img>
+		</router>    
+		
+</resources>
