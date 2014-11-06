@@ -29,7 +29,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.filmmuseum" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="160f4cb1-8d16-49cf-9ef7-8b067af91144" name="Default" comment="" />
+    <list default="true" id="160f4cb1-8d16-49cf-9ef7-8b067af91144" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="FilmMuseum.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -570,7 +572,7 @@
       <workItem from="1414988814013" duration="4275000" />
       <workItem from="1415024653324" duration="1243000" />
       <workItem from="1415174748390" duration="3419000" />
-      <workItem from="1415191227809" duration="13704000" />
+      <workItem from="1415191227809" duration="13887000" />
     </task>
     <task id="LOCAL-00001" summary="ad">
       <created>1413965617369</created>
@@ -632,7 +634,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189526000" />
+    <option name="totallyTimeSpent" value="189709000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
