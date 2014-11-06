@@ -2,10 +2,17 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoActivity.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/eagerness/EagernessActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/eagerness/MovieActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/information/IntroductionActivity.java" charset="GB2312" />
@@ -14,7 +21,7 @@
     <file url="file://$PROJECT_DIR$/src/com/example/navigation/RecommendActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/screening/NowScreeningActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/screening/ReviewScreeningActivity.java" charset="GB2312" />
-    <file url="PROJECT" charset="GB2312" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
 
