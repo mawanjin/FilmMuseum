@@ -45,6 +45,8 @@ public class FloorFragment extends Fragment {
 
         touchImageView = new TouchImageView(getActivity(), MagicFactory.getBitmap( MagicFactory.getFloor(getActivity(),person.getFloor()).getBackground()), pointers);
         touchImageView.setmActivity(getActivity());
+
+
 //        touchImageView.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
 //            public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -58,5 +60,9 @@ public class FloorFragment extends Fragment {
         floorContainer.addView(touchImageView);
 
         return view;
+    }
+
+    public void showLocation(){
+        touchImageView.invalidate();
     }
 }

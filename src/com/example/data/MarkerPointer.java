@@ -14,6 +14,7 @@ public class MarkerPointer extends Pointer {
     private int id=1;
     private int contentId;
 
+
     public MarkerPointer(){
 
     }

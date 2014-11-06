@@ -33,6 +33,11 @@ public class PersonService {
 					if ("beacon".equals(pullParser.getName())) {
 						person = new Person();
 					}
+
+                    if ("pid".equals(pullParser.getName())) {
+						person.setPid(Integer.parseInt(pullParser.nextText()));
+					}
+
 					if ("major".equals(pullParser.getName())) {
 						int major = Integer.valueOf(pullParser.nextText());
 						person.setMajor(major);

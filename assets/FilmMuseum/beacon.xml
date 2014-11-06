@@ -5,8 +5,12 @@
         <minor>56556</minor>
         <url>1</url>
         <floor>1</floor>
+        <pid>2</pid>
+        <!--deprecated-->
         <location_x>1136</location_x>
+        <!--deprecated-->
         <location_y>1800</location_y>
+        <!--deprecated-->
         <location_marker>location_marker.png</location_marker>
     </beacon>
     <beacon>
@@ -14,6 +18,7 @@
         <minor>56546</minor>
         <url>2</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>
@@ -23,6 +28,7 @@
         <minor>56536</minor>
         <url>3</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>
@@ -32,6 +38,7 @@
         <minor>54576</minor>
         <url>4</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>
@@ -41,6 +48,7 @@
         <minor>54596</minor>
         <url>5</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>
@@ -50,6 +58,7 @@
         <minor>54566</minor>
         <url>6</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>
@@ -59,6 +68,7 @@
         <minor>56526</minor>
         <url>7</url>
         <floor>1</floor>
+        <pid>2</pid>
         <location_x>10</location_x>
         <location_y>10</location_y>
         <location_marker>location_marker.png</location_marker>

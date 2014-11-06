@@ -171,15 +171,20 @@ public class FloorLegendFactory {
         for(Floor floor:floors){
             if(floor.getId()==person.getFloor()){
                 pointers = floor.getPointers();
+                for(MarkerPointer pointer: pointers){
+                    if(person.getPid()==pointer.getId()){
+                        pointer.showing = true;
+                        break;
+                    }
+                }
                 break;
             }
         }
 
-//        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.location_marker);
-        Bitmap bitmap = MagicFactory.getBitmap(person.getLocationMarker());
-        MarkerPointer location = new MarkerPointer(context, bitmap, person.getLocationX(), person.getLocationY());
-
-        pointers.add(location);
+//        Bitmap bitmap = MagicFactory.getBitmap(person.getLocationMarker());
+//        MarkerPointer location = new MarkerPointer(context, bitmap, person.getLocationX(), person.getLocationY());
+//
+//        pointers.add(location);
         return pointers;
     }
 

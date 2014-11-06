@@ -441,6 +441,8 @@ public class Download {
                                 Bitmap bitmapTip = MagicFactory.getBitmap(xpp.nextText());
                                 pointer.tip = new MarkerPointer(context, bitmapTip, (pointer.immutableX + pointer.width) - pointer.width / 2 - bitmapTip.getWidth() / 2, pointer.immutableY - pointer.height);
                                 pointer.tip.paddingBottom = -30;
+                            } else if ("pid".equals(xpp.getName())){
+                                pointer.setId(Integer.parseInt(xpp.nextText()));
                             }
 
                             break;

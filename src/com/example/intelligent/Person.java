@@ -6,6 +6,7 @@ public class Person implements Serializable{
 	private Integer major;
 	private Integer minor;
     private Integer floor;
+    private Integer pid;
 	private String url;
     private int locationX;
     private int locationY;
@@ -85,5 +86,13 @@ public class Person implements Serializable{
 
     public void setLocationMarker(String locationMarker) {
         this.locationMarker = locationMarker;
+    }
+
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
     }
 }
