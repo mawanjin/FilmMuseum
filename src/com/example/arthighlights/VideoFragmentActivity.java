@@ -41,6 +41,7 @@ public class VideoFragmentActivity extends FragmentActivity {
         SysApplication.getInstance().addActivity(this);
         setContentView(R.layout.audio_fragment_activity_layout);
         viewpager = (ViewPagerFixed) findViewById(R.id.viewpager);
+        viewpager.setOffscreenPageLimit(2);
         videoFragment = new VideoFragment(getIntent().getIntExtra("id",0));
         //todo 这里根据id去查找对应的楼层数据
         person  = (Person) getIntent().getSerializableExtra("person");
@@ -62,6 +63,8 @@ public class VideoFragmentActivity extends FragmentActivity {
 
         viewpager.setAdapter(mAdapter);
         viewpager.setCurrentItem(1);
+//        viewpager.setPageTransformer(true, new DefaultTransformer());
+
 
         viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

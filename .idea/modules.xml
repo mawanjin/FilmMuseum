@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Documents/workspace/android/DragImageView/DragImageView.iml" filepath="$USER_HOME$/Documents/workspace/android/DragImageView/DragImageView.iml" />
       <module fileurl="file://$PROJECT_DIR$/FilmMuseum.iml" filepath="$PROJECT_DIR$/FilmMuseum.iml" />
     </modules>
   </component>

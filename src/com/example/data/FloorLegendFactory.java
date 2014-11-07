@@ -181,10 +181,6 @@ public class FloorLegendFactory {
             }
         }
 
-//        Bitmap bitmap = MagicFactory.getBitmap(person.getLocationMarker());
-//        MarkerPointer location = new MarkerPointer(context, bitmap, person.getLocationX(), person.getLocationY());
-//
-//        pointers.add(location);
         return pointers;
     }
 

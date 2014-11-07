@@ -36,25 +36,12 @@ public class FloorFragment extends Fragment {
         View view = inflater.inflate(R.layout.floor, null);
         FrameLayout floorContainer = (FrameLayout) view.findViewById(R.id.container);
 
-        //读取beacon获取对应的数据，这里是ListMainActivity传进来的
-//        List<MarkerPointer> pointers = FloorLegendFactory.getInstance(getActivity()).getViewItemsWithLocation();
-
         for (MarkerPointer pointer : pointers) {
             pointer.clickable = false;
         }
 
         touchImageView = new TouchImageView(getActivity(), MagicFactory.getBitmap( MagicFactory.getFloor(getActivity(),person.getFloor()).getBackground()), pointers);
         touchImageView.setmActivity(getActivity());
-
-
-//        touchImageView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View view, MotionEvent motionEvent) {
-//
-//                return false;
-//            }
-//        });
-
 
         floorContainer.removeAllViews();
         floorContainer.addView(touchImageView);
