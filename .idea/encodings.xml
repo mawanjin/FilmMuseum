@@ -2,16 +2,10 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/libs/DragImageView.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/src/com/example/anim/AccordionTransformer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/anim/DefaultTransformer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/anim/InRightDownTransformer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/anim/InRightUpTransformer.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/example/anim/RotateTransformer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java" charset="GB2312" />

@@ -296,12 +296,14 @@
         <!--</activity>-->
 
         <activity
-                android:name="com.example.arthighlights.ListMainActivity">
+                android:name="com.example.arthighlights.ListMainActivity"
+                android:screenOrientation="portrait">
 
         </activity>
 
         <activity
-                android:name="com.example.arthighlights.VideoFragmentActivity">
+                android:name="com.example.arthighlights.VideoFragmentActivity"
+                android:screenOrientation="portrait">
 
         </activity>
 
