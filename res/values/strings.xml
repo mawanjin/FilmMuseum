@@ -247,5 +247,8 @@
     <string name="inteli_navi">智能导览模式</string>
     <string name="update_hasnew">有新内容可用</string>
     <string name="update_download_now">你想现在就下载吗?</string>
+    <string name="legend">博物馆楼层图</string>
+
+
 
 </resources>

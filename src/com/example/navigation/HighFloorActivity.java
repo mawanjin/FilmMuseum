@@ -30,7 +30,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Â¥²ãÍ¼Ö÷Ò³
+ * æ¥¼å±‚å›¾
  */
 public class HighFloorActivity extends Activity  {
     private String TAG = HighFloorActivity.class.getName();
@@ -51,7 +51,6 @@ public class HighFloorActivity extends Activity  {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Òþ²Ø±êÌâÀ¸
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.high_floor);
         SysApplication.getInstance().addActivity(this);
@@ -59,7 +58,7 @@ public class HighFloorActivity extends Activity  {
         container = (FrameLayout) findViewById(R.id.container);
         switchFloor(1);
         tv = (TextView) findViewById(R.id.tv_title);
-        tv.setText("²©Îï¹ÝÂ¥²ãÍ¼");
+        tv.setText(R.string.legend);
 
         ivReturn = (ImageView) findViewById(R.id.ivReturn);
         ivReturn.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +71,6 @@ public class HighFloorActivity extends Activity  {
 
         menu = (LinearLayout) findViewById(R.id.menu);
         menubg = (LinearLayout) findViewById(R.id.menubg);
-        //¶¯Ì¬Éú³Éµ×²¿Â¥²ã¸öÊý
         initFloor();
         if(footFloors!=null&&footFloors.size()>0)
         footFloors.get(0).performClick();
@@ -155,6 +153,11 @@ public class HighFloorActivity extends Activity  {
         container.removeAllViews();
 
         Floor floor = MagicFactory.getFloors(this).get(index);
+        for (MarkerPointer pointer : floor.getPointers()) {
+            pointer.clickable = true;
+            pointer.showing = false;
+        }
+
         touchImageView = new TouchImageView(this, MagicFactory.getBitmap(floor.getBackground()), floor.getPointers());
 
         touchImageView.setmActivity(this);
@@ -162,7 +165,6 @@ public class HighFloorActivity extends Activity  {
 
             public Pointer onClick(Pointer p,boolean isTip) {
                 Log.d(TAG, "good");
-                //²»ÊÇtip,ÔòÖ»Òþ²Ø»òÏÔÊ¾
                 if (!isTip) return null;
 
                 Intent intent = new Intent();
@@ -191,14 +193,12 @@ public class HighFloorActivity extends Activity  {
 
 
 
-    // ²Ëµ¥¼ü
-    @SuppressWarnings("static-access")
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == event.KEYCODE_BACK) {
             Timer exit = null;
             if (isExit == false) {
                 isExit = true;
-                Toast.makeText(getApplicationContext(), "ÔÙ°´Ò»´ÎÍË³ö³ÌÐò",
+                Toast.makeText(getApplicationContext(), "ï¿½Ù°ï¿½Ò»ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½",
                         Toast.LENGTH_SHORT).show();
                 exit = new Timer();
                 exit.schedule(new TimerTask() {
@@ -217,12 +217,12 @@ public class HighFloorActivity extends Activity  {
     private static boolean isExit = false;
 
     protected void onStop() {
-        Log.v("HTTWs", "highfloorActivity½øÈëonstop");
+        Log.v("HTTWs", "highfloorActivityï¿½ï¿½ï¿½ï¿½onstop");
         super.onStop();
     }
 
     protected void onDestroy() {
-        Log.v("HTTWs", "highfloorActivity½øÈëondestroy");
+        Log.v("HTTWs", "highfloorActivityï¿½ï¿½ï¿½ï¿½ondestroy");
         if (bm != null && bm.isRecycled() == false) {
             bm.recycle();
             bm = null;
@@ -259,7 +259,7 @@ public class HighFloorActivity extends Activity  {
         btn.getBackground().setAlpha(0);
         btn.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
                 LayoutParams.FILL_PARENT));
-        btn.setText("²ÓÀÃ½ð±­");
+        btn.setText("xxx");
         btn.setTextColor(Color.WHITE);
         btn.setTextSize(25 * scale);
         layout.addView(btn);

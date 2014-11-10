@@ -38,6 +38,8 @@ public class FloorFragment extends Fragment {
 
         for (MarkerPointer pointer : pointers) {
             pointer.clickable = false;
+            pointer.showing = false;
+            if(person.getPid()==pointer.getId())pointer.showing = true;
         }
 
         touchImageView = new TouchImageView(getActivity(), MagicFactory.getBitmap( MagicFactory.getFloor(getActivity(),person.getFloor()).getBackground()), pointers);
