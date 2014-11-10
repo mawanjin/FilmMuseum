@@ -54,6 +54,9 @@ public class BeaconActivity extends Activity {
     private TextView tv;
     //有效距离
     private int distance = 1;
+    //切换最小时间间隔
+    private long switchGap = 2000;
+    private long lastSwitchTime;
 
 
     @SuppressLint("NewApi")
@@ -94,6 +97,7 @@ public class BeaconActivity extends Activity {
         beaconManager.setForegroundScanPeriod(100, 0);
         beaconManager.setRangingListener(new RangingListener() {
             public void onBeaconsDiscovered(Region region, final List<Beacon> beacons) {
+                myBeacons.clear();
                 myBeacons.addAll(beacons);
                 for (int i = 0; i < beacons.size(); i++) {
                     Beacon beacon = beacons.get(i);
@@ -105,6 +109,8 @@ public class BeaconActivity extends Activity {
 
                         if (currentBeacon != major) {//如果当前beacon不是正在播放的，则进行播放操作。
                             if (beacon.getDistance() <= distance) {
+                                if(System.currentTimeMillis()-lastSwitchTime<switchGap)return;
+                                lastSwitchTime = System.currentTimeMillis();
                                 for (Person person : persons) {
                                     if (major == person.getMajor()
                                             && minor == person.getMinor()) {
@@ -141,6 +147,15 @@ public class BeaconActivity extends Activity {
         });
     }
 
+    private Activity lastActivity = null;
+
+    public Activity getLastActivity() {
+        return lastActivity;
+    }
+
+    public void setLastActivity(Activity lastActivity) {
+        this.lastActivity = lastActivity;
+    }
 
     public class Myhandler extends Handler {
         public Myhandler(Looper looper) {
@@ -162,20 +177,23 @@ public class BeaconActivity extends Activity {
                         bundle.putInt("id", m.getId());
                         bundle.putSerializable("person",person);
                         intent.putExtras(bundle);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                         startActivityForResult(intent,ON_RESULT_EXIT);
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
                         sendBroadcast(intentBroadcast);
+
+
                     } else if (m.getType().equals("music")) {
 
                         intent.setClass(getApplicationContext(),
                                 AudioFragmentActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("id", m.getId());
-                        bundle.putSerializable("person",person);
+                        bundle.putSerializable("person", person);
                         intent.putExtras(bundle);
-                        intent.putExtras(bundle);
-                        startActivityForResult(intent,ON_RESULT_EXIT);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                        startActivityForResult(intent, ON_RESULT_EXIT);
                         sendBroadcast(new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH));
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
@@ -184,11 +202,11 @@ public class BeaconActivity extends Activity {
 
                         intent.setClass(getApplicationContext(),
                                 ListMainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable(ListMainActivity.EXTRA_ITEMS, m);
                         bundle.putInt("id", m.getId());
                         bundle.putSerializable("person",person);
-                        intent.putExtras(bundle);
                         intent.putExtras(bundle);
                         startActivityForResult(intent,ON_RESULT_EXIT);
                     }

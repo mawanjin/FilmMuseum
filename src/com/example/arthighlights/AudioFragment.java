@@ -370,6 +370,7 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 
 
         ArtContent c = MagicFactory.getPlay(id);
+        if(c==null)return;
         tv.setText(c.getTitle());
         tv2.setText(c.getTitle());
         tv3.setText(c.getContent());

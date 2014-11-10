@@ -63,6 +63,7 @@ public class ListMainActivity extends FragmentActivity {
     @Override
     protected void onStop() {
         setResult(BeaconActivity.ON_RESULT_EXIT);
+        finish();
         super.onStop();
     }
 }

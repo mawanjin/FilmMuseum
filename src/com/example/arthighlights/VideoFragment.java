@@ -243,6 +243,7 @@ public class VideoFragment extends Fragment implements Callback,
 				int position = mediaPlayer.getCurrentPosition();
 				int mMax = mediaPlayer.getDuration();
 				int sMax = seekBar.getMax();
+                if(mMax>0)
 				seekBar.setProgress(position * sMax / mMax);
 			} else {
 				return;
@@ -415,6 +416,7 @@ public class VideoFragment extends Fragment implements Callback,
 	}
 
 	public void surfaceCreated(SurfaceHolder arg0) {
+        if(mediaPlayer!=null)
 		mediaPlayer.setDisplay(holder);
 	}
 
