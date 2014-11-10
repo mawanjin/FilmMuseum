@@ -15,6 +15,7 @@ import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import com.example.anim.DefaultTransformer;
 import com.example.data.Filter;
 import com.example.data.FloorLegendFactory;
 import com.example.filmmuseum.R;
@@ -65,7 +66,7 @@ public class VideoFragmentActivity extends FragmentActivity {
 
         viewpager.setAdapter(mAdapter);
         viewpager.setCurrentItem(1);
-//        viewpager.setPageTransformer(true, new DefaultTransformer());
+        viewpager.setPageTransformer(true, new DefaultTransformer());
 
 
         viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {

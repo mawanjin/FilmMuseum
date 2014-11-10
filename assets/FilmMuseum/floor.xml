@@ -2,188 +2,412 @@
 <resources>
 
 
-    	<floor>
-    		<!-- beancon里对应的floor-->    		
-    		<id>1</id>    		
-    		<background>f1.png</background>    		
-    		<pointers>    		
-    			<pointer>
+    <floor>
+        <!-- beancon里对应的floor-->
+        <id>1</id>
+        <background>f1.png</background>
+        <pointers>
+            <pointer>
                 <!--点编号-->
                 <pid>1</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_film.png</src>
-    			<x>136</x>
-    			<y>800</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>艺术影厅</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>4</content_id>
-	    		<!--提示tip背影图-->
-	    		<tip>tip_frame.png</tip>
-	    		</pointer>
-	    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_film.png</src>
+                <x>136</x>
+                <y>800</y>
+                <!--图标点击之后的显示文字-->
+                <txt>艺术影厅</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame.png</tip>
+            </pointer>
+            <pointer>
                 <!--点编号-->
                 <pid>2</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_film.png</src>
-    			<x>900</x>
-    			<y>860</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>乌鸦与麻雀</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<!--提示tip背影图-->
-	    		<tip>tip_frame.png</tip>
-    		</pointer>
-	    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_film.png</src>
+                <x>900</x>
+                <y>860</y>
+                <!--图标点击之后的显示文字-->
+                <txt>乌鸦与麻雀</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame.png</tip>
+            </pointer>
+            <pointer>
                 <!--点编号-->
                 <pid>3</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_film.png</src>
-    			<x>500</x>
-    			<y>1202</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>国歌诞生</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer>                 		    		
-    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_film.png</src>
+                <x>500</x>
+                <y>1202</y>
+                <!--图标点击之后的显示文字-->
+                <txt>国歌诞生</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+            <pointer>
                 <!--点编号-->
                 <pid>4</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_ppt.png</src>
-    			<x>1319</x>
-    			<y>1040</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>五号摄影棚</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer>                 		    		
-    		
-    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_ppt.png</src>
+                <x>1319</x>
+                <y>1040</y>
+                <!--图标点击之后的显示文字-->
+                <txt>五号摄影棚</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+
+            <pointer>
                 <!--点编号-->
                 <pid>5</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_ppt.png</src>
-    			<x>420</x>
-    			<y>1150</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>灿烂金杯</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer> 
-    		
-    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_ppt.png</src>
+                <x>420</x>
+                <y>1150</y>
+                <!--图标点击之后的显示文字-->
+                <txt>灿烂金杯</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+
+            <pointer>
                 <!--点编号-->
                 <pid>6</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_ppt.png</src>
-    			<x>260</x>
-    			<y>1269</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>百年辉煌</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer> 
-    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_ppt.png</src>
+                <x>260</x>
+                <y>1269</y>
+                <!--图标点击之后的显示文字-->
+                <txt>百年辉煌</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+            <pointer>
                 <!--点编号-->
                 <pid>7</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_ppt.png</src>
-    			<x>510</x>
-    			<y>1352</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>荣耀瞬间</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer> 
-    		
-    		<pointer>
+                <!--动态显示的图标-->
+                <src>marker_ppt.png</src>
+                <x>510</x>
+                <y>1352</y>
+                <!--图标点击之后的显示文字-->
+                <txt>荣耀瞬间</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+
+            <pointer>
                 <!--点编号-->
                 <pid>8</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_ppt.png</src>
-    			<x>500</x>
-    			<y>1616</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>光影之戏</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>3</content_id>
-	    		<tip>tip_frame.png</tip>
-    		</pointer>	    		
-    		</pointers>    		    	    		    		    		
-    	</floor>
-    	<floor>
-    		<!-- beancon里对应的floor-->    		
-    		<id>2</id>
+                <!--动态显示的图标-->
+                <src>marker_ppt.png</src>
+                <x>500</x>
+                <y>1616</y>
+                <!--图标点击之后的显示文字-->
+                <txt>光影之戏</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>3</content_id>
+                <tip>tip_frame.png</tip>
+            </pointer>
+        </pointers>
+    </floor>
+    <floor>
+        <!-- beancon里对应的floor-->
+        <id>2</id>
 
-    		<background>f2.png</background>
-            <pointers>
-    			<pointer>
-                    <!--点编号-->
-                    <pid>1</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_film_purple.png</src>
-    			<x>136</x>
-    			<y>800</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>一号录音棚</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>4</content_id>
-	    		<!--提示tip背影图-->
-	    		<tip>tip_frame_purple.png</tip>
-	    		</pointer>
-            </pointers>
-    	</floor>
-    	
-    	<floor>
-    		<!-- beancon里对应的floor-->    		
-    		<id>3</id>    		
-    		<background>f3.png</background>    		
-    		<pointers>    		
-    			<pointer>
-                    <!--点编号-->
-                    <pid>1</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_pic_atrovirens.png</src>
-    			<x>136</x>
-    			<y>800</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>影海溯源</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>4</content_id>
-	    		<!--提示tip背影图-->
-	    		<tip>tip_frame_atrovirens.png</tip>
-	    		</pointer>
-            </pointers>
-    	</floor>
-    	
-    	<floor>
-    		<!-- beancon里对应的floor-->    		
-    		<id>4</id>    		
-    		<background>f4.png</background>    		
-    		<pointers>    		
-    			<pointer>
-                    <!--点编号-->
-                    <pid>1</pid>
-    			<!--动态显示的图标-->
-    			<src>marker_pic_yellow.png</src>
-    			<x>136</x>
-    			<y>800</y>
-    			<!--图标点击之后的显示文字-->
-    			<txt>水银灯下的南京路</txt>
-    			<!-- beancon里对应的全局唯一id-->
-	    		<content_id>5</content_id>
-	    		<!--提示tip背影图-->
-	    		<tip>tip_frame_yellow.png</tip>
-	    		</pointer>
-            </pointers>
-    	</floor>
+        <background>f2.png</background>
+        <pointers>
+            <pointer>
+                <!--点编号-->
+                <pid>1</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_purple.png</src>
+                <x>136</x>
+                <y>700</y>
+                <!--图标点击之后的显示文字-->
+                <txt>一号录音棚</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>2</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_purple.png</src>
+                <x>1248</x>
+                <y>777</y>
+                <!--图标点击之后的显示文字-->
+                <txt>一号摄影棚</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>3</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_purple.png</src>
+                <x>79</x>
+                <y>1110</y>
+                <!--图标点击之后的显示文字-->
+                <txt>后期制作工作室</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>4</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_purple.png</src>
+                <x>668</x>
+                <y>1305</y>
+                <!--图标点击之后的显示文字-->
+                <txt>电影工作室</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>5</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_purple.png</src>
+                <x>335</x>
+                <y>1544</y>
+                <!--图标点击之后的显示文字-->
+                <txt>电影百科</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>6</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_purple.png</src>
+                <x>1302</x>
+                <y>1105</y>
+                <!--图标点击之后的显示文字-->
+                <txt>化妆服装工作室</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_purple.png</tip>
+            </pointer>
+        </pointers>
+    </floor>
+
+    <floor>
+        <!-- beancon里对应的floor-->
+        <id>3</id>
+        <background>f3.png</background>
+        <pointers>
+            <pointer>
+                <!--点编号-->
+                <pid>1</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_atrovirens.png</src>
+                <x>36</x>
+                <y>700</y>
+                <!--图标点击之后的显示文字-->
+                <txt>影海溯源</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+            <pointer>
+                <!--点编号-->
+                <pid>2</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_atrovirens.png</src>
+                <x>718</x>
+                <y>718</y>
+                <!--图标点击之后的显示文字-->
+                <txt>漫乐园</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>3</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_atrovirens.png</src>
+                <x>1190</x>
+                <y>728</y>
+                <!--图标点击之后的显示文字-->
+                <txt>动画长廊</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>4</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_atrovirens.png</src>
+                <x>328</x>
+                <y>1096</y>
+                <!--图标点击之后的显示文字-->
+                <txt>梦幻工厂</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>5</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_atrovirens.png</src>
+                <x>1095</x>
+                <y>1147</y>
+                <!--图标点击之后的显示文字-->
+                <txt>大开眼界</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>6</pid>
+                <!--动态显示的图标-->
+                <src>marker_film_atrovirens.png</src>
+                <x>1260</x>
+                <y>1055</y>
+                <!--图标点击之后的显示文字-->
+                <txt>译制经典</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>7</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_atrovirens.png</src>
+                <x>669</x>
+                <y>1506</y>
+                <!--图标点击之后的显示文字-->
+                <txt>光影长河</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>4</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_atrovirens.png</tip>
+            </pointer>
+        </pointers>
+    </floor>
+
+    <floor>
+        <!-- beancon里对应的floor-->
+        <id>4</id>
+        <background>f4.png</background>
+        <pointers>
+            <pointer>
+                <!--点编号-->
+                <pid>1</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_yellow.png</src>
+                <x>236</x>
+                <y>800</y>
+                <!--图标点击之后的显示文字-->
+                <txt>水银灯下的南京路</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>5</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_yellow.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>2</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_yellow.png</src>
+                <x>1227</x>
+                <y>740</y>
+                <!--图标点击之后的显示文字-->
+                <txt>百年发行放映</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>5</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_yellow.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>3</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_yellow.png</src>
+                <x>658</x>
+                <y>1074</y>
+                <!--图标点击之后的显示文字-->
+                <txt>大师风采</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>5</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_yellow.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>4</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_yellow.png</src>
+                <x>426</x>
+                <y>1767</y>
+                <!--图标点击之后的显示文字-->
+                <txt>星光大道</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>5</content_id>
+                <!--提示tip背影图-->
+                <tip>tip_frame_yellow.png</tip>
+            </pointer>
+
+            <pointer>
+                <!--点编号-->
+                <pid>5</pid>
+                <!--动态显示的图标-->
+                <src>marker_pic_yellow.png</src>
+                <x>859</x>
+                <y>1463</y>
+                <!--图标点击之后的显示文字-->
+                <txt>星耀苍穹</txt>
+                <!-- beancon里对应的全局唯一id-->
+                <content_id>5</content_id>
+                <!--提示tip背影图-->
+                <tip>marker_film_yellow.png</tip>
+            </pointer>
+        </pointers>
+    </floor>
 
 
 </resources>
