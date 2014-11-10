@@ -404,7 +404,7 @@
                 <!-- beancon里对应的全局唯一id-->
                 <content_id>5</content_id>
                 <!--提示tip背影图-->
-                <tip>marker_film_yellow.png</tip>
+                <tip>tip_frame_yellow.png</tip>
             </pointer>
         </pointers>
     </floor>
