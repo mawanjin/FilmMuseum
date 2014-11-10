@@ -29,13 +29,15 @@
         <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize1"/>
 
         <TextView
                 android:id="@+id/txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/list_txt_top"/>
+                android:paddingTop="@dimen/list_txt_top"
+                android:textSize="@dimen/textsize2"/>
     </LinearLayout>
 
 </LinearLayout>

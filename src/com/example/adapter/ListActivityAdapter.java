@@ -1,16 +1,14 @@
 package com.example.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
-import com.example.util.FileSysUtils;
 import com.example.util.ListItem;
 
 import java.util.ArrayList;
@@ -61,9 +59,7 @@ public class ListActivityAdapter extends BaseAdapter {
         } else
             viewHolder = (ViewHolder) view.getTag();
 
-        Bitmap bm = BitmapFactory.decodeFile(FileSysUtils.getExternalStoragePath()
-                + "/FilmMuseum/system/image/" + item.getSrc());
-        viewHolder.img.setImageBitmap(bm);
+        viewHolder.img.setImageBitmap(MagicFactory.getBitmap(item.getSrc()));
         viewHolder.title.setText(item.getTitle());
         viewHolder.txt.setText(item.getTxt());
         return view;

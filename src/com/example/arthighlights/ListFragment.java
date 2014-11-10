@@ -1,8 +1,6 @@
 package com.example.arthighlights;
 
 import android.app.AlertDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,9 +11,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.adapter.ListActivityAdapter;
+import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.util.ArtMenu;
-import com.example.util.FileSysUtils;
 
 /**
  * User: mawanjin@join-cn.com
@@ -73,9 +71,7 @@ public class ListFragment  extends Fragment{
                 View view1 = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_list_big_img,null);
                 dialog.setContentView(view1);
                 final ImageView img = (android.widget.ImageView) view1.findViewById(R.id.img);
-                Bitmap bm = BitmapFactory.decodeFile(FileSysUtils.getExternalStoragePath()
-                        + "/FilmMuseum/system/image/" + menu.getItems().get(position).getBig());
-                img.setImageBitmap(bm);
+                img.setImageBitmap(MagicFactory.getBitmap(menu.getItems().get(position).getBig()));
                 img.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

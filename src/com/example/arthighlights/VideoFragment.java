@@ -63,6 +63,8 @@ public class VideoFragment extends Fragment implements Callback,
 
     private int id;
     private LinearLayout seekbarContainer;
+    private List<ArtContent> list;
+    private List<ArtContentVideo> video;
 
     public VideoFragment(int id){
         this.id = id;
@@ -108,57 +110,11 @@ public class VideoFragment extends Fragment implements Callback,
 
 		tv.setText("动画电影工作室");
 
-        List<ArtContent> list = MagicFactory.getArtContents();
-        List<ArtContentVideo> video = MagicFactory.getArtContentVideos();
-		for (ArtContentVideo vi : video) {
-			if (vi.getType().equals("image")) {
-				if (vi.getId() == 1) {
-					LayoutParams params = new LayoutParams(vi.getWidth(),
-							vi.getHeight());
-					iv1.setImageBitmap(MagicFactory.getBitmap(vi.getSrc()));
-					iv1.setLayoutParams(params);
-				}
-//				if (vi.getId() == 2) {
-//					Bitmap bm = BitmapFactory
-//							.decodeFile(getExternalStoragePath()
-//									+ "/FilmMuseum/system/image/" + vi.getSrc());
-//					iv2.setImageBitmap(bm);
-//					iv2.setX(vi.getX());
-//					iv2.setY(vi.getY());
-//				}
-//				if (vi.getId() == 3) {
-//					Bitmap bm = BitmapFactory
-//							.decodeFile(getExternalStoragePath()
-//									+ "/FilmMuseum/system/image/" + vi.getSrc());
-//					iv3.setImageBitmap(bm);
-//					iv3.setX(vi.getX());
-//					iv3.setY(vi.getY());
-//				}
-			}
-			if (vi.getType().equals("text")) {
-				if (vi.getId() == 4) {
-					tv2.setX(vi.getX());
-					tv2.setY(vi.getY());
-					tv2.setWidth(vi.getWidth());
-					tv2.setTextSize(vi.getTextsize());
-				}
-				if (vi.getId() == 5) {
-					tv3.setX(vi.getX());
-					tv3.setY(vi.getY());
-					tv3.setWidth(vi.getWidth());
-					tv3.setTextSize(vi.getTextsize());
-				}
-			}
-		}
+        list = MagicFactory.getArtContents();
+        video = MagicFactory.getArtContentVideos();
 
-		for (ArtContent art : list) {
-			if (id == art.getId()) {
-				tv.setText(art.getTitle());
-				tv2.setText(art.getTitle());
-				tv3.setText(art.getContent());
-				path = MagicFactory.getPlayUrl(art.getSrc());
-			}
-		}
+        initTxt();
+
 
 		ivReturn = (ImageView) view.findViewById(R.id.ivReturn);
 		ivReturn.setOnClickListener(new View.OnClickListener() {
@@ -181,6 +137,7 @@ public class VideoFragment extends Fragment implements Callback,
 		mediaPlayer.setOnSeekCompleteListener(this);
 		mediaPlayer.setOnVideoSizeChangedListener(this);
 		try {
+            mediaPlayer.setLooping(true);
 			mediaPlayer.setDataSource(path);
 			mediaPlayer.prepare();
 			mediaPlayer.start();
@@ -216,13 +173,67 @@ public class VideoFragment extends Fragment implements Callback,
 			public void onCompletion(MediaPlayer arg0) {
 				iv1.setImageResource(R.drawable.player);
 				seekBar.setProgress(0);
+                mediaPlayer.start();
 			}
 		});
         return view;
 	}
 
+    private void initTxt() {
+        for (ArtContentVideo vi : video) {
+            if (vi.getType().equals("image")) {
+                if (vi.getId() == 1) {
+                    LayoutParams params = new LayoutParams(vi.getWidth(),
+                            vi.getHeight());
+                    iv1.setImageBitmap(MagicFactory.getBitmap(vi.getSrc()));
+                    iv1.setLayoutParams(params);
+                }
+//				if (vi.getId() == 2) {
+//					Bitmap bm = BitmapFactory
+//							.decodeFile(getExternalStoragePath()
+//									+ "/FilmMuseum/system/image/" + vi.getSrc());
+//					iv2.setImageBitmap(bm);
+//					iv2.setX(vi.getX());
+//					iv2.setY(vi.getY());
+//				}
+//				if (vi.getId() == 3) {
+//					Bitmap bm = BitmapFactory
+//							.decodeFile(getExternalStoragePath()
+//									+ "/FilmMuseum/system/image/" + vi.getSrc());
+//					iv3.setImageBitmap(bm);
+//					iv3.setX(vi.getX());
+//					iv3.setY(vi.getY());
+//				}
+            }
+            if (vi.getType().equals("text")) {
+                if (vi.getId() == 4) {
+                    tv2.setX(vi.getX());
+                    tv2.setY(vi.getY());
+                    tv2.setWidth(vi.getWidth());
+                    tv2.setTextSize(vi.getTextsize());
+                }
+                if (vi.getId() == 5) {
+                    tv3.setX(vi.getX());
+                    tv3.setY(vi.getY());
+                    tv3.setWidth(vi.getWidth());
+                    tv3.setTextSize(vi.getTextsize());
+                }
+            }
+        }
 
-	@SuppressLint("HandlerLeak")
+        for (ArtContent art : list) {
+            if (id == art.getId()) {
+                tv.setText(art.getTitle());
+                tv2.setText(art.getTitle());
+                tv3.setText(art.getContent());
+                path = MagicFactory.getPlayUrl(art.getSrc());
+            }
+        }
+
+    }
+
+
+    @SuppressLint("HandlerLeak")
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			if (mediaPlayer == null) {
@@ -340,9 +351,12 @@ public class VideoFragment extends Fragment implements Callback,
 
     @Override
     public void onDestroyView() {
-        mediaPlayer.release();
-        mediaPlayer = null;
-        System.gc();
+        if(mediaPlayer!=null){
+            mediaPlayer.release();
+            mediaPlayer = null;
+            System.gc();
+        }
+
         super.onDestroyView();
     }
 
@@ -426,5 +440,16 @@ public class VideoFragment extends Fragment implements Callback,
             e.printStackTrace();
         }
 
+        initTxt();
+
+    }
+
+    @Override
+    public void onStop() {
+        if(mediaPlayer!=null){
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        super.onStop();
     }
 }

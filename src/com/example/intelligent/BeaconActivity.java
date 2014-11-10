@@ -37,6 +37,7 @@ import java.util.*;
  */
 public class BeaconActivity extends Activity {
     private static final int REQUEST_ENABLE_BT = 1234;
+    public static final int ON_RESULT_EXIT = 1001;
     private static final Region ALL_BEACONS_REGION = new Region("apr", null,
             null, null);
     private BeaconAdapter adapter;
@@ -62,6 +63,7 @@ public class BeaconActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.beacon);
         SysApplication.getInstance().addActivity(this);
+
         tv = (TextView) findViewById(R.id.tv_title);
         tv.setText("智能导览模式");
         ivReturn = (ImageView) findViewById(R.id.ivReturn);
@@ -160,7 +162,7 @@ public class BeaconActivity extends Activity {
                         bundle.putInt("id", m.getId());
                         bundle.putSerializable("person",person);
                         intent.putExtras(bundle);
-                        startActivity(intent);
+                        startActivityForResult(intent,ON_RESULT_EXIT);
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
                         sendBroadcast(intentBroadcast);
@@ -173,14 +175,13 @@ public class BeaconActivity extends Activity {
                         bundle.putSerializable("person",person);
                         intent.putExtras(bundle);
                         intent.putExtras(bundle);
-                        startActivity(intent);
+                        startActivityForResult(intent,ON_RESULT_EXIT);
                         sendBroadcast(new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH));
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
                         sendBroadcast(intentBroadcast);
                     } else if (m.getType().equals("list")) {
-                        Toast.makeText(getApplicationContext(),
-                                "显示列表", Toast.LENGTH_LONG).show();
+
                         intent.setClass(getApplicationContext(),
                                 ListMainActivity.class);
                         Bundle bundle = new Bundle();
@@ -189,7 +190,7 @@ public class BeaconActivity extends Activity {
                         bundle.putSerializable("person",person);
                         intent.putExtras(bundle);
                         intent.putExtras(bundle);
-                        startActivity(intent);
+                        startActivityForResult(intent,ON_RESULT_EXIT);
                     }
 
                 }
@@ -235,7 +236,11 @@ public class BeaconActivity extends Activity {
             } else {
                 getActionBar().setSubtitle("Bluetooth not enabled");
             }
+        }else if(requestCode == ON_RESULT_EXIT){
+            finish();
         }
+
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -300,6 +305,7 @@ public class BeaconActivity extends Activity {
         myInput.close();
         myOutputStream.close();
     }
+
 
 
 }

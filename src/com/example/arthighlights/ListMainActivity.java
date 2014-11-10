@@ -8,6 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.Window;
 import com.example.data.FloorLegendFactory;
 import com.example.filmmuseum.R;
+import com.example.intelligent.BeaconActivity;
 import com.example.intelligent.Person;
 import com.example.util.ArtMenu;
 import com.example.view.ViewPagerFixed;
@@ -42,7 +43,6 @@ public class ListMainActivity extends FragmentActivity {
         fragments.add(floorFragment);
         fragments.add(listFragment);
 
-
         PagerAdapter mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int i) {
@@ -58,7 +58,11 @@ public class ListMainActivity extends FragmentActivity {
         viewpager.setAdapter(mAdapter);
         viewpager.setCurrentItem(1);
 
+    }
 
-
+    @Override
+    protected void onStop() {
+        setResult(BeaconActivity.ON_RESULT_EXIT);
+        super.onStop();
     }
 }

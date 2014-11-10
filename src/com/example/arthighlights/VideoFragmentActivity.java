@@ -19,6 +19,7 @@ import com.example.data.Filter;
 import com.example.data.FloorLegendFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
+import com.example.intelligent.BeaconActivity;
 import com.example.intelligent.Person;
 import com.example.view.ViewPagerFixed;
 
@@ -42,9 +43,10 @@ public class VideoFragmentActivity extends FragmentActivity {
         setContentView(R.layout.audio_fragment_activity_layout);
         viewpager = (ViewPagerFixed) findViewById(R.id.viewpager);
         viewpager.setOffscreenPageLimit(2);
+        person  = (Person) getIntent().getSerializableExtra("person");
         videoFragment = new VideoFragment(getIntent().getIntExtra("id",0));
         //todo 这里根据id去查找对应的楼层数据
-        person  = (Person) getIntent().getSerializableExtra("person");
+
         final FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
         fragments.add(floorFragment);
         fragments.add(videoFragment);
@@ -90,6 +92,8 @@ public class VideoFragmentActivity extends FragmentActivity {
             }
         });
 
+
+
     }
 
     @Override
@@ -111,5 +115,11 @@ public class VideoFragmentActivity extends FragmentActivity {
                 videoFragment.switchURL(intent.getIntExtra("id",0));
             }
         },new IntentFilter(Filter.IntentFilter_ACTION_BEACON_SWITCH));
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(BeaconActivity.ON_RESULT_EXIT);
+        super.onStop();
     }
 }

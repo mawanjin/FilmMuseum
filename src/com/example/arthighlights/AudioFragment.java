@@ -48,8 +48,8 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 	private static final String APP_ID = "wx6462caed59df1b17";
 	// IWXAPI是第三方app和微信通信的openaip接口
 	private IWXAPI api;
-
     private int id;
+    private List<ArtContentAudio> cons;
 
     public AudioFragment(int id){
         this.id = id;
@@ -84,6 +84,7 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 		ivMenu = (ImageView) view.findViewById(R.id.iv_menu);
 		ivMenu.setVisibility(View.GONE);
 		player = new MediaPlayer();
+        player.setLooping(true);
 		seekbar = (SeekBar) view.findViewById(R.id.audio_seekbar);
         seekbar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
@@ -105,65 +106,8 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
             }
         });
 
-        List<ArtContentAudio> cons = MagicFactory.getAudios();
-
-		for (ArtContentAudio arts : cons) {
-			if (arts.getVisible() == 0) {
-				iv.setVisibility(View.GONE);
-			} else {
-				if (arts.getType().equals("image")) {
-					if (arts.getId() == 1) {
-                        iv.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
-						iv.setImageBitmap(bm);
-						iv.setX(arts.getX());
-						iv.setY(arts.getY());
-					}
-					if (arts.getId() == 3) {
-                        iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
-						LayoutParams params = new LayoutParams(arts.getWidth(),
-								arts.getHeight());
-						iv2.setImageBitmap(bm);
-						iv2.setX(arts.getX());
-						iv2.setY(arts.getY());
-						iv2.setLayoutParams(params);
-					}
-					if (arts.getId() == 6) {
-                        iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
-//						iv5.setImageBitmap(bm);
-//						iv5.setX(arts.getX());
-//						iv5.setY(arts.getY());
-					}
-				} else if (arts.getType().equals("text")) {
-					if (arts.getId() == 7) {
-						tv2.setX(arts.getX());
-						tv2.setY(arts.getY());
-						tv2.setTextSize(arts.getTextsize());
-					}
-					if (arts.getId() == 8) {
-						tv3.setX(arts.getX());
-						tv3.setY(arts.getY());
-						tv3.setTextSize(arts.getTextsize());
-					}
-				} else if (arts.getType().equals("seekbar")) {
-                    seekbarContainer.setY(arts.getY()-25);
-					seekbar.setX(arts.getX());
-					seekbar.setY(arts.getY());
-				}
-			}
-		}
-
-//		iv4.setOnClickListener(new View.OnClickListener() {
-//			public void onClick(View v) {
-//				showPopUp(v);
-//			}
-//		});
-
-
-        ArtContent c = MagicFactory.getPlay(id);
-        tv.setText(c.getTitle());
-        tv2.setText(c.getTitle());
-        tv3.setText(c.getContent());
-        path = MagicFactory.getPlayUrl(c.getSrc());
+        cons = MagicFactory.getAudios();
+        initTxt();
 
 		try {
 			player.setDataSource(path);
@@ -184,6 +128,7 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 			public void onCompletion(MediaPlayer arg0) {
 				iv2.setImageResource(R.drawable.player);
 				seekbar.setProgress(0);
+                player.start();
 			}
 		});
 		iv2.setOnClickListener(new View.OnClickListener() {
@@ -260,12 +205,11 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 
     @Override
     public void onDestroyView() {
-        player.release();
-        player = null;
-        if (bm.isRecycled() == false) {
-            bm.recycle();
-            System.gc();
+        if(player!=null){
+            player.release();
+            player = null;
         }
+
         super.onDestroyView();
     }
 
@@ -338,5 +282,98 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
 	public void onStopTrackingTouch(SeekBar arg0) {
 
 	}
+
+    @Override
+    public void onStop() {
+        if(player!=null){
+            player.release();
+            player = null;
+        }
+        super.onStop();
+    }
+
+    public void switchURL(int _id){
+        if(player==null)return;
+        List<ArtContent> list = MagicFactory.getArtContents();
+        id = _id;
+        for (ArtContent art : list) {
+            if (id == art.getId()) {
+                path = MagicFactory.getPlayUrl(art.getSrc());
+            }
+        }
+        try {
+            player.stop();
+            player.reset();
+            player.setDataSource(path);
+            player.prepare();
+            player.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        initTxt();
+
+    }
+
+    private void initTxt() {
+
+        for (ArtContentAudio arts : cons) {
+            if (arts.getVisible() == 0) {
+                iv.setVisibility(View.GONE);
+            } else {
+                if (arts.getType().equals("image")) {
+                    if (arts.getId() == 1) {
+                        iv.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
+                        iv.setImageBitmap(bm);
+                        iv.setX(arts.getX());
+                        iv.setY(arts.getY());
+                    }
+                    if (arts.getId() == 3) {
+                        iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
+                        LayoutParams params = new LayoutParams(arts.getWidth(),
+                                arts.getHeight());
+                        iv2.setImageBitmap(bm);
+                        iv2.setX(arts.getX());
+                        iv2.setY(arts.getY());
+                        iv2.setLayoutParams(params);
+                    }
+                    if (arts.getId() == 6) {
+                        iv2.setImageBitmap(MagicFactory.getBitmap(arts.getSrc()));
+//						iv5.setImageBitmap(bm);
+//						iv5.setX(arts.getX());
+//						iv5.setY(arts.getY());
+                    }
+                } else if (arts.getType().equals("text")) {
+                    if (arts.getId() == 7) {
+                        tv2.setX(arts.getX());
+                        tv2.setY(arts.getY());
+                        tv2.setTextSize(arts.getTextsize());
+                    }
+                    if (arts.getId() == 8) {
+                        tv3.setX(arts.getX());
+                        tv3.setY(arts.getY());
+                        tv3.setTextSize(arts.getTextsize());
+                    }
+                } else if (arts.getType().equals("seekbar")) {
+                    seekbarContainer.setY(arts.getY()-25);
+                    seekbar.setX(arts.getX());
+                    seekbar.setY(arts.getY());
+                }
+            }
+        }
+
+//		iv4.setOnClickListener(new View.OnClickListener() {
+//			public void onClick(View v) {
+//				showPopUp(v);
+//			}
+//		});
+
+
+        ArtContent c = MagicFactory.getPlay(id);
+        tv.setText(c.getTitle());
+        tv2.setText(c.getTitle());
+        tv3.setText(c.getContent());
+        path = MagicFactory.getPlayUrl(c.getSrc());
+    }
 
 }
