@@ -40,7 +40,8 @@ public class ListMainActivity extends FragmentActivity {
         int id = getIntent().getIntExtra("id",0);
         person  = (Person) getIntent().getSerializableExtra("person");
         FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
-        fragments.add(floorFragment);
+        if(person.isShowMap())
+            fragments.add(floorFragment);
         fragments.add(listFragment);
 
         PagerAdapter mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {

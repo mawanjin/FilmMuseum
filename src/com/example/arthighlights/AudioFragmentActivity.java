@@ -42,7 +42,9 @@ public class AudioFragmentActivity extends FragmentActivity {
         //todo 这里根据id去查找对应的楼层数据
         person  = (Person) getIntent().getSerializableExtra("person");
         FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
-        fragments.add(floorFragment);
+//        fragments.add(floorFragment);
+        if(person.isShowMap())
+            fragments.add(floorFragment);
         fragments.add(audioFragment);
 
         PagerAdapter mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {

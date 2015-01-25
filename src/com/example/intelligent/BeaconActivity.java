@@ -17,6 +17,7 @@ import com.aprilbrother.aprilbrothersdk.BeaconManager;
 import com.aprilbrother.aprilbrothersdk.BeaconManager.RangingListener;
 import com.aprilbrother.aprilbrothersdk.Region;
 import com.example.arthighlights.AudioFragmentActivity;
+import com.example.arthighlights.ImgFragmentActivity;
 import com.example.arthighlights.ListMainActivity;
 import com.example.arthighlights.VideoFragmentActivity;
 import com.example.data.BeaconExtra;
@@ -53,7 +54,7 @@ public class BeaconActivity extends Activity {
     private ImageView ivReturn, ivMenu;
     private TextView tv;
     //有效距离
-    private int distance = 1;
+    private float distance = 1;
     //切换最小时间间隔
     private long switchGap = 2000;
     private long lastSwitchTime;
@@ -84,8 +85,6 @@ public class BeaconActivity extends Activity {
         init();
         BeaconExtra beaconExtra = MagicFactory.getBeaconExtra();
         if(beaconExtra!=null)distance = beaconExtra.getAvailableDistance();
-
-
     }
 
     private void init() {
@@ -94,7 +93,7 @@ public class BeaconActivity extends Activity {
         adapter = new BeaconAdapter(this);
         lv.setAdapter(adapter);
         beaconManager = new BeaconManager(BeaconActivity.this);
-        beaconManager.setForegroundScanPeriod(100, 0);
+        beaconManager.setForegroundScanPeriod(500, 0);
         beaconManager.setRangingListener(new RangingListener() {
             public void onBeaconsDiscovered(Region region, final List<Beacon> beacons) {
                 myBeacons.clear();
@@ -108,7 +107,8 @@ public class BeaconActivity extends Activity {
                         persons = MagicFactory.getPersons();
 
                         if (currentBeacon != major) {//如果当前beacon不是正在播放的，则进行播放操作。
-                            if (beacon.getDistance() <= distance) {
+                            double bDistance = beacon.getDistance();
+                            if ( bDistance<= distance) {
                                 if(System.currentTimeMillis()-lastSwitchTime<switchGap)return;
                                 lastSwitchTime = System.currentTimeMillis();
                                 for (Person person : persons) {
@@ -123,13 +123,14 @@ public class BeaconActivity extends Activity {
                                     }
                                 }
                             }
-                        }else{//如果是当前播放的而且已经离开了两米了
-                            if (beacon.getDistance() > 2) {
-//                                Toast.makeText(getApplicationContext(),
-//                                        currentBeacon + "离开了两米",
-//                                        Toast.LENGTH_SHORT).show();
-                            }
                         }
+//                        else{//如果是当前播放的而且已经离开了两米了
+//                            if (beacon.getDistance() > 2) {
+////                                Toast.makeText(getApplicationContext(),
+////                                        currentBeacon + "离开了两米",
+////                                        Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
 
 
 
@@ -198,7 +199,18 @@ public class BeaconActivity extends Activity {
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
                         sendBroadcast(intentBroadcast);
-                    } else if (m.getType().equals("list")) {
+                    }else if (m.getType().equals("img")) {
+
+                        intent.setClass(getApplicationContext(),
+                                ImgFragmentActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("id", m.getId());
+                        bundle.putSerializable("person", person);
+                        intent.putExtras(bundle);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                        startActivityForResult(intent, ON_RESULT_EXIT);
+                    }
+                    else if (m.getType().equals("list")) {
 
                         intent.setClass(getApplicationContext(),
                                 ListMainActivity.class);

@@ -11,6 +11,7 @@ public class Person implements Serializable{
     private int locationX;
     private int locationY;
     private String locationMarker;
+    private boolean showMap;
 
 	public Integer getMajor() {
 		return major;
@@ -95,4 +96,12 @@ public class Person implements Serializable{
     public void setPid(Integer pid) {
         this.pid = pid;
     }
+
+	public boolean isShowMap() {
+		return showMap;
+	}
+
+	public void setShowMap(boolean showMap) {
+		this.showMap = showMap;
+	}
 }

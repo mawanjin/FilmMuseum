@@ -58,6 +58,9 @@ public class PersonService {
 					}if ("floor".equals(pullParser.getName())) {
 						int floor = Integer.parseInt(pullParser.nextText());
 						person.setFloor(floor);
+					}if ("show_map".equals(pullParser.getName())) {
+						boolean showMap = Boolean.parseBoolean(pullParser.nextText());
+						person.setShowMap(showMap);
 					}
 					break;
 				case XmlPullParser.END_TAG:

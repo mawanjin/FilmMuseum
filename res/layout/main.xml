@@ -28,11 +28,13 @@
         android:layout_centerHorizontal="true"
         android:singleLine="false"
         android:layout_marginTop="0dp"
+        android:paddingBottom="30dp"
         android:gravity="center"
         android:background="#00000000"
         android:lines="4"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+            android:text="初始化中..."/>
 	
     <ImageView
         android:id="@+id/imageView3"

@@ -17,9 +17,9 @@ import java.util.List;
  * User: mawanjin@join-cn.com
  * Date: 14/10/28
  * Time: 20:43
- * »¶Ó­À´µ½Ä§·¨¹¤³§¡£ÕâÀïÄã¿ÉÒÔ·¢ÏÖ£¬ÎÒÃÇ¿ÉÒÔ°ÑËùÓÐµÄxmlÖÐµÄÊý¾Ý£¬ÓÃÉñÆæµÄÄ§·¨×ª±ä
- * ³É¿ÉÒÔ³ÔµÄÃæ°ü£¨POJO£©:).
- * °üÀ¨ÒôÆµÊý¾Ý(content2.xml)
+ * ï¿½ï¿½Ó­ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½Ðµï¿½xmlï¿½Ðµï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½×ªï¿½ï¿½
+ * ï¿½É¿ï¿½ï¿½Ô³Ôµï¿½ï¿½ï¿½ï¿½POJOï¿½ï¿½:).
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½(content2.xml)
  */
 public class MagicFactory {
 
@@ -42,7 +42,7 @@ public class MagicFactory {
 
 
     /**
-     * ×ª»¯ÒôÆµÊý¾Ýcontent2.xml
+     * ×ªï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½content2.xml
      *
      * @return
      */
@@ -57,7 +57,7 @@ public class MagicFactory {
     }
 
     /**
-     * ´Ó/FilmMuseum/system/image/ÖÐ¶ÁÈ¡Í¼Æ¬
+     * ï¿½ï¿½/FilmMuseum/system/image/ï¿½Ð¶ï¿½È¡Í¼Æ¬
      *
      * @param src
      * @return
@@ -68,7 +68,7 @@ public class MagicFactory {
     }
 
     /**
-     * ×ª»¯ÄÚÈÝcontent.xml
+     * ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½content.xml
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class MagicFactory {
 
 
     /**
-     * ×ª»¯ÄÚÈÝcontent.xml
+     * ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½content.xml
      *
      * @return
      */
@@ -94,6 +94,17 @@ public class MagicFactory {
                     + "/FilmMuseum/system/FilmMuseum/menu.xml");
         }
         return artMenus;
+    }
+
+    public static ArtMenu getArtMenu(int i) {
+        if (artMenus == null) {
+            artMenus = getArtMenus();
+        }
+        if(artMenus!=null&&artMenus.size()>0)
+        for(ArtMenu menu : artMenus){
+            if(menu.getId() == i)return menu;
+        }
+        return null;
     }
 
 
@@ -112,7 +123,7 @@ public class MagicFactory {
 
 
     /**
-     * ×ª»¯ÄÚÈÝcontent.xml
+     * ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½content.xml
      *
      * @return
      */
@@ -127,7 +138,7 @@ public class MagicFactory {
     }
 
     /**
-     * ¶ÁÈ¡²¥·ÅÔ´Ãû³Æ
+     * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
      *
      * @return
      */
@@ -149,7 +160,7 @@ public class MagicFactory {
 
 
     /**
-     * ×ª»¯ÄÚÈÝfloor.xml.»ñÈ¡Â¥²ãÐÅÏ¢
+     * ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½floor.xml.ï¿½ï¿½È¡Â¥ï¿½ï¿½ï¿½ï¿½Ï¢
      *
      * @return
      */
@@ -164,7 +175,7 @@ public class MagicFactory {
     }
 
     /**
-     * Í¼²ãÊý¾Ý
+     * Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
      * @param context
      * @param index
      * @return
@@ -178,7 +189,7 @@ public class MagicFactory {
     }
 
     /**
-     * ¶ÔÓ¦content4.xml ÊÓÆµUI
+     * ï¿½ï¿½Ó¦content4.xml ï¿½ï¿½ÆµUI
      * @return
      */
     public static List<ArtContentVideo> getVideoLayer(){

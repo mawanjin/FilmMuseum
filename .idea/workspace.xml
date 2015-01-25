@@ -29,17 +29,167 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.filmmuseum" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="160f4cb1-8d16-49cf-9ef7-8b067af91144" name="Default" comment="">
+    <list default="true" id="160f4cb1-8d16-49cf-9ef7-8b067af91144" name="Default" comment="图片">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/ImgFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/ImgFragmentActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/img.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/beacon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/beacon_extra.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/content.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/content2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/content3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/content4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/eagerness.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/floor.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/glance.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/1_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/2_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/3_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/4_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/5_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/6_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/7_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/8_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/9_big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/DreamOn.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/audio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/audio_brillant.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/banner3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/banner4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/bg2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/bg3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/btn1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/btn2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/btn3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/btn4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/btn5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/business.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/center.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/center2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/contact.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/dragon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/dragons.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/f1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/f2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/f3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/f4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/film3.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/film7.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/film8.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/film9.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/glan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/goddess.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/heaven.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/heavens.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/high9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/location_marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/lovely.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/main1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/main2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/main3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/main4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_film.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_film_atrovirens.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_film_purple.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_film_yellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_pic.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_pic_atrovirens.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_pic_film.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_pic_purple.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_pic_yellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/marker_ppt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/player.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/servicecen1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/shop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/shop2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/star.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/star2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/submenu4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/suki.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/sup1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/sup2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/sup3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/ticket.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/tip_frame.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/tip_frame_atrovirens.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/tip_frame_purple.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/tip_frame_yellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/image/title2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/indexdata.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/info.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/menu.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/online.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/recommend.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/FilmMuseum/screen.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/FilmMuseum.apk" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/FilmMuseum.zip" afterPath="$PROJECT_DIR$/assets/FilmMuseum.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/launcher.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/launcher.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragmentActivity.java" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragmentActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java" afterPath="$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/data/BeaconExtra.java" afterPath="$PROJECT_DIR$/src/com/example/data/BeaconExtra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/util/Download.java" afterPath="$PROJECT_DIR$/src/com/example/util/Download.java" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Documents/workspace/android/DragImageView/DragImageView.iml" afterPath="$USER_HOME$/Documents/workspace/android/DragImageView/DragImageView.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FilmMuseum.iml" afterPath="$PROJECT_DIR$/FilmMuseum.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/arthighlights/ListMainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/ListMainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/data/MagicFactory.java" afterPath="$PROJECT_DIR$/src/com/example/data/MagicFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/intelligent/Person.java" afterPath="$PROJECT_DIR$/src/com/example/intelligent/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/intelligent/PersonService.java" afterPath="$PROJECT_DIR$/src/com/example/intelligent/PersonService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragment.java" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java" afterPath="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/audio.xml" afterPath="$PROJECT_DIR$/res/layout/audio.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sw320dp/strings.xml" afterPath="$PROJECT_DIR$/res/values-sw320dp/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sw480dp/strings.xml" afterPath="$PROJECT_DIR$/res/values-sw480dp/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sw600dp/strings.xml" afterPath="$PROJECT_DIR$/res/values-sw600dp/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sw720dp-land/strings.xml" afterPath="$PROJECT_DIR$/res/values-sw720dp-land/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FilmMuseum.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$USER_HOME$/Documents/workspace/android/DragImageView/bin/classes/" />
+    <ignored path="$PROJECT_DIR$/bin/classes/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +240,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -99,87 +249,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BeaconActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java">
+      <file leaf-file-name="ImgFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ImgFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31746033" vertical-offset="545" max-vertical-offset="4425">
-              <caret line="74" column="38" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1140">
+              <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="img.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/img.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5292096" vertical-offset="281" max-vertical-offset="1035">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding>
-                <element signature="e#3316#5614#0" expanded="true" />
-                <element signature="e#5603#5604#0" expanded="true" />
-                <element signature="e#5705#5706#0" expanded="true" />
-                <element signature="e#5740#5741#0" expanded="true" />
-                <element signature="e#5798#5799#0" expanded="true" />
-                <element signature="e#5846#5847#0" expanded="true" />
-                <element signature="e#5934#5935#0" expanded="true" />
-                <element signature="e#5971#5972#0" expanded="true" />
+                <element signature="e#484#501#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListMainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ListMainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1065">
-              <caret line="37" column="2" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AudioFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioFragmentActivity.java">
+      <file leaf-file-name="top.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/top.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="1005">
-              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-              <folding>
-                <element signature="e#2337#2569#0" expanded="true" />
-                <element signature="e#2558#2559#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="1455">
-              <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="660">
+              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudioFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1295" max-vertical-offset="5025">
-              <caret line="372" column="25" selection-start-line="372" selection-start-column="25" selection-end-line="372" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MagicFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="5610">
-              <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="6150">
-              <caret line="418" column="28" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="28" />
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -190,70 +294,48 @@
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/workspace/keystore/myandroid" />
+    <option name="KEY_ALIAS" value="android" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/dialog/UpdateDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/example/async/DownloadTask.java" />
-        <option value="$PROJECT_DIR$/res/layout/dialog_update.xml" />
-        <option value="$PROJECT_DIR$/assets/version.xml" />
-        <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/layout/video.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/VideoActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/audio.xml" />
-        <option value="$PROJECT_DIR$/assets/FilmMuseum/content2.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/AudioActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/recommend.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/navigation/RecommendActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/high_floor.xml" />
-        <option value="$PROJECT_DIR$/res/layout/item_information.xml" />
-        <option value="$PROJECT_DIR$/res/layout/item_screening.xml" />
-        <option value="$PROJECT_DIR$/res/layout/item_review_screening.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/screening/DragonActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/assets/FilmMuseum/beacon_extra.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/data/BeaconExtra.java" />
-        <option value="$PROJECT_DIR$/res/layout/floor.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/data/MagicFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/example/data/MarkerPointer.java" />
         <option value="$PROJECT_DIR$/src/com/example/util/Download.java" />
-        <option value="$PROJECT_DIR$/src/com/example/data/Floor.java" />
+        <option value="$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity1.java" />
+        <option value="$PROJECT_DIR$/assets/FilmMuseum/beacon_extra.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/intelligent/Person.java" />
         <option value="$PROJECT_DIR$/src/com/example/intelligent/PersonService.java" />
-        <option value="$PROJECT_DIR$/assets/FilmMuseum/beacon.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/data/FloorLegendFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/example/anim/DepthPageTransformer.java" />
-        <option value="$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java" />
-        <option value="$USER_HOME$/Documents/workspace/android/DragImageView/src/org/melonframwork/android/TouchImageView.java" />
-        <option value="$PROJECT_DIR$/src/com/example/anim/ZoomOutPageTransformer.java" />
-        <option value="$PROJECT_DIR$/src/com/example/anim/CubeTransformer.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/ListFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/layout_listactivity.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/adapter/ListActivityAdapter.java" />
-        <option value="$PROJECT_DIR$/res/layout/listview_list.xml" />
-        <option value="$PROJECT_DIR$/res/values-sw600dp/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/navigation/HighFloorActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/FloorFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/menu_right.xml" />
-        <option value="$PROJECT_DIR$/assets/FilmMuseum/floor.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/arthighlights/AudioFragmentActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/arthighlights/ListMainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/arthighlights/ImgFragmentActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/data/MagicFactory.java" />
         <option value="$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/arthighlights/ImgFragment.java" />
+        <option value="$PROJECT_DIR$/res/layout/img.xml" />
       </list>
     </option>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="18" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="790" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -292,6 +374,134 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arthighlights" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilmMuseum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -303,7 +513,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="File.Encoding" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/workspace/android/com.intelligence.meeting.activity.MainActivity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -320,20 +530,24 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="ExportedModule" value="FilmMuseum" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/FilmMuseum.apk" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.intelligent" />
       <recent name="com.example.arthighlights" />
+      <recent name="com.example.intelligent" />
       <recent name="com.example.data" />
       <recent name="com.example.navigation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/layout" />
+      <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
       <recent name="$PROJECT_DIR$/src/com/example/anim" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/assets/FilmMuseum" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.FilmMuseum">
@@ -403,6 +617,14 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -480,6 +702,27 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -609,6 +852,7 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="160f4cb1-8d16-49cf-9ef7-8b067af91144" name="Default" comment="" />
       <created>1413892301535</created>
+      <option name="number" value="Default" />
       <updated>1413892301535</updated>
       <workItem from="1413892306146" duration="154000" />
       <workItem from="1413892467165" duration="2405000" />
@@ -634,101 +878,156 @@
       <workItem from="1415596417945" duration="4312000" />
       <workItem from="1415601275618" duration="4000" />
       <workItem from="1415601316167" duration="743000" />
-      <workItem from="1415602367870" duration="6242000" />
+      <workItem from="1415602367870" duration="6296000" />
+      <workItem from="1416374907095" duration="2308000" />
+      <workItem from="1416382337175" duration="10168000" />
+      <workItem from="1419437084471" duration="754000" />
+      <workItem from="1422025133431" duration="2721000" />
+      <workItem from="1422187274198" duration="11834000" />
     </task>
     <task id="LOCAL-00001" summary="ad">
       <created>1413965617369</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1413965617369</updated>
     </task>
     <task id="LOCAL-00002" summary="patch:matrix">
       <created>1414341279873</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1414341279873</updated>
     </task>
     <task id="LOCAL-00003" summary="patch:matrix">
       <created>1414428877318</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1414428877318</updated>
     </task>
     <task id="LOCAL-00004" summary="dynamic xml">
       <created>1414692829616</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1414692829616</updated>
     </task>
     <task id="LOCAL-00005" summary="dynamic xml">
       <created>1414692910612</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1414692910612</updated>
     </task>
     <task id="LOCAL-00006" summary="dynamic xml">
       <created>1414779907270</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1414779907270</updated>
     </task>
     <task id="LOCAL-00007" summary="dynamic xml">
       <created>1414833246018</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1414833246018</updated>
     </task>
     <task id="LOCAL-00008" summary="dynamic xml">
       <created>1414903603961</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1414903603961</updated>
     </task>
     <task id="LOCAL-00009" summary="dynamic xml">
       <created>1414918087929</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1414918087929</updated>
     </task>
     <task id="LOCAL-00010" summary="download">
       <created>1414943512085</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1414943512085</updated>
     </task>
     <task id="LOCAL-00011" summary="download optimization">
       <created>1414947042625</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1414947042625</updated>
     </task>
     <task id="LOCAL-00012" summary="download optimization">
       <created>1415175837259</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1415175837259</updated>
     </task>
     <task id="LOCAL-00013" summary="N多小bug，大多是排版问题">
       <created>1415205368262</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1415205368262</updated>
     </task>
     <task id="LOCAL-00014" summary="漏掉的新建文件">
       <created>1415205416721</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1415205416721</updated>
     </task>
     <task id="LOCAL-00015" summary="图片问题">
       <created>1415300912666</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1415300912666</updated>
     </task>
     <task id="LOCAL-00016" summary="图片问题">
       <created>1415304426260</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1415304426260</updated>
     </task>
     <task id="LOCAL-00017" summary="图片问题">
       <created>1415372533144</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1415372533144</updated>
     </task>
     <task id="LOCAL-00018" summary="图片问题">
       <created>1415381591351</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1415381591351</updated>
     </task>
     <task id="LOCAL-00019" summary="图片问题">
       <created>1415601015562</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1415601015562</updated>
     </task>
     <task id="LOCAL-00020" summary="扎点问题，内存中引用同一地址">
       <created>1415601998313</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1415601998313</updated>
     </task>
     <task id="LOCAL-00021" summary="补充点测试数据">
       <created>1415604624091</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1415604624091</updated>
     </task>
     <task id="LOCAL-00022" summary="补充点测试数据">
       <created>1415604883297</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1415604883297</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="beacon">
+      <created>1415624922038</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1415624922038</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219099000" />
+    <option name="totallyTimeSpent" value="246938000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -751,93 +1050,97 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="790" extended-state="6" />
+    <frame x="18" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5910448" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67164177" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37106016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24749643" sideWeight="0.55671644" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45544556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5910448" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51862466" sideWeight="0.65208036" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32390383" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4115983" sideWeight="0.65208036" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.48358208" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67164177" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37106016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32234958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.508596" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.48059702" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32107496" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50636494" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892704" sideWeight="0.48059702" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.44477612" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.44477612" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.55671644" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="103" y="122" width="1240" height="590" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.24925373" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.24925373" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.45671642" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6014925" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5761194" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6014925" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.44477612" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252149" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.51044774" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.51044774" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="103" y="122" width="1240" height="590" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.24925373" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.24925373" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5910448" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67164177" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37106016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.45671642" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6014925" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5761194" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6014925" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.55671644" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24749643" sideWeight="0.55671644" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.44477612" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4426934" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45544556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252149" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51862466" sideWeight="0.65208036" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32390383" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4115983" sideWeight="0.65208036" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.48358208" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32234958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.508596" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.51044774" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.48059702" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32107496" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50636494" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.51044774" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892704" sideWeight="0.48059702" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.44477612" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.44477612" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -865,7 +1168,8 @@
     <MESSAGE value="图片问题" />
     <MESSAGE value="扎点问题，内存中引用同一地址" />
     <MESSAGE value="补充点测试数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="补充点测试数据" />
+    <MESSAGE value="beacon" />
+    <option name="LAST_COMMIT_MESSAGE" value="beacon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -908,7 +1212,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java</url>
-          <line>322</line>
+          <line>333</line>
           <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
@@ -920,241 +1224,52 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java</url>
-          <line>116</line>
+          <line>90</line>
           <properties />
-          <option name="timeStamp" value="254" />
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/example/arthighlights/ImgFragmentActivity.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="268" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="256" />
+      <option name="time" value="269" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/data/BeaconExtra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/FilmMuseum/beacon_extra.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="6015">
-          <caret line="390" column="31" selection-start-line="390" selection-start-column="29" selection-end-line="390" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="4575">
-          <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/graphics/BitmapFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2283105" vertical-offset="0" max-vertical-offset="900">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/data/Floor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23183925" vertical-offset="0" max-vertical-offset="647">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8377125" vertical-offset="223" max-vertical-offset="975">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/util/Download.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38356164" vertical-offset="10848" max-vertical-offset="11505">
-          <caret line="750" column="27" selection-start-line="750" selection-start-column="27" selection-end-line="750" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/PersonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42537314" vertical-offset="195" max-vertical-offset="1095">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/data/MarkerPointer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/floor.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/FilmMuseum/beacon.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1230">
-          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7222" max-vertical-offset="17190">
-          <caret line="491" column="19" selection-start-line="491" selection-start-column="19" selection-end-line="491" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/filmmuseum/TabletTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/filmmuseum/ABaseTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15671642" vertical-offset="0" max-vertical-offset="1170">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1622" max-vertical-offset="4605">
-          <caret line="165" column="112" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/anim/DepthPageTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="765">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/floor.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20995334" vertical-offset="0" max-vertical-offset="643">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/anim/ZoomOutPageTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="780">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/anim/InRightUpTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/anim/InRightDownTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88757396" vertical-offset="0" max-vertical-offset="585">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/workspace/android/DragImageView/src/org/melonframwork/android/TouchImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23771791" vertical-offset="2085" max-vertical-offset="7425">
-          <caret line="139" column="27" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41269842" vertical-offset="4085" max-vertical-offset="4785">
-          <caret line="281" column="66" selection-start-line="281" selection-start-column="66" selection-end-line="281" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/filmmuseum/SysApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="840">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="4221" max-vertical-offset="6555">
-          <caret line="297" column="16" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/layout_listactivity.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/widget/AdapterView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11415525" vertical-offset="0" max-vertical-offset="1935">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/adapter/ListActivityAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74840766" vertical-offset="260" max-vertical-offset="930">
-          <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8121019" vertical-offset="0" max-vertical-offset="810">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/listview_list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0383275" vertical-offset="0" max-vertical-offset="720">
           <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/data/FloorLegendFactory.java">
@@ -1164,35 +1279,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3183" max-vertical-offset="3885">
-          <caret line="249" column="24" selection-start-line="249" selection-start-column="18" selection-end-line="249" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2133" max-vertical-offset="2790">
-          <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/navigation/HighFloorActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="3855">
-          <caret line="145" column="25" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/slidingmenu.jar!/com/slidingmenu/lib/SlidingMenu.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18604651" vertical-offset="0" max-vertical-offset="2910">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,27 +1290,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="4905">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_right.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4826389" vertical-offset="611" max-vertical-offset="8040">
           <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/FloorFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="735">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/marker_pic_yellow.png">
@@ -1233,112 +1313,412 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/FilmMuseum/floor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6507937" vertical-offset="5600" max-vertical-offset="6270">
-          <caret line="387" column="62" selection-start-line="387" selection-start-column="31" selection-end-line="387" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/list_main_activity_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1035">
           <caret line="56" column="45" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3885">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-sw320dp/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-sw480dp/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-sw720dp-land/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/eagerness/EagernessActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47014925" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/example/filmmuseum/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/version.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/navigation/HighFloorActivitybak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.847143" vertical-offset="0" max-vertical-offset="10811">
+          <caret line="547" column="31" selection-start-line="547" selection-start-column="12" selection-end-line="547" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/navigation/HighFloorActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="3960">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/navigation/NavigationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/FloorFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18428572" vertical-offset="36" max-vertical-offset="765">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#1618#1777#0" expanded="true" />
-            <element signature="e#1766#1767#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="false" />
+            <element signature="e#1720#1721#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="5610">
-          <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4355" max-vertical-offset="5025">
-          <caret line="372" column="25" selection-start-line="372" selection-start-column="25" selection-end-line="372" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="6150">
-          <caret line="418" column="28" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.35857144" vertical-offset="4009" max-vertical-offset="6150">
+          <caret line="334" column="60" selection-start-line="334" selection-start-column="54" selection-end-line="334" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/workspace/android/DragImageView/src/org/melonframwork/android/TouchImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5905172" vertical-offset="2951" max-vertical-offset="7425">
+          <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/util/FileSysUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4363636" vertical-offset="236" max-vertical-offset="1260">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/util/Download.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10709" max-vertical-offset="11505">
+          <caret line="757" column="82" selection-start-line="757" selection-start-column="82" selection-end-line="757" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35812673" vertical-offset="2015" max-vertical-offset="6885">
+          <caret line="297" column="16" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/ab-sdk-beta1.4.0.jar!/com/aprilbrother/aprilbrothersdk/Beacon.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3255814" vertical-offset="180" max-vertical-offset="825">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.3553719" vertical-offset="696" max-vertical-offset="1725">
+          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="1455">
-          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="4575">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <element signature="e#2399#2587#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#3353#5703#0" expanded="true" />
+            <element signature="e#5483#5677#0" expanded="true" />
+            <element signature="e#5676#5677#0" expanded="true" />
+            <element signature="e#5702#5703#0" expanded="true" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5829#5830#0" expanded="true" />
+            <element signature="e#5887#5888#0" expanded="true" />
+            <element signature="e#5935#5936#0" expanded="true" />
+            <element signature="e#6023#6024#0" expanded="true" />
+            <element signature="e#6060#6061#0" expanded="true" />
+            <element signature="e#9465#9751#0" expanded="true" />
+            <element signature="e#9750#9751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/android-sdks/platforms/android-17/android.jar!/android/graphics/BitmapFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3553719" vertical-offset="66" max-vertical-offset="1140">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/data/BeaconExtra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27061856" vertical-offset="0" max-vertical-offset="388">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/util/ZipExtractorTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="823" max-vertical-offset="2625">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/beacon.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92783505" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1838#1839#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/PersonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1140">
+          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/filmmuseum/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="4710">
+          <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="1005">
-          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding>
-            <element signature="e#2337#2569#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.4197349" vertical-offset="0" max-vertical-offset="990">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ListMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1065">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="870">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/audio.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.327273" vertical-offset="587" max-vertical-offset="1380">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/data/MagicFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="5775">
+          <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/VideoFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1078" max-vertical-offset="1515">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3416#3648#0" expanded="true" />
+            <element signature="e#3647#3648#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7601246" vertical-offset="4106" max-vertical-offset="4815">
+          <caret line="290" column="28" selection-start-line="290" selection-start-column="28" selection-end-line="290" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31746033" vertical-offset="545" max-vertical-offset="4425">
-          <caret line="74" column="38" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2631" max-vertical-offset="4740">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
           <folding>
-            <element signature="e#3316#5614#0" expanded="true" />
-            <element signature="e#5603#5604#0" expanded="true" />
-            <element signature="e#5705#5706#0" expanded="true" />
-            <element signature="e#5740#5741#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5846#5847#0" expanded="true" />
-            <element signature="e#5934#5935#0" expanded="true" />
-            <element signature="e#5971#5972#0" expanded="true" />
+            <element signature="e#2419#2607#0" expanded="true" />
+            <element signature="e#2606#2607#0" expanded="true" />
+            <element signature="e#3370#5765#0" expanded="true" />
+            <element signature="e#5545#5739#0" expanded="true" />
+            <element signature="e#5738#5739#0" expanded="true" />
+            <element signature="e#5764#5765#0" expanded="true" />
+            <element signature="e#5856#5857#0" expanded="true" />
+            <element signature="e#5891#5892#0" expanded="true" />
+            <element signature="e#5949#5950#0" expanded="true" />
+            <element signature="e#5997#5998#0" expanded="true" />
+            <element signature="e#6085#6086#0" expanded="true" />
+            <element signature="e#6122#6123#0" expanded="true" />
+            <element signature="e#10110#10396#0" expanded="true" />
+            <element signature="e#10395#10396#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ImgFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/util/ArtContentAudio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7511046" vertical-offset="0" max-vertical-offset="990">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/AudioFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.220913" vertical-offset="3971" max-vertical-offset="5040">
+          <caret line="372" column="32" selection-start-line="372" selection-start-column="32" selection-end-line="372" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/arthighlights/ImgFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1140">
+          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/top.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/img.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5292096" vertical-offset="281" max-vertical-offset="1035">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+          <folding>
+            <element signature="e#484#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
@@ -1417,6 +1797,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>DragImageView</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1429,4 +1810,3 @@
     </states>
   </component>
 </project>
-

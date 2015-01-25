@@ -755,7 +755,7 @@ public class Download {
                             break;
                         case XmlPullParser.START_TAG:
                             if ("available_distance".equals(xpp.getName())) {
-                                beaconExtra.setAvailableDistance(Integer.parseInt(xpp.nextText()));
+                                beaconExtra.setAvailableDistance(Float.parseFloat(xpp.nextText()));
                             }
                             break;
                     }

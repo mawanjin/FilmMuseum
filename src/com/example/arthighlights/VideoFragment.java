@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.util.Log;
 import android.view.*;
 import android.view.SurfaceHolder.Callback;
@@ -225,7 +226,7 @@ public class VideoFragment extends Fragment implements Callback,
             if (id == art.getId()) {
                 tv.setText(art.getTitle());
                 tv2.setText(art.getTitle());
-                tv3.setText(art.getContent());
+                tv3.setText(Html.fromHtml(art.getContent()));
                 path = MagicFactory.getPlayUrl(art.getSrc());
             }
         }

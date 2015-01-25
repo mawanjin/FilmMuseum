@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$USER_HOME$/Documents/workspace/android/DragImageView" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Documents/workspace/android/DragImageView/src/org/melonframwork/android/TouchImageView.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/anim/DefaultTransformer.java" charset="UTF-8" />
@@ -13,11 +15,11 @@
     <file url="file://$PROJECT_DIR$/src/com/example/eagerness/MovieActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/information/IntroductionActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/com/example/intelligent/BeaconActivity1.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/example/navigation/HighFloorActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/example/navigation/RecommendActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/screening/NowScreeningActivity.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/example/screening/ReviewScreeningActivity.java" charset="GB2312" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="PROJECT" charset="GB2312" />
   </component>
 </project>
-

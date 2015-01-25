@@ -6,13 +6,13 @@ package com.example.data;
  * Time: 00:16
  */
 public class BeaconExtra {
-    private int availableDistance;
+    private float availableDistance;
 
-    public int getAvailableDistance() {
+    public float getAvailableDistance() {
         return availableDistance;
     }
 
-    public void setAvailableDistance(int availableDistance) {
+    public void setAvailableDistance(float availableDistance) {
         this.availableDistance = availableDistance;
     }
 }

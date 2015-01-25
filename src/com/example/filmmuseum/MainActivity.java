@@ -80,6 +80,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn1.setOnClickListener(this);
 		btn2.setOnClickListener(this);
         if(!FileSysUtils.isExist()){
+			isUnzipCompleted = false;
             FileSysUtils.initSysData(this);
 
             ZipExtractorTask task = new ZipExtractorTask(FileSysUtils.getExternalStoragePath()
@@ -88,6 +89,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 @Override
                 public void handleMessage(Message msg) {
                     super.handleMessage(msg);
+					isUnzipCompleted = true;
                     index  = MagicFactory.getIndex();
                     logo.setImageBitmap(MagicFactory.getBitmap(index.getLogo()));
                     tv2.setText(Html.fromHtml(index.getIndexItems().get(0).getDescription()));
@@ -96,6 +98,7 @@ public class MainActivity extends Activity implements OnClickListener {
             });
             task.execute();
         }else{
+			isUnzipCompleted = true;
             index  = MagicFactory.getIndex();
             logo.setImageBitmap(MagicFactory.getBitmap(index.getLogo()));
             tv2.setText(Html.fromHtml(index.getIndexItems().get(0).getDescription()));
@@ -110,7 +113,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	// 点击事件
 	public void onClick(View v) {
-
+		if(!isUnzipCompleted){
+			Toast.makeText(this,"初始化中,请等待!",Toast.LENGTH_SHORT).show();
+			return;
+		}
 		if (v.getId() == R.id.main_btn1) {
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, BeaconActivity.class);
@@ -295,6 +301,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	protected void onDestroy() {
 		Log.v("HTTWs","---> main进入destroy");
+		if(list!=null)
 		if (list.size() != 0) {
 			list = null;
 			System.gc();

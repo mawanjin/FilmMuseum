@@ -15,7 +15,11 @@
   </component>
   <component name="FacetManager">
     <facet type="android" name="Android">
-      <configuration />
+      <configuration>
+        <proGuardCfgFiles>
+          <file>file:///Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home/tools/proguard/proguard-android.txt</file>
+        </proGuardCfgFiles>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
@@ -25,7 +29,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
     </content>
-    <orderEntry type="jdk" jdkName="Android 4.2.2 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 17 Platform" jdkType="Android SDK" />
     <orderEntry type="module-library">
       <library name="slidingmenu.jar">
         <CLASSES>
@@ -75,4 +79,3 @@
     <orderEntry type="module" module-name="DragImageView" />
   </component>
 </module>
-

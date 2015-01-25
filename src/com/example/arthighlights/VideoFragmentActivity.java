@@ -49,7 +49,8 @@ public class VideoFragmentActivity extends FragmentActivity {
         //todo 这里根据id去查找对应的楼层数据
 
         final FloorFragment floorFragment = new FloorFragment(FloorLegendFactory.getInstance(this).getViewItemsWithLocation(this,person),person);
-        fragments.add(floorFragment);
+        if(person.isShowMap())
+            fragments.add(floorFragment);
         fragments.add(videoFragment);
 
         PagerAdapter mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {

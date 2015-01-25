@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.util.Log;
 import android.view.*;
 import android.widget.*;
@@ -373,7 +374,8 @@ public class AudioFragment extends Fragment implements OnSeekBarChangeListener {
         if(c==null)return;
         tv.setText(c.getTitle());
         tv2.setText(c.getTitle());
-        tv3.setText(c.getContent());
+
+        tv3.setText(Html.fromHtml(c.getContent()));
         path = MagicFactory.getPlayUrl(c.getSrc());
     }
 
