@@ -21,6 +21,8 @@ import com.example.data.MagicFactory;
 import com.example.data.Version;
 import com.example.dialog.UpdateDialog;
 import com.example.intelligent.BeaconActivity;
+import com.example.intelligent.BeaconActivity1;
+import com.example.intelligent.BeaconActivity2;
 import com.example.util.FileSysUtils;
 import com.example.util.ZipExtractorTask;
 
@@ -119,7 +121,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		if (v.getId() == R.id.main_btn1) {
 			Intent intent = new Intent();
-			intent.setClass(MainActivity.this, BeaconActivity.class);
+			intent.setClass(MainActivity.this, BeaconActivity2.class);
 			startActivity(intent);
 			overridePendingTransition(R.anim.a2, R.anim.a1);
 		} else if (v.getId() == R.id.main_btn2) {

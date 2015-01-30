@@ -27,13 +27,13 @@
         android:theme="@style/AppTheme" >
 
         <!-- 扫描beacon的服务 -->
-        <service
-            android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"
-            android:exported="false" />
-        <service
-            android:name="com.aprilbrother.aprilbeacondemo.NotifyService"
-            android:exported="false" >
-        </service>
+        <!--<service-->
+            <!--android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"-->
+            <!--android:exported="false" />-->
+        <!--<service-->
+            <!--android:name="com.aprilbrother.aprilbeacondemo.NotifyService"-->
+            <!--android:exported="false" >-->
+        <!--</service>-->
 
         <activity
             android:name="com.example.filmmuseum.MainActivity"

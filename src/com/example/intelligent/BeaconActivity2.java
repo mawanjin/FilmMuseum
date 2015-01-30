@@ -17,6 +17,7 @@ import com.aprilbrother.aprilbrothersdk.BeaconManager;
 import com.aprilbrother.aprilbrothersdk.BeaconManager.RangingListener;
 import com.aprilbrother.aprilbrothersdk.Region;
 import com.example.arthighlights.AudioFragmentActivity;
+import com.example.arthighlights.ImgFragmentActivity;
 import com.example.arthighlights.ListMainActivity;
 import com.example.arthighlights.VideoFragmentActivity;
 import com.example.data.BeaconExtra;
@@ -33,13 +34,14 @@ import java.io.OutputStream;
 import java.util.*;
 
 /**
-* ï¿½ï¿½ï¿½ï¿½Õ¹Ê¾beaconï¿½Ð±ï¿½
+* Ô­À´µÄ¡£¡£ËÑË÷Õ¹Ê¾beaconÁÐ±í
 */
-public class BeaconActivity1 extends Activity {
+public class BeaconActivity2 extends Activity {
     private static final int REQUEST_ENABLE_BT = 1234;
     public static final int ON_RESULT_EXIT = 1001;
     private static final Region ALL_BEACONS_REGION = new Region("apr", null,
             null, null);
+//    private BeaconAdapter adapter;
     private BeaconManager beaconManager;
     private ArrayList<Beacon> myBeacons;
 
@@ -51,9 +53,9 @@ public class BeaconActivity1 extends Activity {
 
     private ImageView ivReturn, ivMenu;
     private TextView tv;
-    //ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+    //ÓÐÐ§¾àÀë
     private float distance = 1;
-    //ï¿½Ð»ï¿½ï¿½ï¿½Ð¡Ê±ï¿½ï¿½ï¿½ï¿½
+    //ÇÐ»»×îÐ¡Ê±¼ä¼ä¸ô
     private long switchGap = 2000;
     private long lastSwitchTime;
 
@@ -61,13 +63,13 @@ public class BeaconActivity1 extends Activity {
     @SuppressLint("NewApi")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
+        // Òþ²Ø±êÌâÀ¸
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.beacon);
         SysApplication.getInstance().addActivity(this);
 
         tv = (TextView) findViewById(R.id.tv_title);
-        tv.setText("ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½Ä£Ê½");
+        tv.setText("ÖÇÄÜµ¼ÀÀÄ£Ê½");
         ivReturn = (ImageView) findViewById(R.id.ivReturn);
         ivReturn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
@@ -83,61 +85,81 @@ public class BeaconActivity1 extends Activity {
         init();
         BeaconExtra beaconExtra = MagicFactory.getBeaconExtra();
         if(beaconExtra!=null)distance = beaconExtra.getAvailableDistance();
-
-
     }
+
+    double lastDistance = -1;
 
     private void init() {
         myBeacons = new ArrayList<Beacon>();
 //        ListView lv = (ListView) findViewById(R.id.lv_beacon);
+//        adapter = new BeaconAdapter(this);
+//        lv.setAdapter(adapter);
+        beaconManager = new BeaconManager(BeaconActivity2.this);
+        beaconManager.setForegroundScanPeriod(500, 0);
 
-        beaconManager = new BeaconManager(BeaconActivity1.this);
-        beaconManager.setForegroundScanPeriod(100, 0);
+        beaconManager.setMonitoringListener(new BeaconManager.MonitoringListener() {
+            @Override
+            public void onEnteredRegion(Region region, List<Beacon> list) {
+
+            }
+
+            @Override
+            public void onExitedRegion(Region region) {
+
+            }
+        });
         beaconManager.setRangingListener(new RangingListener() {
             public void onBeaconsDiscovered(Region region, final List<Beacon> beacons) {
                 myBeacons.clear();
                 myBeacons.addAll(beacons);
+
+                Beacon beaconPlay = null;
+                Beacon beacon = null;
+                int major;
+                int minor;
+                List<Person> persons = MagicFactory.getPersons();;
                 for (int i = 0; i < beacons.size(); i++) {
-                    Beacon beacon = beacons.get(i);
-                    int major = beacon.getMajor();
-                    int minor = beacon.getMinor();
-                    List<Person> persons;
+                    beacon = beacons.get(i);
+                    major = beacon.getMajor();
                     try {
-                        persons = MagicFactory.getPersons();
+                        if (currentBeacon != major) {//Èç¹ûµ±Ç°beacon²»ÊÇÕýÔÚ²¥·ÅµÄ£¬Ôò½øÐÐÅÐ¶Ï
+                            double bDistance = beacon.getDistance();
 
-                        if (currentBeacon != major) {//ï¿½ï¿½ï¿½Ç?beaconï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ÅµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½Å²ï¿½ï¿½ï¿½ï¿½ï¿?
-                            if (beacon.getDistance() <= distance) {
-                                if(System.currentTimeMillis()-lastSwitchTime<switchGap)return;
-                                lastSwitchTime = System.currentTimeMillis();
-                                for (Person person : persons) {
-                                    if (major == person.getMajor()
-                                            && minor == person.getMinor()) {
-                                        Message msg = new Message();
-//                                        msg.obj = person.getUrl();
-                                        msg.obj = person;
-                                        handler.sendMessage(msg);
-                                        currentBeacon = major;
-                                        break;
-                                    }
+                            if ( bDistance<= distance) {
+                                if(lastDistance!=-1){
+                                    if(bDistance>lastDistance)continue;
+
                                 }
+                                lastDistance = bDistance;
+                                beaconPlay = beacon;
+
                             }
-                        }else{//ï¿½ï¿½ï¿½ï¿½Çµï¿½Ç°ï¿½ï¿½ï¿½ÅµÄ¶ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ë¿?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-                            if (beacon.getDistance() > 2) {
-//                                Toast.makeText(getApplicationContext(),
-//                                        currentBeacon + "ï¿½ë¿ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
-//                                        Toast.LENGTH_SHORT).show();
-                            }
+                        }else{
+                            continue;
                         }
-
-
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
+                if(beaconPlay==null)return;
+                major = beaconPlay.getMajor();
+                minor = beaconPlay.getMinor();
+                for (Person person : persons) {
+                    if (major == person.getMajor()
+                            && minor == person.getMinor()) {
+                        Message msg = new Message();
+//                                        msg.obj = person.getUrl();
+                        msg.obj = person;
+                        handler.sendMessage(msg);
+                        currentBeacon = major;
+                        break;
+                    }
+                }
+
                 runOnUiThread(new Runnable() {
                     @SuppressLint("NewApi")
                     public void run() {
+//                        adapter.replaceWith(beacons);
                     }
                 });
             }
@@ -195,7 +217,18 @@ public class BeaconActivity1 extends Activity {
                         Intent intentBroadcast = new Intent(Filter.IntentFilter_ACTION_BEACON_SWITCH);
                         intentBroadcast.putExtra("id",m.getId());
                         sendBroadcast(intentBroadcast);
-                    } else if (m.getType().equals("list")) {
+                    }else if (m.getType().equals("img")) {
+
+                        intent.setClass(getApplicationContext(),
+                                ImgFragmentActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("id", m.getId());
+                        bundle.putSerializable("person", person);
+                        intent.putExtras(bundle);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                        startActivityForResult(intent, ON_RESULT_EXIT);
+                    }
+                    else if (m.getType().equals("list")) {
 
                         intent.setClass(getApplicationContext(),
                                 ListMainActivity.class);
@@ -230,6 +263,7 @@ public class BeaconActivity1 extends Activity {
 
     @SuppressLint("NewApi")
     private void connectToService() {
+//        adapter.replaceWith(Collections.<Beacon>emptyList());
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
             @Override
             public void onServiceReady() {
@@ -244,6 +278,7 @@ public class BeaconActivity1 extends Activity {
 
     @SuppressLint("NewApi")
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        connectToService();
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode == Activity.RESULT_OK) {
                 connectToService();
@@ -262,12 +297,12 @@ public class BeaconActivity1 extends Activity {
         super.onStart();
         if (beaconManager == null) return;
         if (!beaconManager.hasBluetooth()) {
-            Toast.makeText(this, "ï¿½ï¿½ï¿½ï¿½è±¸Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ±¾Ì?ï¿½Í£ï¿½ï¿½ï¿½È·ï¿½Ïºï¿½ï¿½ï¿½ï¿½ï¿½...", Toast.LENGTH_LONG)
+            Toast.makeText(this, "ÄúµÄÉè±¸Ã»ÓÐÀ¶ÑÀ»òÀ¶ÑÀ°æ±¾Ì«µÍ£¬ÇëÈ·ÈÏºóÖØÊÔ...", Toast.LENGTH_LONG)
                     .show();
             return;
         }
         if (!beaconManager.isBluetoothEnabled()) {
-            Log.v("HTTWs", "ï¿½ï¿½ï¿½ï¿½è±¸Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ïºï¿½ï¿½ï¿½ï¿½ï¿?... ");
+            Log.v("HTTWs", "ÄúµÄÉè±¸Î´¿ªÆôÀ¶ÑÀ£¬ÇëÈ·ÈÏºóÖØÊÔ... ");
             Intent enableBtIntent = new Intent(
                     BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
@@ -304,7 +339,7 @@ public class BeaconActivity1 extends Activity {
     }
 
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½SDï¿½ï¿½
+    // ¿½±´ÎÄ¼þµ½SD¿¨
     private void copyBigDataToSD(String strOutFileName) throws IOException {
         InputStream myInput;
         OutputStream myOutputStream = new FileOutputStream(strOutFileName);
