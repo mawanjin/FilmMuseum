@@ -22,6 +22,7 @@ import com.example.arthighlights.ListMainActivity;
 import com.example.arthighlights.VideoFragmentActivity;
 import com.example.data.BeaconExtra;
 import com.example.data.Filter;
+import com.example.data.Floor;
 import com.example.data.MagicFactory;
 import com.example.filmmuseum.R;
 import com.example.filmmuseum.SysApplication;
@@ -37,6 +38,7 @@ import java.util.*;
 * 原来的。。搜索展示beacon列表
 */
 public class BeaconActivity2 extends Activity {
+    private static String TAG = BeaconActivity2.class.getSimpleName();
     private static final int REQUEST_ENABLE_BT = 1234;
     public static final int ON_RESULT_EXIT = 1001;
     private static final Region ALL_BEACONS_REGION = new Region("apr", null,
@@ -45,7 +47,7 @@ public class BeaconActivity2 extends Activity {
     private BeaconManager beaconManager;
     private ArrayList<Beacon> myBeacons;
 
-    private int currentBeacon = 0;
+    private int currentBeacon = -1;
     private List<Integer> list;
 
     private Looper mainlooper = null;
@@ -87,7 +89,15 @@ public class BeaconActivity2 extends Activity {
         if(beaconExtra!=null)distance = beaconExtra.getAvailableDistance();
     }
 
-    double lastDistance = -1;
+    double lastDistance = 1;
+
+
+    Beacon beaconPlay = null;
+    Beacon beacon = null;
+    int major;
+    int minor;
+    List<Person> persons = MagicFactory.getPersons();;
+    Map<Integer,Double> beaconValid = new HashMap<Integer,Double>();
 
     private void init() {
         myBeacons = new ArrayList<Beacon>();
@@ -95,7 +105,7 @@ public class BeaconActivity2 extends Activity {
 //        adapter = new BeaconAdapter(this);
 //        lv.setAdapter(adapter);
         beaconManager = new BeaconManager(BeaconActivity2.this);
-        beaconManager.setForegroundScanPeriod(500, 0);
+        beaconManager.setForegroundScanPeriod(100, 0);
 
         beaconManager.setMonitoringListener(new BeaconManager.MonitoringListener() {
             @Override
@@ -108,53 +118,98 @@ public class BeaconActivity2 extends Activity {
 
             }
         });
+
+    int miniDistance;
+
         beaconManager.setRangingListener(new RangingListener() {
+
             public void onBeaconsDiscovered(Region region, final List<Beacon> beacons) {
                 myBeacons.clear();
                 myBeacons.addAll(beacons);
 
-                Beacon beaconPlay = null;
-                Beacon beacon = null;
-                int major;
-                int minor;
-                List<Person> persons = MagicFactory.getPersons();;
-                for (int i = 0; i < beacons.size(); i++) {
+                for (int i = 0; i < beacons.size(); i++) {//取出距离最小的设备
+
                     beacon = beacons.get(i);
-                    major = beacon.getMajor();
-                    try {
-                        if (currentBeacon != major) {//如果当前beacon不是正在播放的，则进行判断
-                            double bDistance = beacon.getDistance();
+                    //监测所有设备状态，如果和上次的距离相差太多，则忽略
+                    Double d = beaconValid.get(beacon.getMajor());
 
-                            if ( bDistance<= distance) {
-                                if(lastDistance!=-1){
-                                    if(bDistance>lastDistance)continue;
+                    if(d==null){
+                        beaconValid.put(beacon.getMajor(),beacon.getDistance());
+                    }else{
+//                        double dis = beacon.getDistance();
 
-                                }
-                                lastDistance = bDistance;
-                                beaconPlay = beacon;
-
-                            }
-                        }else{
+                        double gap = Math.abs(d-beacon.getDistance());
+                        if(gap>0.8){
                             continue;
                         }
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
+                    System.out.println("xxxxx="+beacon.getMajor()+";"+beacon.getDistance()+"");
+                    beaconValid.put(beacon.getMajor(),beacon.getDistance());
+
+                    if(beaconPlay!=null){//正在播放的
+                        System.out.println("beacon.getDistance()="+beacon.getDistance()+"last beacon="+beaconPlay.getMajor()+";beaconPlay.getDistance()="+lastDistance);
+                    }
+
+                    if(beaconPlay!=null&&beaconPlay.getMajor()==beacon.getMajor()){//如果是正在播放的，则更新一下当前设备现在的距离
+                        lastDistance = beacon.getDistance();
+                        continue;
+                    }
+
+                    if(beaconPlay==null){//如果是第一个，则直接进行播放
+                        beaconPlay = beacon;
+                        lastDistance = beaconPlay.getDistance();
+                    }else if(beacon.getDistance()<lastDistance){//如果不是当前正在播放的，并且当前距离小于正在播放的，则进行播放操作
+                            beaconPlay = beacon;
+                            lastDistance = beacon.getDistance();
+                        }
                 }
-                if(beaconPlay==null)return;
-                major = beaconPlay.getMajor();
-                minor = beaconPlay.getMinor();
+
+
+                if(beaconPlay==null||currentBeacon == beaconPlay.getMajor())return;//如果正在播放，则跳过
+
+                if(beaconPlay.getDistance()<distance)
                 for (Person person : persons) {
-                    if (major == person.getMajor()
-                            && minor == person.getMinor()) {
+                    if (beaconPlay.getMajor() == person.getMajor()
+                            && beaconPlay.getMinor() == person.getMinor()) {
+                        currentBeacon = beaconPlay.getMajor();
                         Message msg = new Message();
-//                                        msg.obj = person.getUrl();
                         msg.obj = person;
                         handler.sendMessage(msg);
-                        currentBeacon = major;
                         break;
                     }
                 }
+
+
+
+//                for (int i = 0; i < beacons.size(); i++) {
+//                    beacon = beacons.get(i);
+//
+//                    if(currentBeacon == beacon.getMajor()){//如果当前设备是正在展现的，则更新当前设备的距离
+//                        lastDistance = beacon.getDistance();
+//                        continue;
+//                    }
+//
+//                    try {
+//                        if (currentBeacon != beacon.getMajor()) {//如果当前beacon不是正在播放的，则进行判断
+//                            double bDistance = beacon.getDistance();//当前设备距离
+//                            if(bDistance==0)return;
+//                            if ( bDistance<= distance) {
+//                                if(lastDistance!=-1){
+//                                    if(bDistance>=lastDistance)continue;//如果当前距离大于上次设备的距离
+//                                }
+//                                lastDistance = bDistance;
+//                            }
+//                        }else{
+//                            continue;
+//                        }
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+
+//                if(currentBeacon==beacon.getMajor())return;
+
+
 
                 runOnUiThread(new Runnable() {
                     @SuppressLint("NewApi")

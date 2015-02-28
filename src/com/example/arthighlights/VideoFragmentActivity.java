@@ -107,20 +107,26 @@ public class VideoFragmentActivity extends FragmentActivity {
 //        return super.onTouchEvent(event);
     }
 
+    BroadcastReceiver broadcastReceiver;
+
     @Override
     protected void onStart() {
         super.onStart();
-        registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                //切换视频源
-                videoFragment.switchURL(intent.getIntExtra("id",0));
-            }
-        },new IntentFilter(Filter.IntentFilter_ACTION_BEACON_SWITCH));
+        try{
+            broadcastReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    //切换视频源
+                    videoFragment.switchURL(intent.getIntExtra("id",0));
+                }
+            };
+            registerReceiver(broadcastReceiver,new IntentFilter(Filter.IntentFilter_ACTION_BEACON_SWITCH));
+        }catch (Exception e){}
     }
 
     @Override
     protected void onStop() {
+        unregisterReceiver(broadcastReceiver);
         setResult(BeaconActivity.ON_RESULT_EXIT);
         finish();
         super.onStop();
